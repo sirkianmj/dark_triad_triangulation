@@ -1,0 +1,18 @@
+# Environments
+.venv/
+env/
+*.env
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Data files (keep raw & large processed data out of Git)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# OS / System
+.DS_Store
