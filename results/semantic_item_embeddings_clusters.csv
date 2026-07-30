@@ -1,0 +1,13 @@
+Item_Code,True_Trait,LLM_Semantic_Cluster,Literal_Text
+DTDD_1m,Machiavellianism,0,I tend to manipulate people to get what I want.
+DTDD_2m,Machiavellianism,2,I have used deceit or lied to get what I want.
+DTDD_3m,Machiavellianism,0,I have used flattery to get what I want.
+DTDD_4m,Machiavellianism,0,I tend to exploit others towards my own end.
+DTDD_1p,Psychopathy,1,I tend to be unconcerned with the morality of my actions.
+DTDD_2p,Psychopathy,0,I tend to be callous or insensitive to other peoples feelings.
+DTDD_3p,Psychopathy,0,I tend to be cynical and skeptical of others.
+DTDD_4p,Psychopathy,1,I tend to lack remorse or feel guilty for my mistakes.
+DTDD_1n,Narcissism,0,I tend to want others to admire me.
+DTDD_2n,Narcissism,0,I tend to want others to pay attention to me.
+DTDD_3n,Narcissism,0,I tend to seek prestige or status.
+DTDD_4n,Narcissism,0,I tend to expect special favors from others.
