@@ -1,0 +1,4 @@
+Trait,Causal_Parents
+Machiavellianism,"age (undirected/bidirected), BFI_A_sum (undirected/bidirected), RSES_sum (undirected/bidirected), score_Psychopathy, score_Narcissism"
+Psychopathy,"BFI_C_sum (undirected/bidirected), TEQ_sum, score_Machiavellianism (undirected/bidirected), score_Narcissism"
+Narcissism,"age (undirected/bidirected), BFI_N_sum (undirected/bidirected), score_Machiavellianism (undirected/bidirected), score_Psychopathy (undirected/bidirected)"
