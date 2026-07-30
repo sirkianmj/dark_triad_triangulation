@@ -1,0 +1,4 @@
+Trait,XGBoost_R2,XGBoost_MAE,Top_Predictor,Top_Importance
+score_Machiavellianism,0.168,4.027,BFI_A_sum,0.308
+score_Psychopathy,0.25,3.151,TEQ_sum,0.459
+score_Narcissism,0.104,4.484,age,0.341
