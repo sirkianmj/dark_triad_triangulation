@@ -1,0 +1,4 @@
+Trait,Target_Coverage,Empirical_Coverage,Mean_Conformal_Band_Width
+score_Machiavellianism,95.0%,96.0%,19.701
+score_Psychopathy,95.0%,95.3%,16.643
+score_Narcissism,95.0%,95.0%,20.7
