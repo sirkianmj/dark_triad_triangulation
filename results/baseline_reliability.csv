@@ -1,4 +1,4 @@
 Sample,N,Alpha_Mach,Omega_Mach,Alpha_Psy,Omega_Psy,Alpha_Narc,Omega_Narc,Alpha_Total,Omega_Total
-sample_1_community,5903,0.828,0.886,0.763,0.849,0.846,0.898,0.869,0.893
-sample_2_student,2071,0.802,0.873,0.621,0.777,0.833,0.89,0.816,0.858
-sample_3_representative,1492,0.84,0.893,0.71,0.821,0.811,0.877,0.897,0.915
+sample_1_community,4526,0.809,0.875,0.714,0.824,0.836,0.892,0.84,0.872
+sample_2_student,1725,0.782,0.864,0.58,0.756,0.829,0.888,0.795,0.843
+sample_3_representative,1333,0.831,0.888,0.683,0.808,0.798,0.87,0.887,0.907

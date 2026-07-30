@@ -4,7 +4,7 @@ import numpy as np
 import semopy
 
 print("="*60)
-print("  DT3 PROJECT: PHASE 2 - CONFIRMATORY FACTOR ANALYSIS (CFA)  ")
+print("  DT3 PROJECT: PHASE 2 - CORRECTED CFA MODEL FIT COMPARISON ")
 print("="*60)
 
 # Load master dataset (Sample 1 Community)
@@ -32,8 +32,7 @@ for name, spec in models.items():
         mod = semopy.Model(spec)
         res = mod.fit(s1_df)
         stats = semopy.calc_stats(mod)
-        
-        # semopy calc_stats returns a pandas DataFrame
+
         chi2 = stats.loc['Value', 'chi2'] if 'chi2' in stats.columns else np.nan
         dof = stats.loc['Value', 'DoF'] if 'DoF' in stats.columns else np.nan
         cfi = stats.loc['Value', 'CFI'] if 'CFI' in stats.columns else np.nan
@@ -55,7 +54,7 @@ for name, spec in models.items():
 if cfa_results:
     cfa_df = pd.DataFrame(cfa_results)
     print("\n" + "="*60)
-    print("     CONFIRMATORY FACTOR ANALYSIS FIT COMPARISON     ")
+    print("     CONFIRMATORY FACTOR ANALYSIS FIT COMPARISON (CLEAN S1)     ")
     print("="*60)
     print(cfa_df.to_string(index=False))
 

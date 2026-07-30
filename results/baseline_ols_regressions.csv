@@ -1,19 +1,14 @@
-Trait,Predictor,Beta_Std,P_value,R2
-score_Machiavellianism,age,-0.879,0.0,0.078
-score_Machiavellianism,BFI_A_sum,-1.47,0.0,0.078
-score_Machiavellianism,BFI_C_sum,1.151,0.0,0.078
-score_Machiavellianism,BFI_N_sum,0.413,0.0,0.078
-score_Machiavellianism,TEQ_sum,-1.007,0.0,0.078
-score_Machiavellianism,RSES_sum,0.33,0.0,0.078
-score_Psychopathy,age,-0.535,0.0,0.135
-score_Psychopathy,BFI_A_sum,-1.035,0.0,0.135
-score_Psychopathy,BFI_C_sum,1.352,0.0,0.135
-score_Psychopathy,BFI_N_sum,0.244,0.0,0.135
-score_Psychopathy,TEQ_sum,-1.61,0.0,0.135
-score_Psychopathy,RSES_sum,-0.098,0.0559,0.135
-score_Narcissism,age,-1.321,0.0,0.066
-score_Narcissism,BFI_A_sum,-1.095,0.0,0.066
-score_Narcissism,BFI_C_sum,0.767,0.0,0.066
-score_Narcissism,BFI_N_sum,0.433,0.0,0.066
-score_Narcissism,TEQ_sum,-0.218,0.0004,0.066
-score_Narcissism,RSES_sum,0.031,0.6159,0.066
+Hypothesis,Sample,Target,Predictor,Beta_Std,P_value,R2,N
+H2a,sample_3_representative,score_Psychopathy,BFI_N_sum,0.1059,0.0001,0.084,1333
+H2b (n.s.),sample_3_representative,score_Machiavellianism,BFI_N_sum,0.1387,0.0,0.115,1333
+H4a,sample_3_representative,score_Narcissism,BFI_N_sum,0.1409,0.0,0.106,1333
+H4b,sample_3_representative,score_Narcissism,BFI_C_sum,-0.1327,0.0,0.104,1333
+H7a,sample_3_representative,score_Narcissism,BFI_A_sum,-0.2317,0.0,0.139,1333
+H7b,sample_3_representative,score_Machiavellianism,BFI_A_sum,-0.3774,0.0,0.234,1333
+H7c,sample_3_representative,score_Psychopathy,BFI_A_sum,-0.4074,0.0,0.234,1333
+H8a,sample_3_representative,score_Machiavellianism,BFI_C_sum,-0.2379,0.0,0.151,1333
+H8b,sample_3_representative,score_Psychopathy,BFI_C_sum,-0.2442,0.0,0.131,1333
+H9a (n.s.),sample_3_representative,score_Narcissism,TEQ_sum,-0.0439,0.108,0.089,1333
+H9b,sample_3_representative,score_Machiavellianism,TEQ_sum,-0.1686,0.0,0.123,1333
+H9c,sample_3_representative,score_Psychopathy,TEQ_sum,-0.316,0.0,0.166,1333
+H1,sample_2_student,score_Narcissism,RSES_sum,-0.0681,0.004,0.095,1725
