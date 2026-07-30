@@ -1,0 +1,4 @@
+Trait,Top_Interaction_Pair,Interaction_Strength
+score_Machiavellianism,BFI_C_sum x BFI_A_sum,0.2057
+score_Psychopathy,BFI_A_sum x BFI_C_sum,0.2628
+score_Narcissism,age x TEQ_sum,0.1263
