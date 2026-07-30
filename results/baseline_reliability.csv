@@ -1,4 +1,4 @@
-Sample,N,Alpha_Machiavellianism,Alpha_Psychopathy,Alpha_Narcissism,Alpha_Full_Scale
-sample_1_community,5903,0.828,0.763,0.846,0.869
-sample_2_student,2071,0.802,0.621,0.833,0.816
-sample_3_representative,1492,0.84,0.71,0.811,0.897
+Sample,N,Alpha_Mach,Omega_Mach,Alpha_Psy,Omega_Psy,Alpha_Narc,Omega_Narc,Alpha_Total,Omega_Total
+sample_1_community,5903,0.828,0.886,0.763,0.849,0.846,0.898,0.869,0.893
+sample_2_student,2071,0.802,0.873,0.621,0.777,0.833,0.89,0.816,0.858
+sample_3_representative,1492,0.84,0.893,0.71,0.821,0.811,0.877,0.897,0.915
