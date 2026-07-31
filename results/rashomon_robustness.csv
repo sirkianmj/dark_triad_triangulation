@@ -1,0 +1,10 @@
+Trait,Architecture,Test_R2,Test_MAE
+score_Machiavellianism,Elastic-Net,0.143,4.213
+score_Machiavellianism,Random Forest,0.193,4.104
+score_Machiavellianism,XGBoost,0.199,4.097
+score_Psychopathy,Elastic-Net,0.179,3.563
+score_Psychopathy,Random Forest,0.309,3.255
+score_Psychopathy,XGBoost,0.324,3.227
+score_Narcissism,Elastic-Net,0.113,4.524
+score_Narcissism,Random Forest,0.112,4.522
+score_Narcissism,XGBoost,0.126,4.486

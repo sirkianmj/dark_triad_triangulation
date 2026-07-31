@@ -1,0 +1,10 @@
+Sample,N,Trait,CV_R2_Mean,CV_R2_Std,Top_Driver
+sample_1_community,5902,score_Machiavellianism,0.155,0.044,BFI_A_sum
+sample_1_community,5902,score_Psychopathy,0.288,0.032,TEQ_sum
+sample_1_community,5902,score_Narcissism,0.085,0.03,BFI_A_sum
+sample_2_student,2071,score_Machiavellianism,-0.029,0.035,age
+sample_2_student,2071,score_Psychopathy,0.079,0.06,TEQ_sum
+sample_2_student,2071,score_Narcissism,0.024,0.036,age
+sample_3_representative,1492,score_Machiavellianism,0.191,0.054,BFI_A_sum
+sample_3_representative,1492,score_Psychopathy,0.237,0.026,BFI_A_sum
+sample_3_representative,1492,score_Narcissism,0.104,0.043,BFI_A_sum

@@ -16,3 +16,6 @@ data/processed/*
 
 # OS / System
 .DS_Store
+
+# Exclude complete single-file dump
+DT3_FULL_PROJECT_DUMP.txt

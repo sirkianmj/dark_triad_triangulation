@@ -1,0 +1,7 @@
+Trait,Subtype,N,Key_Driver,Driver_SHAP
+score_Machiavellianism,Cluster_0,1085,BFI_A_sum,-1.04
+score_Machiavellianism,Cluster_1,915,BFI_A_sum,1.08
+score_Psychopathy,Cluster_0,1442,TEQ_sum,-0.947
+score_Psychopathy,Cluster_1,558,TEQ_sum,2.54
+score_Narcissism,Cluster_0,1511,age,0.652
+score_Narcissism,Cluster_1,489,age,-1.975

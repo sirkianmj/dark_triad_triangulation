@@ -1,0 +1,4 @@
+Trait,Directed_Parents,Undirected_or_Bidirected
+score_Machiavellianism,None,"age, BFI_A_sum, TEQ_sum"
+score_Psychopathy,None,"age, BFI_A_sum, TEQ_sum"
+score_Narcissism,age,BFI_A_sum

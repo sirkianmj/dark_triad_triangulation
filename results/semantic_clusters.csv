@@ -1,0 +1,13 @@
+Item,True_Trait,Predicted_Cluster,Text
+DTDD_1m,Machiavellianism,0,I tend to manipulate others to get my way.
+DTDD_2m,Machiavellianism,0,I have used deceit or lied to get my way.
+DTDD_3m,Machiavellianism,0,I have used flattery to get my way.
+DTDD_4m,Machiavellianism,0,I tend to exploit others towards my own end.
+DTDD_1p,Psychopathy,2,I tend to lack remorse.
+DTDD_2p,Psychopathy,2,I tend to not be too concerned with the morality of my actions.
+DTDD_3p,Psychopathy,2,I tend to be callous or insensitive.
+DTDD_4p,Psychopathy,2,I tend to be cynical.
+DTDD_1n,Narcissism,0,I tend to want others to admire me.
+DTDD_2n,Narcissism,0,I tend to want others to pay attention to me.
+DTDD_3n,Narcissism,1,I tend to seek prestige or status.
+DTDD_4n,Narcissism,0,I tend to expect special favors from others.
