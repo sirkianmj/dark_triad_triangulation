@@ -1,21 +1,23 @@
-# Environments
+# R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
 .venv/
 env/
-*.env
 
-# Python / Jupyter
-__pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-
-# Data files (keep raw & large processed data out of Git)
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-
-# OS / System
+# OS
 .DS_Store
 
-# Exclude complete single-file dump
-DT3_FULL_PROJECT_DUMP.txt
+# Large/raw binary caches (we keep small validated CSV/JSON, not scratch files)
+data/interim/*
+!data/interim/.gitkeep
+
+# Secrets
+*.env
