@@ -1,0 +1,12 @@
+name: dt3
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pyreadr
+  - jupyterlab
+  - numpy
+  - openpyxl
+  - python-docx
+  - pandas
+prefix: /Users/kianm.j/miniforge3/envs/dt3
