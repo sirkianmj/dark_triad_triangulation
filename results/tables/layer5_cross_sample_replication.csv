@@ -1,0 +1,7 @@
+Sample,Trait,N_Obs,Predictors_Used,CV_5Fold_R2_Mean,Conformal_95_PI_Mean_Width
+sample_1_community,Machiavellianism,5215,"BFI_A_sum,BFI_C_sum,BFI_E_sum,BFI_N_sum,BFI_O_sum,TEQ_sum,age",0.189,18.962
+sample_1_community,Psychopathy,5215,"BFI_A_sum,BFI_C_sum,BFI_E_sum,BFI_N_sum,BFI_O_sum,TEQ_sum,age",0.312,17.451
+sample_1_community,Narcissism,5215,"BFI_A_sum,BFI_C_sum,BFI_E_sum,BFI_N_sum,BFI_O_sum,TEQ_sum,age",0.115,19.76
+sample_3_representative,Machiavellianism,1492,"BFI_A_sum,BFI_C_sum,BFI_E_sum,BFI_N_sum,BFI_O_sum,TEQ_sum,age",0.197,17.494
+sample_3_representative,Psychopathy,1492,"BFI_A_sum,BFI_C_sum,BFI_E_sum,BFI_N_sum,BFI_O_sum,TEQ_sum,age",0.237,14.052
+sample_3_representative,Narcissism,1492,"BFI_A_sum,BFI_C_sum,BFI_E_sum,BFI_N_sum,BFI_O_sum,TEQ_sum,age",0.133,17.668

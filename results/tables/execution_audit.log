@@ -1,0 +1,1342 @@
+2026-08-04 16:07:16,218 [INFO] ===============================================================
+2026-08-04 16:07:16,218 [INFO]  DT³ PHASE 1 (REMEDIATED): Data Preprocessing
+2026-08-04 16:07:16,218 [INFO] ===============================================================
+2026-08-04 16:07:16,231 [INFO] Cryptographic Hash (sample_1_community): a625842f3a471aedfbb067d656e1b8ab2b583052eaeea2c2ebd8a1e1da0e9a7d
+2026-08-04 16:07:16,237 [INFO] Cryptographic Hash (sample_2_student): 2133bcd49c37f4551fa329427308dcdf5a4e3886e2fba3e82fbe79497d6ee83a
+2026-08-04 16:07:16,240 [INFO] Cryptographic Hash (sample_3_representative): 38ebfd78a2d84554f7c1d43239a88c844d0b548e8f3a21f64480675a6352e55d
+2026-08-04 16:07:16,274 [INFO] --- Cleaning sample_1_community ---
+2026-08-04 16:07:16,278 [INFO] Age filter removed 3534 rows.
+2026-08-04 16:07:16,281 [INFO] After DTDD item cleaning: 5903 rows remain.
+2026-08-04 16:07:16,283 [INFO] Computed BFI_A_sum from 9 items in sample_1_community.
+2026-08-04 16:07:16,284 [INFO] Computed BFI_C_sum from 9 items in sample_1_community.
+2026-08-04 16:07:16,285 [INFO] Computed BFI_N_sum from 8 items in sample_1_community.
+2026-08-04 16:07:16,286 [INFO] Computed BFI_O_sum from 10 items in sample_1_community.
+2026-08-04 16:07:16,287 [INFO] Computed BFI_E_sum from 8 items in sample_1_community.
+2026-08-04 16:07:16,288 [INFO] Computed TEQ_sum from 7 items in sample_1_community.
+2026-08-04 16:07:16,288 [INFO] Computed RSES_sum from 10 items in sample_1_community.
+2026-08-04 16:07:16,289 [INFO] Finished cleaning sample_1_community: retained 5903 / 10518 rows.
+2026-08-04 16:07:16,303 [INFO] --- Cleaning sample_2_student ---
+2026-08-04 16:07:16,304 [INFO] Age filter removed 37 rows.
+2026-08-04 16:07:16,305 [INFO] After DTDD item cleaning: 2071 rows remain.
+2026-08-04 16:07:16,307 [WARNING] No items found for prefix BFI_A_. Skipping composite BFI_A_sum.
+2026-08-04 16:07:16,307 [WARNING] No items found for prefix BFI_C_. Skipping composite BFI_C_sum.
+2026-08-04 16:07:16,307 [INFO] Computed BFI_N_sum from 8 items in sample_2_student.
+2026-08-04 16:07:16,307 [WARNING] No items found for prefix BFI_O_. Skipping composite BFI_O_sum.
+2026-08-04 16:07:16,307 [WARNING] No BFI‑E items found in sample_2_student. Extraversion will be missing.
+2026-08-04 16:07:16,308 [INFO] Computed TEQ_sum from 19 items in sample_2_student.
+2026-08-04 16:07:16,308 [INFO] Computed RSES_sum from 10 items in sample_2_student.
+2026-08-04 16:07:16,308 [INFO] Finished cleaning sample_2_student: retained 2071 / 5334 rows.
+2026-08-04 16:07:16,313 [INFO] --- Cleaning sample_3_representative ---
+2026-08-04 16:07:16,314 [INFO] Age filter removed 2 rows.
+2026-08-04 16:07:16,315 [INFO] After DTDD item cleaning: 1492 rows remain.
+2026-08-04 16:07:16,317 [INFO] Computed BFI_A_sum from 9 items in sample_3_representative.
+2026-08-04 16:07:16,317 [INFO] Computed BFI_C_sum from 9 items in sample_3_representative.
+2026-08-04 16:07:16,318 [INFO] Computed BFI_N_sum from 8 items in sample_3_representative.
+2026-08-04 16:07:16,318 [INFO] Computed BFI_O_sum from 10 items in sample_3_representative.
+2026-08-04 16:07:16,318 [INFO] Computed BFI_E_sum from 8 items in sample_3_representative.
+2026-08-04 16:07:16,319 [INFO] Computed TEQ_sum from 7 items in sample_3_representative.
+2026-08-04 16:07:16,319 [WARNING] No items found for prefix RSES_. Skipping composite RSES_sum.
+2026-08-04 16:07:16,319 [INFO] Finished cleaning sample_3_representative: retained 1492 / 1665 rows.
+2026-08-04 16:07:16,323 [INFO] BFI_E_sum successfully constructed and included.
+2026-08-04 16:07:16,511 [INFO] Saved master dataset to data/processed/dt3_master_dataset.csv with shape (9466, 128)
+2026-08-04 16:07:16,532 [INFO] Saved test‑retest dataset to data/processed/dt3_test_retest.csv with 61 matched pairs.
+2026-08-04 16:07:16,532 [INFO] === PHASE 1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:11:48,263 [INFO] ===============================================================
+2026-08-04 16:11:48,264 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 16:11:48,264 [INFO] ===============================================================
+2026-08-04 16:11:48,281 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:11:48,317 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 16:11:48,318 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 16:11:48,330 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 16:11:48,344 [WARNING] Omega attempt 1 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,350 [WARNING] Omega attempt 2 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,350 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:11:48,357 [WARNING] Omega attempt 1 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,364 [WARNING] Omega attempt 2 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,364 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:11:48,370 [WARNING] Omega attempt 1 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,376 [WARNING] Omega attempt 2 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,376 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:11:48,380 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 16:11:48,386 [WARNING] Omega attempt 1 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,390 [WARNING] Omega attempt 2 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,390 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:11:48,395 [WARNING] Omega attempt 1 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,399 [WARNING] Omega attempt 2 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,399 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:11:48,403 [WARNING] Omega attempt 1 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,407 [WARNING] Omega attempt 2 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,407 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:11:48,409 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 16:11:48,413 [WARNING] Omega attempt 1 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,417 [WARNING] Omega attempt 2 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,417 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:11:48,424 [WARNING] Omega attempt 1 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,428 [WARNING] Omega attempt 2 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,428 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:11:48,432 [WARNING] Omega attempt 1 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,435 [WARNING] Omega attempt 2 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:11:48,435 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:11:48,439 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 16:11:48,439 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 16:11:48,444 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 16:11:48,457 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 16:11:48,457 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 16:11:48,462 [INFO] CFA N=5902
+2026-08-04 16:11:48,494 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 16:11:48,497 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 16:11:48,497 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:16:10,205 [INFO] ===============================================================
+2026-08-04 16:16:10,205 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 16:16:10,205 [INFO] ===============================================================
+2026-08-04 16:16:10,222 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:16:10,258 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 16:16:10,260 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 16:16:10,269 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 16:16:10,279 [WARNING] Omega attempt 1 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,284 [WARNING] Omega attempt 2 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,284 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:16:10,291 [WARNING] Omega attempt 1 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,296 [WARNING] Omega attempt 2 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,296 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:16:10,303 [WARNING] Omega attempt 1 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,309 [WARNING] Omega attempt 2 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,309 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:16:10,313 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 16:16:10,317 [WARNING] Omega attempt 1 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,321 [WARNING] Omega attempt 2 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,321 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:16:10,326 [WARNING] Omega attempt 1 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,329 [WARNING] Omega attempt 2 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,329 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:16:10,334 [WARNING] Omega attempt 1 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,338 [WARNING] Omega attempt 2 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,338 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:16:10,340 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 16:16:10,344 [WARNING] Omega attempt 1 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,347 [WARNING] Omega attempt 2 for Machiavellianism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,347 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:16:10,351 [WARNING] Omega attempt 1 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,355 [WARNING] Omega attempt 2 for Psychopathy failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,355 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:16:10,361 [WARNING] Omega attempt 1 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,364 [WARNING] Omega attempt 2 for Narcissism failed: Could not extract loadings or residual variances.
+2026-08-04 16:16:10,364 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:16:10,367 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 16:16:10,367 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-08-04 16:16:10,368 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-08-04 16:16:10,373 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-08-04 16:16:10,373 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 16:16:10,377 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 16:16:10,388 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 16:16:10,388 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 16:16:10,393 [INFO] CFA N=5902
+2026-08-04 16:16:10,422 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 16:16:10,424 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 16:16:10,424 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:19:54,769 [INFO] ===============================================================
+2026-08-04 16:19:54,770 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 16:19:54,770 [INFO] ===============================================================
+2026-08-04 16:19:54,787 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:19:54,826 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 16:19:54,828 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 16:19:54,838 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 16:19:54,846 [WARNING] Omega attempt 1 for Machiavellianism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,850 [WARNING] Omega attempt 2 for Machiavellianism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,850 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:19:54,854 [WARNING] Omega attempt 1 for Psychopathy failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,858 [WARNING] Omega attempt 2 for Psychopathy failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,858 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:19:54,863 [WARNING] Omega attempt 1 for Narcissism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,866 [WARNING] Omega attempt 2 for Narcissism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,866 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:19:54,870 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 16:19:54,872 [WARNING] Omega attempt 1 for Machiavellianism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,874 [WARNING] Omega attempt 2 for Machiavellianism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,874 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:19:54,878 [WARNING] Omega attempt 1 for Psychopathy failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,880 [WARNING] Omega attempt 2 for Psychopathy failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,880 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:19:54,883 [WARNING] Omega attempt 1 for Narcissism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,885 [WARNING] Omega attempt 2 for Narcissism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,885 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:19:54,888 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 16:19:54,890 [WARNING] Omega attempt 1 for Machiavellianism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,892 [WARNING] Omega attempt 2 for Machiavellianism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,892 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:19:54,894 [WARNING] Omega attempt 1 for Psychopathy failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,896 [WARNING] Omega attempt 2 for Psychopathy failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,896 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:19:54,899 [WARNING] Omega attempt 1 for Narcissism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,900 [WARNING] Omega attempt 2 for Narcissism failed: 'Model' object has no attribute 'get_stand_estimates'
+2026-08-04 16:19:54,900 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:19:54,904 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 16:19:54,904 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-08-04 16:19:54,905 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-08-04 16:19:54,908 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-08-04 16:19:54,908 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 16:19:54,912 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 16:19:54,923 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 16:19:54,924 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 16:19:54,930 [INFO] CFA N=5902
+2026-08-04 16:19:54,960 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 16:19:54,962 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 16:19:54,962 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:21:47,095 [INFO] ===============================================================
+2026-08-04 16:21:47,095 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 16:21:47,095 [INFO] ===============================================================
+2026-08-04 16:21:47,112 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:21:47,146 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 16:21:47,148 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 16:21:47,156 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 16:21:47,165 [WARNING] Omega attempt 1 for Machiavellianism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,171 [WARNING] Omega attempt 2 for Machiavellianism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,171 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:21:47,176 [WARNING] Omega attempt 1 for Psychopathy failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,180 [WARNING] Omega attempt 2 for Psychopathy failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,180 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:21:47,185 [WARNING] Omega attempt 1 for Narcissism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,190 [WARNING] Omega attempt 2 for Narcissism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,190 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:21:47,194 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 16:21:47,197 [WARNING] Omega attempt 1 for Machiavellianism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,200 [WARNING] Omega attempt 2 for Machiavellianism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,200 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:21:47,204 [WARNING] Omega attempt 1 for Psychopathy failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,208 [WARNING] Omega attempt 2 for Psychopathy failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,208 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:21:47,212 [WARNING] Omega attempt 1 for Narcissism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,215 [WARNING] Omega attempt 2 for Narcissism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,215 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:21:47,217 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 16:21:47,221 [WARNING] Omega attempt 1 for Machiavellianism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,224 [WARNING] Omega attempt 2 for Machiavellianism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,224 [ERROR] All Omega attempts for Machiavellianism exhausted. Returning NaN.
+2026-08-04 16:21:47,227 [WARNING] Omega attempt 1 for Psychopathy failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,230 [WARNING] Omega attempt 2 for Psychopathy failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,230 [ERROR] All Omega attempts for Psychopathy exhausted. Returning NaN.
+2026-08-04 16:21:47,234 [WARNING] Omega attempt 1 for Narcissism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,237 [WARNING] Omega attempt 2 for Narcissism failed: Extraction mismatch: 0 loadings, 4 residuals.
+2026-08-04 16:21:47,237 [ERROR] All Omega attempts for Narcissism exhausted. Returning NaN.
+2026-08-04 16:21:47,243 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 16:21:47,243 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-08-04 16:21:47,244 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-08-04 16:21:47,247 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-08-04 16:21:47,248 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 16:21:47,252 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 16:21:47,265 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 16:21:47,265 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 16:21:47,271 [INFO] CFA N=5902
+2026-08-04 16:21:47,302 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 16:21:47,303 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 16:21:47,303 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:25:52,083 [INFO] ===============================================================
+2026-08-04 16:25:52,083 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 16:25:52,083 [INFO] ===============================================================
+2026-08-04 16:25:52,100 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:25:52,135 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 16:25:52,137 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 16:25:52,149 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 16:25:52,170 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 16:25:52,183 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 16:25:52,195 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 16:25:52,196 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-08-04 16:25:52,197 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-08-04 16:25:52,200 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-08-04 16:25:52,200 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 16:25:52,205 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 16:25:52,216 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 16:25:52,216 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 16:25:52,222 [INFO] CFA N=5902
+2026-08-04 16:25:52,253 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 16:25:52,254 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 16:25:52,255 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:29:43,472 [INFO] ===============================================================
+2026-08-04 16:29:43,473 [INFO]  DT³ PHASE 3 (REMEDIATED): Layer 1 - Unsupervised Structural
+2026-08-04 16:29:43,473 [INFO] ===============================================================
+2026-08-04 16:29:43,490 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:29:43,529 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+2026-08-04 16:29:43,531 [INFO] Complete‑case N = 9465 (out of 9466 total)
+2026-08-04 16:29:43,534 [INFO] Using complete‑case covariance (N=9465, P=12).
+2026-08-04 16:29:44,187 [INFO] EBIC Optimization Complete. Min EBIC: 272680.69 at Alpha: 0.1194
+2026-08-04 16:29:44,188 [INFO] Network constructed with 41 non‑zero partial correlation edges.
+2026-08-04 16:29:44,188 [INFO] Louvain Community Detection identified 3 structural clusters.
+2026-08-04 16:29:44,462 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png
+2026-08-04 16:29:44,462 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+2026-08-04 16:29:44,464 [INFO] Complete‑case N = 0 (out of 9466 total)
+2026-08-04 16:29:44,464 [CRITICAL] PIPELINE HALTED DUE TO MATHEMATICAL OR STRUCTURAL VIOLATION: Insufficient complete cases for any network analysis.
+2026-08-04 16:33:02,483 [INFO] ===============================================================
+2026-08-04 16:33:02,483 [INFO]  DT³ PHASE 3 (REMEDIATED v2): Layer 1 - Unsupervised Structural
+2026-08-04 16:33:02,484 [INFO] ===============================================================
+2026-08-04 16:33:02,501 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:33:02,547 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+2026-08-04 16:33:02,549 [INFO] Complete‑case N = 9465 (out of 9466 total)
+2026-08-04 16:33:02,552 [INFO] Using complete‑case correlation (N=9465, P=12).
+2026-08-04 16:33:03,469 [INFO] EBIC Optimization Complete. Min EBIC: 272696.52 at Alpha: 0.1194
+2026-08-04 16:33:03,469 [INFO] Network constructed with 41 non‑zero edges.
+2026-08-04 16:33:03,472 [INFO] Louvain Community Detection identified 3 clusters.
+2026-08-04 16:33:03,709 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png
+2026-08-04 16:33:03,710 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+2026-08-04 16:33:03,711 [INFO] Complete‑case N = 0 (out of 9466 total)
+2026-08-04 16:33:03,711 [INFO] Complete‑case N < 30; switching to pairwise‑deletion correlation.
+2026-08-04 16:33:04,365 [INFO] Using pairwise‑deletion correlation (effective N≈6734, P=88).
+2026-08-04 16:33:09,237 [INFO] EBIC Optimization Complete. Min EBIC: 7110950009907.33 at Alpha: 0.0289
+2026-08-04 16:33:09,238 [INFO] Network constructed with 274 non‑zero edges.
+2026-08-04 16:33:09,239 [INFO] Louvain Community Detection identified 27 clusters.
+2026-08-04 16:33:09,486 [INFO] Network visualization saved to results/figures/layer1_ggm_network_Full_Item_Space.png
+2026-08-04 16:33:09,486 [INFO] --- Executing Topological Data Analysis (Mapper) ---
+2026-08-04 16:33:09,487 [INFO] Topological Space: 9465 observations, 12 dimensions.
+2026-08-04 16:33:09,750 [INFO] TDA Mapper topology saved to results/figures/layer1_tda_mapper.html
+2026-08-04 16:33:09,750 [INFO] === PHASE 3 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:37:57,922 [INFO] ===============================================================
+2026-08-04 16:37:57,922 [INFO]  DT³ PHASE 3 (REMEDIATED v3): Layer 1 - Unsupervised Structural
+2026-08-04 16:37:57,922 [INFO] ===============================================================
+2026-08-04 16:37:57,925 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:37:57,956 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+2026-08-04 16:37:57,957 [INFO] Complete‑case N = 9465 (out of 9466 total)
+2026-08-04 16:37:57,961 [INFO] Using complete‑case correlation (N=9465, P=12).
+2026-08-04 16:37:58,988 [INFO] EBIC Optimization Complete. Min EBIC: 272696.12 at Alpha: 0.1194
+2026-08-04 16:37:58,988 [INFO] Network constructed with 41 non‑zero edges.
+2026-08-04 16:37:58,988 [INFO] Louvain Community Detection identified 3 clusters.
+2026-08-04 16:37:59,213 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png
+2026-08-04 16:37:59,213 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+2026-08-04 16:37:59,214 [INFO] Complete‑case N = 0 (out of 9466 total)
+2026-08-04 16:37:59,214 [INFO] Complete‑case N < 30; switching to pairwise‑deletion correlation.
+2026-08-04 16:37:59,982 [INFO] Using projected pairwise correlation (effective N≈6734, P=88).
+2026-08-04 16:38:02,807 [INFO] EBIC Optimization Complete. Min EBIC: 16501479.62 at Alpha: 0.0289
+2026-08-04 16:38:02,807 [INFO] Network constructed with 274 non‑zero edges.
+2026-08-04 16:38:02,809 [INFO] Louvain Community Detection identified 27 clusters.
+2026-08-04 16:38:03,049 [INFO] Network visualization saved to results/figures/layer1_ggm_network_Full_Item_Space.png
+2026-08-04 16:38:03,049 [INFO] --- Executing Topological Data Analysis (Mapper) ---
+2026-08-04 16:38:03,050 [INFO] Topological Space: 9465 observations, 12 dimensions.
+2026-08-04 16:38:03,294 [INFO] TDA Mapper topology saved to results/figures/layer1_tda_mapper.html
+2026-08-04 16:38:03,294 [INFO] === PHASE 3 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:42:23,391 [INFO] ===============================================================
+2026-08-04 16:42:23,391 [INFO]  DT³ PHASE 3 (REMEDIATED v4): Layer 1 - Unsupervised Structural
+2026-08-04 16:42:23,391 [INFO] ===============================================================
+2026-08-04 16:42:23,408 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:42:23,440 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+2026-08-04 16:42:23,442 [INFO] Complete‑case N = 9465 (out of 9466 total)
+2026-08-04 16:42:23,445 [INFO] Using complete‑case correlation (N=9465, P=12).
+2026-08-04 16:42:24,024 [INFO] EBIC Optimization Complete. Min EBIC: 68747.33 at Alpha: 0.0100
+2026-08-04 16:42:24,024 [INFO] Network constructed with 50 non‑zero edges.
+2026-08-04 16:42:24,027 [INFO] Louvain Community Detection identified 3 clusters.
+2026-08-04 16:42:24,281 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png
+2026-08-04 16:42:24,281 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+2026-08-04 16:42:24,282 [INFO] Complete‑case N = 0 (out of 9466 total)
+2026-08-04 16:42:24,282 [INFO] Complete‑case N < 30; switching to pairwise‑deletion correlation.
+2026-08-04 16:42:25,065 [INFO] Using projected pairwise correlation (effective N≈6734, P=88).
+2026-08-04 16:42:33,853 [INFO] EBIC Optimization Complete. Min EBIC: 393790.72 at Alpha: 0.0346
+2026-08-04 16:42:33,854 [INFO] Network constructed with 697 non‑zero edges.
+2026-08-04 16:42:33,857 [INFO] Louvain Community Detection identified 20 clusters.
+2026-08-04 16:42:34,147 [INFO] Network visualization saved to results/figures/layer1_ggm_network_Full_Item_Space.png
+2026-08-04 16:42:34,147 [INFO] --- Executing Topological Data Analysis (Mapper) ---
+2026-08-04 16:42:34,148 [INFO] Topological Space: 9465 observations, 12 dimensions.
+2026-08-04 16:42:34,404 [INFO] TDA Mapper topology saved to results/figures/layer1_tda_mapper.html
+2026-08-04 16:42:34,405 [INFO] === PHASE 3 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:46:53,611 [INFO] ===============================================================
+2026-08-04 16:46:53,611 [INFO]  DT³ PHASE 4 (REMEDIATED v4): Layer 2 - Supervised Divergence
+2026-08-04 16:46:53,611 [INFO] ===============================================================
+2026-08-04 16:46:53,628 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:46:53,665 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 16:46:53,678 [CRITICAL] UNEXPECTED FAILURE: Found array with 0 sample(s) (shape=(0, 7)) while a minimum of 1 is required by StandardScaler.
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/04_layer2_supervised.py", line 337, in <module>
+    y_tr_raw, y_te_raw, predictors, scaler_y) = prepare_data_strict(df_master)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/04_layer2_supervised.py", line 115, in prepare_data_strict
+    X_test_scaled = scaler_X.transform(X_test)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/preprocessing/_data.py", line 1111, in transform
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 3038, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1110, in check_array
+    raise ValueError(
+ValueError: Found array with 0 sample(s) (shape=(0, 7)) while a minimum of 1 is required by StandardScaler.
+2026-08-04 16:50:00,488 [INFO] ===============================================================
+2026-08-04 16:50:00,488 [INFO]  DT³ PHASE 4 (REMEDIATED v4.1): Layer 2 - Supervised Divergence
+2026-08-04 16:50:00,488 [INFO] ===============================================================
+2026-08-04 16:50:00,505 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:50:00,541 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 16:50:00,541 [INFO] Sample counts in master dataset:
+2026-08-04 16:50:00,544 [INFO]   sample_1_community: 5903
+2026-08-04 16:50:00,546 [INFO]   sample_2_student: 2071
+2026-08-04 16:50:00,546 [INFO]   sample_3_representative: 1492
+2026-08-04 16:50:00,551 [INFO]   sample_1_community: 5903 rows before NA drop
+2026-08-04 16:50:00,553 [INFO]   sample_1_community: 5096 rows after NA drop
+2026-08-04 16:50:00,555 [INFO]   sample_3_representative: 1492 rows before NA drop
+2026-08-04 16:50:00,555 [INFO]   sample_3_representative: 0 rows after NA drop
+2026-08-04 16:50:00,555 [CRITICAL] PIPELINE HALTED: Test sample (representative) is empty. Possible cause: the representative sample was dropped during preprocessing. Re-run Phase 1 with the corrected 01_preprocess_data.py script.
+2026-08-04 16:50:53,728 [INFO] ===============================================================
+2026-08-04 16:50:53,728 [INFO]  DT³ PHASE 1 (REMEDIATED): Data Preprocessing
+2026-08-04 16:50:53,728 [INFO] ===============================================================
+2026-08-04 16:50:53,919 [INFO] Cryptographic Hash (sample_1_community): a625842f3a471aedfbb067d656e1b8ab2b583052eaeea2c2ebd8a1e1da0e9a7d
+2026-08-04 16:50:53,925 [INFO] Cryptographic Hash (sample_2_student): 2133bcd49c37f4551fa329427308dcdf5a4e3886e2fba3e82fbe79497d6ee83a
+2026-08-04 16:50:53,928 [INFO] Cryptographic Hash (sample_3_representative): 38ebfd78a2d84554f7c1d43239a88c844d0b548e8f3a21f64480675a6352e55d
+2026-08-04 16:50:53,957 [INFO] --- Cleaning sample_1_community ---
+2026-08-04 16:50:53,960 [INFO] Age filter removed 3534 rows.
+2026-08-04 16:50:53,962 [INFO] After DTDD item cleaning: 5903 rows remain.
+2026-08-04 16:50:53,964 [INFO] Computed BFI_A_sum from 9 items in sample_1_community.
+2026-08-04 16:50:53,965 [INFO] Computed BFI_C_sum from 9 items in sample_1_community.
+2026-08-04 16:50:53,966 [INFO] Computed BFI_N_sum from 8 items in sample_1_community.
+2026-08-04 16:50:53,967 [INFO] Computed BFI_O_sum from 10 items in sample_1_community.
+2026-08-04 16:50:53,968 [INFO] Computed BFI_E_sum from 8 items in sample_1_community.
+2026-08-04 16:50:53,969 [INFO] Computed TEQ_sum from 7 items in sample_1_community.
+2026-08-04 16:50:53,970 [INFO] Computed RSES_sum from 10 items in sample_1_community.
+2026-08-04 16:50:53,970 [INFO] Finished cleaning sample_1_community: retained 5903 / 10518 rows.
+2026-08-04 16:50:53,984 [INFO] --- Cleaning sample_2_student ---
+2026-08-04 16:50:53,985 [INFO] Age filter removed 37 rows.
+2026-08-04 16:50:53,987 [INFO] After DTDD item cleaning: 2071 rows remain.
+2026-08-04 16:50:53,988 [WARNING] No items found for prefix BFI_A_. Skipping composite BFI_A_sum.
+2026-08-04 16:50:53,988 [WARNING] No items found for prefix BFI_C_. Skipping composite BFI_C_sum.
+2026-08-04 16:50:53,988 [INFO] Computed BFI_N_sum from 8 items in sample_2_student.
+2026-08-04 16:50:53,988 [WARNING] No items found for prefix BFI_O_. Skipping composite BFI_O_sum.
+2026-08-04 16:50:53,988 [WARNING] No BFI‑E items found in sample_2_student. Extraversion will be missing.
+2026-08-04 16:50:53,989 [INFO] Computed TEQ_sum from 19 items in sample_2_student.
+2026-08-04 16:50:53,990 [INFO] Computed RSES_sum from 10 items in sample_2_student.
+2026-08-04 16:50:53,990 [INFO] Finished cleaning sample_2_student: retained 2071 / 5334 rows.
+2026-08-04 16:50:53,995 [INFO] --- Cleaning sample_3_representative ---
+2026-08-04 16:50:53,995 [INFO] Age filter removed 2 rows.
+2026-08-04 16:50:53,996 [INFO] After DTDD item cleaning: 1492 rows remain.
+2026-08-04 16:50:53,998 [INFO] Computed BFI_A_sum from 9 items in sample_3_representative.
+2026-08-04 16:50:53,998 [INFO] Computed BFI_C_sum from 9 items in sample_3_representative.
+2026-08-04 16:50:53,999 [INFO] Computed BFI_N_sum from 8 items in sample_3_representative.
+2026-08-04 16:50:53,999 [INFO] Computed BFI_O_sum from 10 items in sample_3_representative.
+2026-08-04 16:50:54,000 [INFO] Computed BFI_E_sum from 8 items in sample_3_representative.
+2026-08-04 16:50:54,000 [INFO] Computed TEQ_sum from 7 items in sample_3_representative.
+2026-08-04 16:50:54,000 [WARNING] No items found for prefix RSES_. Skipping composite RSES_sum.
+2026-08-04 16:50:54,000 [INFO] Finished cleaning sample_3_representative: retained 1492 / 1665 rows.
+2026-08-04 16:50:54,003 [INFO] BFI_E_sum successfully constructed and included.
+2026-08-04 16:50:54,191 [INFO] Saved master dataset to data/processed/dt3_master_dataset.csv with shape (9466, 128)
+2026-08-04 16:50:54,208 [INFO] Saved test‑retest dataset to data/processed/dt3_test_retest.csv with 61 matched pairs.
+2026-08-04 16:50:54,208 [INFO] === PHASE 1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:51:05,236 [INFO] ===============================================================
+2026-08-04 16:51:05,236 [INFO]  DT³ PHASE 4 (REMEDIATED v4.1): Layer 2 - Supervised Divergence
+2026-08-04 16:51:05,236 [INFO] ===============================================================
+2026-08-04 16:51:05,238 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:51:05,270 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 16:51:05,270 [INFO] Sample counts in master dataset:
+2026-08-04 16:51:05,273 [INFO]   sample_1_community: 5903
+2026-08-04 16:51:05,274 [INFO]   sample_2_student: 2071
+2026-08-04 16:51:05,275 [INFO]   sample_3_representative: 1492
+2026-08-04 16:51:05,278 [INFO]   sample_1_community: 5903 rows before NA drop
+2026-08-04 16:51:05,279 [INFO]   sample_1_community: 5096 rows after NA drop
+2026-08-04 16:51:05,282 [INFO]   sample_3_representative: 1492 rows before NA drop
+2026-08-04 16:51:05,282 [INFO]   sample_3_representative: 0 rows after NA drop
+2026-08-04 16:51:05,282 [CRITICAL] PIPELINE HALTED: Test sample (representative) is empty. Possible cause: the representative sample was dropped during preprocessing. Re-run Phase 1 with the corrected 01_preprocess_data.py script.
+2026-08-04 16:52:22,119 [INFO] ===============================================================
+2026-08-04 16:52:22,120 [INFO]  DT³ PHASE 4 (REMEDIATED v4.2): Layer 2 - Supervised Divergence
+2026-08-04 16:52:22,120 [INFO] ===============================================================
+2026-08-04 16:52:22,136 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:52:22,173 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 16:52:22,173 [INFO] Sample counts in master dataset:
+2026-08-04 16:52:22,176 [INFO]   sample_1_community: 5903
+2026-08-04 16:52:22,177 [INFO]   sample_2_student: 2071
+2026-08-04 16:52:22,178 [INFO]   sample_3_representative: 1492
+2026-08-04 16:52:22,185 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-08-04 16:52:22,185 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'RSES_sum']
+2026-08-04 16:52:22,185 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum']
+2026-08-04 16:52:22,185 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 16:52:22,195 [INFO] Train Shape: X=(5215, 6), y=(5215, 3)
+2026-08-04 16:52:22,195 [INFO] Test Shape:  X=(1492, 6), y=(1492, 3)
+2026-08-04 16:52:22,195 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+2026-08-04 16:52:22,643 [CRITICAL] UNEXPECTED FAILURE: ReduceLROnPlateau.__init__() got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/04_layer2_supervised.py", line 374, in <module>
+    model, activations, _ = train_mtl_network(X_tr, y_tr_scaled, X_te, y_te_scaled)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/04_layer2_supervised.py", line 218, in train_mtl_network
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.5, patience=20, verbose=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ReduceLROnPlateau.__init__() got an unexpected keyword argument 'verbose'
+2026-08-04 16:53:31,207 [INFO] ===============================================================
+2026-08-04 16:53:31,207 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+2026-08-04 16:53:31,207 [INFO] ===============================================================
+2026-08-04 16:53:31,209 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:53:31,241 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 16:53:31,241 [INFO] Sample counts in master dataset:
+2026-08-04 16:53:31,243 [INFO]   sample_1_community: 5903
+2026-08-04 16:53:31,244 [INFO]   sample_2_student: 2071
+2026-08-04 16:53:31,245 [INFO]   sample_3_representative: 1492
+2026-08-04 16:53:31,251 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-08-04 16:53:31,251 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'RSES_sum']
+2026-08-04 16:53:31,251 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum']
+2026-08-04 16:53:31,251 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 16:53:31,261 [INFO] Train Shape: X=(5215, 6), y=(5215, 3)
+2026-08-04 16:53:31,261 [INFO] Test Shape:  X=(1492, 6), y=(1492, 3)
+2026-08-04 16:53:31,261 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+2026-08-04 16:53:44,336 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7399
+2026-08-04 16:53:44,336 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+2026-08-04 16:53:44,339 [INFO] Identified 325 high scorers for score_Machiavellianism
+2026-08-04 16:53:44,339 [INFO] Identified 343 high scorers for score_Psychopathy
+2026-08-04 16:53:44,339 [INFO] Identified 390 high scorers for score_Narcissism
+2026-08-04 16:53:44,518 [INFO] Observed mean CKA: 0.0486 | Null mean: 0.0780 ± 0.0045 | p (lower) = 0.0000
+2026-08-04 16:53:44,708 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+2026-08-04 16:53:44,775 [INFO] XGBoost [score_Machiavellianism]: R²=0.149, Top Driver=BFI_A_sum
+2026-08-04 16:53:44,834 [INFO] XGBoost [score_Psychopathy]: R²=0.207, Top Driver=TEQ_sum
+2026-08-04 16:53:44,891 [INFO] XGBoost [score_Narcissism]: R²=0.108, Top Driver=age
+2026-08-04 16:53:44,898 [INFO] === PHASE 4 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 16:58:43,437 [INFO] ===============================================================
+2026-08-04 16:58:43,437 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+2026-08-04 16:58:43,437 [INFO] ===============================================================
+2026-08-04 16:58:43,454 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 16:58:43,493 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 16:58:43,493 [INFO] Sample counts in master dataset:
+2026-08-04 16:58:43,497 [INFO]   sample_1_community: 5903
+2026-08-04 16:58:43,498 [INFO]   sample_2_student: 2071
+2026-08-04 16:58:43,499 [INFO]   sample_3_representative: 1492
+2026-08-04 16:58:43,507 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-08-04 16:58:43,507 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+2026-08-04 16:58:43,507 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+2026-08-04 16:58:43,507 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 16:58:43,519 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+2026-08-04 16:58:43,519 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+2026-08-04 16:58:43,519 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+2026-08-04 16:58:56,495 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7743
+2026-08-04 16:58:56,495 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+2026-08-04 16:58:56,498 [INFO] Identified 325 high scorers for score_Machiavellianism
+2026-08-04 16:58:56,498 [INFO] Identified 343 high scorers for score_Psychopathy
+2026-08-04 16:58:56,498 [INFO] Identified 390 high scorers for score_Narcissism
+2026-08-04 16:58:56,651 [INFO] Observed mean CKA: 0.0553 | Null mean: 0.0912 ± 0.0043 | p (lower) = 0.0000
+2026-08-04 16:58:56,658 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+2026-08-04 16:58:56,721 [INFO] XGBoost [score_Machiavellianism]: R²=0.147, Top Driver=BFI_A_sum
+2026-08-04 16:58:56,779 [INFO] XGBoost [score_Psychopathy]: R²=0.218, Top Driver=TEQ_sum
+2026-08-04 16:58:56,837 [INFO] XGBoost [score_Narcissism]: R²=0.132, Top Driver=age
+2026-08-04 16:58:56,840 [INFO] === PHASE 4 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:03:37,458 [INFO] ===============================================================
+2026-08-04 17:03:37,458 [INFO]  DT³ PHASE 2.1 (REMEDIATED): Symbolic Regression (Unscaled) 
+2026-08-04 17:03:37,458 [INFO] ===============================================================
+2026-08-04 17:03:37,460 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:03:37,493 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 17:03:37,500 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:03:37,500 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:03:37,509 [INFO] --- Executing Symbolic Regression (Unscaled Targets) ---
+2026-08-04 17:03:37,509 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 17:04:01,824 [INFO] Discovered Form [score_Machiavellianism]: sub(div(add(0.646, 0.278), sub(div(BFI_N_sum, BFI_N_sum), add(0.646, 0.278))), add(add(div(sub(sub(div(div(add(TEQ_sum, BFI_O_sum), sub(BFI_E_sum, BFI_E_sum)), sub(div(BFI_N_sum, BFI_N_sum), add(0.646, 0.278))), add(add(div(sub(add(sub(div(BFI_N_sum, BFI_N_sum), add(0.646, 0.278)), div(add(TEQ_sum, BFI_O_sum), sub(BFI_E_sum, BFI_E_sum))), -0.561), div(TEQ_sum, TEQ_sum)), mul(0.730, BFI_C_sum)), add(add(TEQ_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum)))), add(div(div(BFI_N_sum, BFI_N_sum), sub(BFI_E_sum, BFI_E_sum)), add(0.646, 0.278))), sub(BFI_E_sum, BFI_E_sum)), mul(0.730, BFI_C_sum)), add(add(TEQ_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))))
+2026-08-04 17:04:01,824 [INFO] Validation R² -> Discovery: 0.137 | Replication: 0.152
+2026-08-04 17:04:01,824 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 17:04:30,705 [INFO] Discovered Form [score_Psychopathy]: sub(div(add(div(div(div(BFI_E_sum, BFI_E_sum), mul(0.647, 0.530)), mul(0.647, 0.530)), mul(add(TEQ_sum, add(add(add(age, BFI_N_sum), mul(div(div(BFI_E_sum, BFI_E_sum), mul(0.647, 0.530)), BFI_A_sum)), mul(add(TEQ_sum, 0.533), sub(BFI_E_sum, BFI_A_sum)))), -0.391)), div(div(div(BFI_E_sum, BFI_E_sum), mul(0.647, 0.530)), sub(BFI_C_sum, BFI_C_sum))), add(BFI_A_sum, mul(sub(TEQ_sum, 0.533), div(BFI_E_sum, BFI_E_sum))))
+2026-08-04 17:04:30,705 [INFO] Validation R² -> Discovery: 0.253 | Replication: 0.155
+2026-08-04 17:04:30,705 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 17:04:53,725 [INFO] Discovered Form [score_Narcissism]: sub(sub(div(div(BFI_N_sum, BFI_N_sum), sub(div(BFI_N_sum, BFI_N_sum), add(0.646, 0.278))), add(sub(-0.352, BFI_O_sum), add(BFI_A_sum, age))), sub(BFI_A_sum, BFI_E_sum))
+2026-08-04 17:04:53,725 [INFO] Validation R² -> Discovery: 0.097 | Replication: 0.137
+2026-08-04 17:04:53,733 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 17:04:53,737 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:09:00,820 [INFO] ===============================================================
+2026-08-04 17:09:00,821 [INFO]  DT³ PHASE 2.1 (REMEDIATED): Symbolic Regression (Unscaled) 
+2026-08-04 17:09:00,821 [INFO] ===============================================================
+2026-08-04 17:09:00,838 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:09:00,874 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 17:09:00,881 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:09:00,881 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:09:00,897 [INFO] --- Executing Symbolic Regression (Unscaled Targets) ---
+2026-08-04 17:09:00,897 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 17:09:00,897 [CRITICAL] UNEXPECTED FAILURE: invalid type <class 'function'> found in `function_set`.
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/02.1_layer2_symbolic_regression.py", line 221, in <module>
+    execute_symbolic_regression(X_tr, y_tr, X_te, y_te, preds)
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/02.1_layer2_symbolic_regression.py", line 175, in execute_symbolic_regression
+    est.fit(X_train, y_train_trait)
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/gplearn/genetic.py", line 353, in fit
+    raise ValueError('invalid type %s found in `function_set`.'
+ValueError: invalid type <class 'function'> found in `function_set`.
+2026-08-04 17:09:54,052 [INFO] ===============================================================
+2026-08-04 17:09:54,053 [INFO]  DT³ PHASE 2.1 (REMEDIATED): Symbolic Regression (Unscaled) 
+2026-08-04 17:09:54,053 [INFO] ===============================================================
+2026-08-04 17:09:54,055 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:09:54,091 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 17:09:54,098 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:09:54,098 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:09:54,114 [INFO] --- Executing Symbolic Regression (Unscaled Targets) ---
+2026-08-04 17:09:54,114 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 17:10:30,445 [INFO] Discovered Form [score_Machiavellianism]: mul(add(sub(0.989, -0.939), 0.927), add(sub(0.989, -0.939), add(0.967, sub(0.972, BFI_A_sum))))
+2026-08-04 17:10:30,445 [INFO] Validation R² -> Discovery: 0.080 | Replication: 0.127
+2026-08-04 17:10:30,445 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 17:11:07,273 [INFO] Discovered Form [score_Psychopathy]: mul(sub(sub(0.929, -0.961), -0.961), sub(sub(sub(0.929, TEQ_sum), -0.961), -0.961))
+2026-08-04 17:11:07,273 [INFO] Validation R² -> Discovery: 0.060 | Replication: -0.032
+2026-08-04 17:11:07,274 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 17:11:45,466 [INFO] Discovered Form [score_Narcissism]: mul(add(0.927, sub(0.897, -0.939)), mul(sub(0.897, -0.939), add(0.927, sub(0.897, -0.939))))
+2026-08-04 17:11:45,467 [INFO] Validation R² -> Discovery: -0.003 | Replication: -0.173
+2026-08-04 17:11:45,652 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 17:11:45,663 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:14:19,871 [INFO] ===============================================================
+2026-08-04 17:14:19,871 [INFO]  DT³ PHASE 2.1 (REMEDIATED): Symbolic Regression (Unscaled) 
+2026-08-04 17:14:19,871 [INFO] ===============================================================
+2026-08-04 17:14:19,887 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:14:19,922 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 17:14:19,930 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:14:19,930 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:14:19,951 [INFO] --- Executing Symbolic Regression (Standardized) ---
+2026-08-04 17:14:19,951 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 17:14:31,784 [INFO] Discovered Form [score_Machiavellianism]: mul(-0.569, BFI_A_sum)
+2026-08-04 17:14:31,785 [INFO] Validation R² -> Discovery: 0.085 | Replication: 0.025
+2026-08-04 17:14:31,785 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 17:14:44,517 [INFO] Discovered Form [score_Psychopathy]: min(neg(min(0.455, BFI_A_sum)), mul(TEQ_sum, -0.643))
+2026-08-04 17:14:44,517 [INFO] Validation R² -> Discovery: 0.188 | Replication: 0.137
+2026-08-04 17:14:44,517 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 17:14:56,957 [INFO] Discovered Form [score_Narcissism]: mul(-0.248, neg(add(sub(BFI_E_sum, BFI_A_sum), neg(age))))
+2026-08-04 17:14:56,957 [INFO] Validation R² -> Discovery: 0.095 | Replication: 0.095
+2026-08-04 17:14:57,140 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 17:14:57,144 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:19:58,131 [INFO] ===============================================================
+2026-08-04 17:19:58,131 [INFO]  DT³ PHASE 2.1 (REMEDIATED v6): Symbolic Regression (Unscaled + Wide Constants)
+2026-08-04 17:19:58,131 [INFO] ===============================================================
+2026-08-04 17:19:58,148 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:19:58,182 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 17:19:58,190 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:19:58,190 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:19:58,213 [INFO] --- Executing Symbolic Regression (Unscaled Targets, Wide Constants) ---
+2026-08-04 17:19:58,213 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 17:20:26,924 [INFO] Discovered Form [score_Machiavellianism]: sub(sub(sub(sub(11.639, BFI_A_sum), BFI_C_sum), sub(TEQ_sum, BFI_E_sum)), BFI_A_sum)
+2026-08-04 17:20:27,101 [INFO] Validation R² -> Discovery: 0.147 | Replication: 0.114
+2026-08-04 17:20:27,101 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 17:20:55,418 [INFO] Discovered Form [score_Psychopathy]: sub(sub(8.879, add(TEQ_sum, TEQ_sum)), BFI_A_sum)
+2026-08-04 17:20:55,595 [INFO] Validation R² -> Discovery: 0.204 | Replication: 0.147
+2026-08-04 17:20:55,595 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 17:21:24,723 [INFO] Discovered Form [score_Narcissism]: sub(add(13.730, sub(BFI_E_sum, BFI_A_sum)), sub(add(BFI_A_sum, age), BFI_O_sum))
+2026-08-04 17:21:24,900 [INFO] Validation R² -> Discovery: 0.098 | Replication: 0.131
+2026-08-04 17:21:24,908 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 17:21:24,919 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:25:17,247 [INFO] ===============================================================
+2026-08-04 17:25:17,247 [INFO]  DT³ PHASE 5 (REMEDIATED): Layer 3 – Exploratory Dependence & Frozen Counterfactuals
+2026-08-04 17:25:17,247 [INFO] ===============================================================
+2026-08-04 17:25:17,264 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:25:17,297 [INFO] --- Preparing Layer 3 Data (Exploratory Dependence + Counterfactuals) ---
+2026-08-04 17:25:17,305 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:25:17,305 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:25:17,320 [INFO] --- Executing Exploratory Dependence Graph (Partial Correlations) ---
+2026-08-04 17:25:17,321 [INFO] Exploratory Dependence Graph: 16 significant edges (α corrected = 0.000048).
+2026-08-04 17:25:17,325 [INFO] --- Executing Frozen‑Demographics Counterfactual Analysis ---
+2026-08-04 17:25:17,325 [INFO] Immutable features (frozen): ['age']
+2026-08-04 17:25:17,415 [INFO] Median threshold for score_Machiavellianism: 9.00
+2026-08-04 17:25:17,501 [INFO] Median threshold for score_Psychopathy: 9.00
+2026-08-04 17:25:17,587 [INFO] Median threshold for score_Narcissism: 12.00
+2026-08-04 17:25:17,587 [INFO] Counterfactuals for score_Machiavellianism: 325 high scorers (≥15.00).
+2026-08-04 17:28:05,772 [INFO]   [score_Machiavellianism] Primary tipping feature: BFI_A_sum (99.7%)
+2026-08-04 17:28:05,773 [INFO] Counterfactuals for score_Psychopathy: 343 high scorers (≥14.00).
+2026-08-04 17:30:39,192 [INFO]   [score_Psychopathy] Primary tipping feature: BFI_A_sum (100.0%)
+2026-08-04 17:30:39,192 [INFO] Counterfactuals for score_Narcissism: 390 high scorers (≥16.00).
+2026-08-04 17:33:02,842 [INFO]   [score_Narcissism] Primary tipping feature: BFI_A_sum (99.0%)
+2026-08-04 17:33:02,847 [INFO] Counterfactual results saved to results/tables/layer3_counterfactual_flipping.csv
+2026-08-04 17:33:02,847 [INFO] === PHASE 5 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:36:52,113 [INFO] ===============================================================
+2026-08-04 17:36:52,114 [INFO]  DT³ PHASE 5 (REMEDIATED v2): Layer 3 – Exploratory Dependence & Frozen Counterfactuals
+2026-08-04 17:36:52,114 [INFO] ===============================================================
+2026-08-04 17:36:52,131 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:36:52,175 [INFO] --- Preparing Layer 3 Data (Exploratory Dependence + Counterfactuals) ---
+2026-08-04 17:36:52,184 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:36:52,184 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:36:52,200 [INFO] --- Executing Exploratory Dependence Graph (Partial Correlations) ---
+2026-08-04 17:36:52,201 [INFO] Exploratory Dependence Graph: 16 significant edges (α corrected = 0.000048).
+2026-08-04 17:36:52,204 [INFO] --- Executing Frozen‑Demographics Counterfactual Analysis (Grid Search) ---
+2026-08-04 17:36:52,204 [INFO] Immutable features (frozen): ['age']
+2026-08-04 17:36:52,294 [INFO] Median threshold for score_Machiavellianism: 9.00
+2026-08-04 17:36:52,375 [INFO] Median threshold for score_Psychopathy: 9.00
+2026-08-04 17:36:52,456 [INFO] Median threshold for score_Narcissism: 12.00
+2026-08-04 17:36:52,456 [INFO] Counterfactuals for score_Machiavellianism: 325 high scorers (≥15.00).
+2026-08-04 17:37:16,470 [INFO]   [score_Machiavellianism] Primary tipping feature: BFI_A_sum (20.6%)
+2026-08-04 17:37:16,470 [INFO] Counterfactuals for score_Psychopathy: 343 high scorers (≥14.00).
+2026-08-04 17:37:38,768 [INFO]   [score_Psychopathy] Primary tipping feature: TEQ_sum (35.0%)
+2026-08-04 17:37:38,768 [INFO] Counterfactuals for score_Narcissism: 390 high scorers (≥16.00).
+2026-08-04 17:37:57,094 [INFO]   [score_Narcissism] Primary tipping feature: BFI_A_sum (61.8%)
+2026-08-04 17:37:57,273 [INFO] Counterfactual results saved to results/tables/layer3_counterfactual_flipping.csv
+2026-08-04 17:37:57,273 [INFO] === PHASE 5 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:45:00,562 [INFO] ===============================================================
+2026-08-04 17:45:00,563 [INFO]  DT³ PHASE 6 (REMEDIATED): Layer 4 - Semantic Triangulation 
+2026-08-04 17:45:00,563 [INFO] ===============================================================
+2026-08-04 17:45:00,563 [INFO] --- Executing Semantic Embedding Extraction ---
+2026-08-04 17:45:00,563 [INFO] Initializing SentenceTransformer (all-MiniLM-L6-v2)...
+2026-08-04 17:45:00,579 [INFO] No device provided, using mps
+2026-08-04 17:45:01,329 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:01,331 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-04 17:45:01,488 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:01,725 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:01,973 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:01,977 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-08-04 17:45:02,226 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:02,387 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:02,643 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:02,795 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-08-04 17:45:03,156 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:03,395 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:03,721 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:03,870 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:04,098 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 17:45:04,327 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:04,460 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:04,793 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 17:45:05,040 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 17:45:05,286 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 17:45:05,528 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 17:45:05,760 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:05,918 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:06,243 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:06,392 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:06,625 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:06,795 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:07,036 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:07,178 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:07,406 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-08-04 17:45:07,660 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 17:45:07,933 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 17:45:08,080 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-08-04 17:45:08,346 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-08-04 17:45:08,795 [INFO] Successfully extracted embeddings. Shape: (12, 384)
+2026-08-04 17:45:08,795 [INFO] Executing Agglomerative Hierarchical Clustering (k=3)...
+2026-08-04 17:45:08,809 [INFO] Clustering Metrics -> ARI: 0.5045 (Moderate) | Silhouette: 0.1214
+2026-08-04 17:45:08,809 [INFO] Executing 1,000-iteration Permutation Test for ARI significance...
+2026-08-04 17:45:09,020 [INFO] Permutation Test -> Null Mean ARI: 0.0002 ± 0.1098 | p-value: 0.0070
+2026-08-04 17:45:09,031 [INFO] 
+--- SEMANTIC FRACTURE ANALYSIS ---
+Empirical_Cluster  0  1  2
+Theoretical_Trait         
+Machiavellianism   4  0  0
+Narcissism         3  1  0
+Psychopathy        0  0  4
+----------------------------------
+2026-08-04 17:45:09,187 [INFO] Dendrogram saved to results/figures/layer4_semantic_dendrogram.png
+2026-08-04 17:45:09,187 [INFO] === PHASE 6 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 17:50:25,517 [INFO] ===============================================================
+2026-08-04 17:50:25,694 [INFO]  DT³ PHASE 7 (REMEDIATED v2): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 17:50:25,694 [INFO] ===============================================================
+2026-08-04 17:50:25,711 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:50:25,749 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 17:50:25,755 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:50:25,755 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:50:25,773 [INFO] --- Executing Formal SHAP Divergence Index (Pseudo‑Trait Null) ---
+2026-08-04 17:50:26,083 [INFO] Observed SDI: 0.2818
+2026-08-04 17:50:26,091 [CRITICAL] UNEXPECTED FAILURE: [17:50:26] /Users/runner/work/xgboost/xgboost/src/data/data.cc:522: Check failed: p_info->Size() % n_samples == 0 (687 vs. 0) : Invalid size for `label`:(5902,1). n_samples:5215
+Stack trace:
+  [bt] (0) 1   libxgboost.dylib                    0x00000001617e7dd8 dmlc::LogMessageFatal::~LogMessageFatal() + 124
+  [bt] (1) 2   libxgboost.dylib                    0x0000000161993d0c xgboost::(anonymous namespace)::ReshapeInfo(unsigned long long, xgboost::linalg::Tensor<float, 2>*, xgboost::StringView) + 352
+  [bt] (2) 3   libxgboost.dylib                    0x0000000161992dac xgboost::MetaInfo::SetInfoFromHost(xgboost::Context const*, xgboost::StringView, xgboost::Json) + 200
+  [bt] (3) 4   libxgboost.dylib                    0x0000000161992b30 xgboost::MetaInfo::SetInfo(xgboost::Context const&, xgboost::StringView, xgboost::StringView) + 468
+  [bt] (4) 5   libxgboost.dylib                    0x00000001617fe46c XGDMatrixSetInfoFromInterface + 228
+  [bt] (5) 6   libffi.8.dylib                      0x0000000102fe0050 ffi_call_SYSV + 80
+  [bt] (6) 7   libffi.8.dylib                      0x0000000102fdd89c ffi_call_int + 1444
+  [bt] (7) 8   _ctypes.cpython-311-darwin.so       0x0000000102db81f8 _ctypes_callproc + 704
+  [bt] (8) 9   _ctypes.cpython-311-darwin.so       0x0000000102db29c0 PyCFuncPtr_call + 208
+
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/07_layer5_robustness.py", line 372, in <module>
+    execute_sdi_pseudo_trait(X_tr, y_tr, dtdd_matrix, common_preds)
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/07_layer5_robustness.py", line 205, in execute_sdi_pseudo_trait
+    model_null.fit(X_train, pseudo_y[:, k])
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 751, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/sklearn.py", line 1343, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/sklearn.py", line 700, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+                    ^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/sklearn.py", line 1257, in _create_dmatrix
+    return QuantileDMatrix(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 751, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 1719, in __init__
+    self._init(
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 1783, in _init
+    it.reraise()
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 594, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+    ^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 575, in _handle_exception
+    return fn()
+           ^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 662, in <lambda>
+    return self._handle_exception(lambda: int(self.next(input_data)), 0)
+                                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/data.py", line 1642, in next
+    input_data(**self.kwargs)
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 751, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 651, in input_data
+    self.proxy.set_info(
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 751, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 1052, in set_info
+    self.set_label(label)
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 1179, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/data.py", line 1574, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/data.py", line 1521, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/xgboost/core.py", line 324, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [17:50:26] /Users/runner/work/xgboost/xgboost/src/data/data.cc:522: Check failed: p_info->Size() % n_samples == 0 (687 vs. 0) : Invalid size for `label`:(5902,1). n_samples:5215
+Stack trace:
+  [bt] (0) 1   libxgboost.dylib                    0x00000001617e7dd8 dmlc::LogMessageFatal::~LogMessageFatal() + 124
+  [bt] (1) 2   libxgboost.dylib                    0x0000000161993d0c xgboost::(anonymous namespace)::ReshapeInfo(unsigned long long, xgboost::linalg::Tensor<float, 2>*, xgboost::StringView) + 352
+  [bt] (2) 3   libxgboost.dylib                    0x0000000161992dac xgboost::MetaInfo::SetInfoFromHost(xgboost::Context const*, xgboost::StringView, xgboost::Json) + 200
+  [bt] (3) 4   libxgboost.dylib                    0x0000000161992b30 xgboost::MetaInfo::SetInfo(xgboost::Context const&, xgboost::StringView, xgboost::StringView) + 468
+  [bt] (4) 5   libxgboost.dylib                    0x00000001617fe46c XGDMatrixSetInfoFromInterface + 228
+  [bt] (5) 6   libffi.8.dylib                      0x0000000102fe0050 ffi_call_SYSV + 80
+  [bt] (6) 7   libffi.8.dylib                      0x0000000102fdd89c ffi_call_int + 1444
+  [bt] (7) 8   _ctypes.cpython-311-darwin.so       0x0000000102db81f8 _ctypes_callproc + 704
+  [bt] (8) 9   _ctypes.cpython-311-darwin.so       0x0000000102db29c0 PyCFuncPtr_call + 208
+
+
+2026-08-04 17:52:17,506 [INFO] ===============================================================
+2026-08-04 17:52:17,506 [INFO]  DT³ PHASE 7 (REMEDIATED v3): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 17:52:17,506 [INFO] ===============================================================
+2026-08-04 17:52:17,522 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 17:52:17,556 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 17:52:17,563 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:52:17,563 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 17:52:17,594 [INFO] Aligned training rows: 5215 (DTDD) vs 5215 (predictors)
+2026-08-04 17:52:17,594 [INFO] --- Executing Formal SHAP Divergence Index (Pseudo‑Trait Null) ---
+2026-08-04 17:52:17,881 [INFO] Observed SDI: 0.2818
+2026-08-04 17:52:46,250 [INFO]   SDI null permutation 100/500
+2026-08-04 17:53:14,573 [INFO]   SDI null permutation 200/500
+2026-08-04 17:53:42,663 [INFO]   SDI null permutation 300/500
+2026-08-04 17:54:10,695 [INFO]   SDI null permutation 400/500
+2026-08-04 17:54:38,726 [INFO]   SDI null permutation 500/500
+2026-08-04 17:54:38,726 [INFO] SDI Null: mean 0.1008 ± 0.0569, p = 0.0020
+2026-08-04 17:54:38,735 [INFO] --- Executing Multi‑Architecture Robustness (Rashomon Set) ---
+2026-08-04 17:54:38,737 [INFO] Rashomon [score_Machiavellianism - Elastic-Net]: R² = 0.145
+2026-08-04 17:54:39,021 [INFO] Rashomon [score_Machiavellianism - Random Forest]: R² = 0.134
+2026-08-04 17:54:39,109 [INFO] Rashomon [score_Machiavellianism - XGBoost]: R² = 0.147
+2026-08-04 17:54:39,110 [INFO] Rashomon [score_Psychopathy - Elastic-Net]: R² = 0.237
+2026-08-04 17:54:39,390 [INFO] Rashomon [score_Psychopathy - Random Forest]: R² = 0.219
+2026-08-04 17:54:39,478 [INFO] Rashomon [score_Psychopathy - XGBoost]: R² = 0.218
+2026-08-04 17:54:39,478 [INFO] Rashomon [score_Narcissism - Elastic-Net]: R² = 0.144
+2026-08-04 17:54:39,761 [INFO] Rashomon [score_Narcissism - Random Forest]: R² = 0.126
+2026-08-04 17:54:39,856 [INFO] Rashomon [score_Narcissism - XGBoost]: R² = 0.132
+2026-08-04 17:54:39,868 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 17:54:39,868 [INFO] --- Executing Cross‑Sample Replication & Conformal Prediction ---
+2026-08-04 17:54:41,171 [INFO] Replication [sample_1_community - score_Machiavellianism]: N=5215, CV R² = 0.189, PI width = 18.962
+2026-08-04 17:54:42,004 [INFO] Replication [sample_1_community - score_Psychopathy]: N=5215, CV R² = 0.312, PI width = 17.451
+2026-08-04 17:54:42,809 [INFO] Replication [sample_1_community - score_Narcissism]: N=5215, CV R² = 0.115, PI width = 19.760
+2026-08-04 17:54:42,921 [INFO] Replication [sample_3_representative - score_Machiavellianism]: N=1492, CV R² = 0.197, PI width = 17.494
+2026-08-04 17:54:43,031 [INFO] Replication [sample_3_representative - score_Psychopathy]: N=1492, CV R² = 0.237, PI width = 14.052
+2026-08-04 17:54:43,807 [INFO] Replication [sample_3_representative - score_Narcissism]: N=1492, CV R² = 0.133, PI width = 17.668
+2026-08-04 17:54:43,810 [WARNING] Skipping sample_2_student: insufficient data (N=0).
+2026-08-04 17:54:43,815 [INFO] --- Executing Person‑Centered GMM (BIC) Analysis ---
+2026-08-04 17:54:44,008 [INFO]   score_Machiavellianism: BIC values computed for 1‑5 components.
+2026-08-04 17:54:44,214 [INFO]   score_Psychopathy: BIC values computed for 1‑5 components.
+2026-08-04 17:54:44,405 [INFO]   score_Narcissism: BIC values computed for 1‑5 components.
+2026-08-04 17:54:44,408 [INFO] Person‑centered BIC results saved to results/tables/layer5_person_centered_bic.csv
+2026-08-04 17:54:44,408 [INFO] === PHASE 7 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:07:44,490 [INFO] ===============================================================
+2026-08-04 18:07:44,491 [INFO]  DT³ PHASE 8 (REMEDIATED): SHAP Interactions Extension 
+2026-08-04 18:07:44,491 [INFO] ===============================================================
+2026-08-04 18:07:44,507 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:07:44,507 [INFO] --- Preparing Data for SHAP Interactions ---
+2026-08-04 18:07:44,556 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:07:44,556 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:07:44,578 [INFO] --- Executing SHAP Interaction Analysis ---
+2026-08-04 18:07:44,800 [INFO]   score_Machiavellianism: top interaction = BFI_A_sum x ...
+2026-08-04 18:07:45,025 [INFO]   score_Psychopathy: top interaction = BFI_A_sum x ...
+2026-08-04 18:07:45,246 [INFO]   score_Narcissism: top interaction = BFI_A_sum x ...
+2026-08-04 18:07:45,255 [INFO] SHAP interactions saved to results/tables/layer2_shap_interactions.csv
+2026-08-04 18:07:45,255 [INFO] === PHASE 8 EXTENSIONS EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:14:29,332 [INFO] ===============================================================
+2026-08-04 18:14:29,509 [INFO]  DT³ PHASE 8 (REMEDIATED): Master Synthesis Matrix 
+2026-08-04 18:14:29,509 [INFO] ===============================================================
+2026-08-04 18:14:29,509 [INFO] --- Compiling DT³ Master Synthesis Matrix ---
+2026-08-04 18:14:29,516 [CRITICAL] SYNTHESIS FAILED: can only concatenate str (not "float") to str
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/09_synthesis_matrix.py", line 264, in <module>
+    compile_synthesis_matrix()
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/09_synthesis_matrix.py", line 61, in compile_synthesis_matrix
+    mean_obs = cka_obs_df.values.mean()  # mean of the 3x3 matrix
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/_core/_methods.py", line 132, in _mean
+    ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can only concatenate str (not "float") to str
+2026-08-04 18:15:36,006 [INFO] ===============================================================
+2026-08-04 18:15:36,007 [INFO]  DT³ PHASE 8 (REMEDIATED): Master Synthesis Matrix 
+2026-08-04 18:15:36,007 [INFO] ===============================================================
+2026-08-04 18:15:36,007 [INFO] --- Compiling DT³ Master Synthesis Matrix ---
+2026-08-04 18:15:36,023 [INFO] Master Synthesis Matrix compiled with 10 paradigm proofs.
+2026-08-04 18:15:36,023 [INFO] Saved to: results/DT3_Master_Synthesis_Matrix.csv
+2026-08-04 18:26:47,261 [INFO] ===============================================================
+2026-08-04 18:26:47,262 [INFO]  DT³ PHASE 7 (REMEDIATED v3): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 18:26:47,262 [INFO] ===============================================================
+2026-08-04 18:26:47,278 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:26:47,318 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 18:26:47,327 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:26:47,327 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:26:47,354 [INFO] Aligned training rows: 5215 (DTDD) vs 5215 (predictors)
+2026-08-04 18:26:47,354 [CRITICAL] UNEXPECTED FAILURE: execute_sdi_pseudo_trait() missing 2 required positional arguments: 'dtdd_data' and 'preds'
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/07_layer5_robustness.py", line 379, in <module>
+    execute_sdi_pseudo_trait(X_tr, y_tr, dtdd_matrix, common_preds)
+TypeError: execute_sdi_pseudo_trait() missing 2 required positional arguments: 'dtdd_data' and 'preds'
+2026-08-04 18:28:11,853 [INFO] ===============================================================
+2026-08-04 18:28:11,854 [INFO]  DT³ PHASE 7 (REMEDIATED v3): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 18:28:11,854 [INFO] ===============================================================
+2026-08-04 18:28:11,870 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:28:11,905 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 18:28:11,912 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:28:11,912 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:28:11,935 [INFO] Aligned training rows: 5215 (DTDD) vs 5215 (predictors)
+2026-08-04 18:28:11,935 [INFO] --- Executing Formal SHAP Divergence Index (Pseudo‑Trait Null, Out‑of‑Sample) ---
+2026-08-04 18:28:12,258 [INFO] Observed SDI (out‑of‑sample): 0.2591
+2026-08-04 18:28:43,004 [INFO]   SDI null permutation 100/500
+2026-08-04 18:29:13,381 [INFO]   SDI null permutation 200/500
+2026-08-04 18:29:43,897 [INFO]   SDI null permutation 300/500
+2026-08-04 18:30:14,308 [INFO]   SDI null permutation 400/500
+2026-08-04 18:30:44,756 [INFO]   SDI null permutation 500/500
+2026-08-04 18:30:44,756 [INFO] SDI Null: mean 0.0953 ± 0.0588, p = 0.0100
+2026-08-04 18:30:44,942 [INFO] --- Executing Multi‑Architecture Robustness (Rashomon Set) ---
+2026-08-04 18:30:44,944 [INFO] Rashomon [score_Machiavellianism - Elastic-Net]: R² = 0.145
+2026-08-04 18:30:45,216 [INFO] Rashomon [score_Machiavellianism - Random Forest]: R² = 0.134
+2026-08-04 18:30:45,312 [INFO] Rashomon [score_Machiavellianism - XGBoost]: R² = 0.147
+2026-08-04 18:30:45,312 [INFO] Rashomon [score_Psychopathy - Elastic-Net]: R² = 0.237
+2026-08-04 18:30:45,584 [INFO] Rashomon [score_Psychopathy - Random Forest]: R² = 0.219
+2026-08-04 18:30:45,671 [INFO] Rashomon [score_Psychopathy - XGBoost]: R² = 0.218
+2026-08-04 18:30:45,672 [INFO] Rashomon [score_Narcissism - Elastic-Net]: R² = 0.144
+2026-08-04 18:30:45,944 [INFO] Rashomon [score_Narcissism - Random Forest]: R² = 0.126
+2026-08-04 18:30:46,030 [INFO] Rashomon [score_Narcissism - XGBoost]: R² = 0.132
+2026-08-04 18:30:46,039 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:30:46,039 [INFO] --- Executing Cross‑Sample Replication & Conformal Prediction ---
+2026-08-04 18:30:47,349 [INFO] Replication [sample_1_community - score_Machiavellianism]: N=5215, CV R² = 0.189, PI width = 18.962
+2026-08-04 18:30:48,162 [INFO] Replication [sample_1_community - score_Psychopathy]: N=5215, CV R² = 0.312, PI width = 17.451
+2026-08-04 18:30:48,988 [INFO] Replication [sample_1_community - score_Narcissism]: N=5215, CV R² = 0.115, PI width = 19.760
+2026-08-04 18:30:49,101 [INFO] Replication [sample_3_representative - score_Machiavellianism]: N=1492, CV R² = 0.197, PI width = 17.494
+2026-08-04 18:30:49,883 [INFO] Replication [sample_3_representative - score_Psychopathy]: N=1492, CV R² = 0.237, PI width = 14.052
+2026-08-04 18:30:49,992 [INFO] Replication [sample_3_representative - score_Narcissism]: N=1492, CV R² = 0.133, PI width = 17.668
+2026-08-04 18:30:49,995 [WARNING] Skipping sample_2_student: insufficient data (N=0).
+2026-08-04 18:30:49,997 [CRITICAL] UNEXPECTED FAILURE: execute_person_centered_gmm() takes 3 positional arguments but 5 were given
+Traceback (most recent call last):
+  File "/Volumes/Lexar/PSYPROJECT/dark_triad_triangulation/scripts/python/07_layer5_robustness.py", line 390, in <module>
+    execute_person_centered_gmm(X_tr, y_tr, X_te, y_te, common_preds)
+TypeError: execute_person_centered_gmm() takes 3 positional arguments but 5 were given
+2026-08-04 18:31:36,980 [INFO] ===============================================================
+2026-08-04 18:31:36,980 [INFO]  DT³ PHASE 7 (REMEDIATED v3): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 18:31:36,980 [INFO] ===============================================================
+2026-08-04 18:31:36,997 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:31:37,029 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 18:31:37,035 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:31:37,035 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:31:37,050 [INFO] Aligned training rows: 5215 (DTDD) vs 5215 (predictors)
+2026-08-04 18:31:37,051 [INFO] --- Executing Formal SHAP Divergence Index (Pseudo‑Trait Null, Out‑of‑Sample) ---
+2026-08-04 18:31:37,359 [INFO] Observed SDI (out‑of‑sample): 0.2591
+2026-08-04 18:32:07,905 [INFO]   SDI null permutation 100/500
+2026-08-04 18:32:38,244 [INFO]   SDI null permutation 200/500
+2026-08-04 18:33:08,686 [INFO]   SDI null permutation 300/500
+2026-08-04 18:33:39,048 [INFO]   SDI null permutation 400/500
+2026-08-04 18:34:09,432 [INFO]   SDI null permutation 500/500
+2026-08-04 18:34:09,432 [INFO] SDI Null: mean 0.0953 ± 0.0588, p = 0.0100
+2026-08-04 18:34:09,435 [INFO] --- Executing Multi‑Architecture Robustness (Rashomon Set) ---
+2026-08-04 18:34:09,435 [INFO] Rashomon [score_Machiavellianism - Elastic-Net]: R² = 0.145
+2026-08-04 18:34:09,720 [INFO] Rashomon [score_Machiavellianism - Random Forest]: R² = 0.134
+2026-08-04 18:34:09,807 [INFO] Rashomon [score_Machiavellianism - XGBoost]: R² = 0.147
+2026-08-04 18:34:09,808 [INFO] Rashomon [score_Psychopathy - Elastic-Net]: R² = 0.237
+2026-08-04 18:34:10,083 [INFO] Rashomon [score_Psychopathy - Random Forest]: R² = 0.219
+2026-08-04 18:34:10,171 [INFO] Rashomon [score_Psychopathy - XGBoost]: R² = 0.218
+2026-08-04 18:34:10,172 [INFO] Rashomon [score_Narcissism - Elastic-Net]: R² = 0.144
+2026-08-04 18:34:10,447 [INFO] Rashomon [score_Narcissism - Random Forest]: R² = 0.126
+2026-08-04 18:34:10,535 [INFO] Rashomon [score_Narcissism - XGBoost]: R² = 0.132
+2026-08-04 18:34:10,544 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:34:10,544 [INFO] --- Executing Cross‑Sample Replication & Conformal Prediction ---
+2026-08-04 18:34:11,807 [INFO] Replication [sample_1_community - score_Machiavellianism]: N=5215, CV R² = 0.189, PI width = 18.962
+2026-08-04 18:34:12,691 [INFO] Replication [sample_1_community - score_Psychopathy]: N=5215, CV R² = 0.312, PI width = 17.451
+2026-08-04 18:34:13,512 [INFO] Replication [sample_1_community - score_Narcissism]: N=5215, CV R² = 0.115, PI width = 19.760
+2026-08-04 18:34:13,626 [INFO] Replication [sample_3_representative - score_Machiavellianism]: N=1492, CV R² = 0.197, PI width = 17.494
+2026-08-04 18:34:13,737 [INFO] Replication [sample_3_representative - score_Psychopathy]: N=1492, CV R² = 0.237, PI width = 14.052
+2026-08-04 18:34:13,844 [INFO] Replication [sample_3_representative - score_Narcissism]: N=1492, CV R² = 0.133, PI width = 17.668
+2026-08-04 18:34:13,847 [WARNING] Skipping sample_2_student: insufficient data (N=0).
+2026-08-04 18:34:13,849 [INFO] --- Executing Person‑Centered GMM (BIC) Analysis ---
+2026-08-04 18:34:14,018 [INFO]   score_Machiavellianism: BIC values computed for 1‑5 components.
+2026-08-04 18:34:14,244 [INFO]   score_Psychopathy: BIC values computed for 1‑5 components.
+2026-08-04 18:34:14,430 [INFO]   score_Narcissism: BIC values computed for 1‑5 components.
+2026-08-04 18:34:14,432 [INFO] Person‑centered BIC results saved to results/tables/layer5_person_centered_bic.csv
+2026-08-04 18:34:14,432 [INFO] === PHASE 7 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:35:30,864 [INFO] ===============================================================
+2026-08-04 18:35:30,864 [INFO]  DT³ PHASE 7 (REMEDIATED v3): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 18:35:30,864 [INFO] ===============================================================
+2026-08-04 18:35:30,880 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:35:30,913 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 18:35:30,919 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:35:30,920 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:35:30,934 [INFO] Aligned training rows: 5215 (DTDD) vs 5215 (predictors)
+2026-08-04 18:35:30,935 [INFO] --- Executing Formal SHAP Divergence Index (Pseudo‑Trait Null, Out‑of‑Sample) ---
+2026-08-04 18:35:31,241 [INFO] Observed SDI (out‑of‑sample): 0.2591
+2026-08-04 18:36:01,804 [INFO]   SDI null permutation 100/500
+2026-08-04 18:36:32,262 [INFO]   SDI null permutation 200/500
+2026-08-04 18:37:02,839 [INFO]   SDI null permutation 300/500
+2026-08-04 18:37:33,219 [INFO]   SDI null permutation 400/500
+2026-08-04 18:38:03,448 [INFO]   SDI null permutation 500/500
+2026-08-04 18:38:03,448 [INFO] SDI Null: mean 0.0953 ± 0.0588, p = 0.0100
+2026-08-04 18:38:03,454 [INFO] --- Executing Multi‑Architecture Robustness (Rashomon Set) ---
+2026-08-04 18:38:03,455 [INFO] Rashomon [score_Machiavellianism - Elastic-Net]: R² = 0.145
+2026-08-04 18:38:03,729 [INFO] Rashomon [score_Machiavellianism - Random Forest]: R² = 0.134
+2026-08-04 18:38:03,822 [INFO] Rashomon [score_Machiavellianism - XGBoost]: R² = 0.147
+2026-08-04 18:38:03,823 [INFO] Rashomon [score_Psychopathy - Elastic-Net]: R² = 0.237
+2026-08-04 18:38:04,093 [INFO] Rashomon [score_Psychopathy - Random Forest]: R² = 0.219
+2026-08-04 18:38:04,181 [INFO] Rashomon [score_Psychopathy - XGBoost]: R² = 0.218
+2026-08-04 18:38:04,181 [INFO] Rashomon [score_Narcissism - Elastic-Net]: R² = 0.144
+2026-08-04 18:38:04,452 [INFO] Rashomon [score_Narcissism - Random Forest]: R² = 0.126
+2026-08-04 18:38:04,541 [INFO] Rashomon [score_Narcissism - XGBoost]: R² = 0.132
+2026-08-04 18:38:04,549 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:38:04,549 [INFO] --- Executing Cross‑Sample Replication & Conformal Prediction ---
+2026-08-04 18:38:05,911 [INFO] Replication [sample_1_community - score_Machiavellianism]: N=5215, CV R² = 0.189, PI width = 18.962
+2026-08-04 18:38:06,737 [INFO] Replication [sample_1_community - score_Psychopathy]: N=5215, CV R² = 0.312, PI width = 17.451
+2026-08-04 18:38:07,517 [INFO] Replication [sample_1_community - score_Narcissism]: N=5215, CV R² = 0.115, PI width = 19.760
+2026-08-04 18:38:08,291 [INFO] Replication [sample_3_representative - score_Machiavellianism]: N=1492, CV R² = 0.197, PI width = 17.494
+2026-08-04 18:38:08,399 [INFO] Replication [sample_3_representative - score_Psychopathy]: N=1492, CV R² = 0.237, PI width = 14.052
+2026-08-04 18:38:08,510 [INFO] Replication [sample_3_representative - score_Narcissism]: N=1492, CV R² = 0.133, PI width = 17.668
+2026-08-04 18:38:08,513 [WARNING] Skipping sample_2_student: insufficient data (N=0).
+2026-08-04 18:38:08,515 [INFO] --- Executing Person‑Centered GMM (BIC) Analysis (Out‑of‑Sample) ---
+2026-08-04 18:38:08,648 [INFO]   score_Machiavellianism: BIC values computed for 1‑5 components.
+2026-08-04 18:38:08,824 [INFO]   score_Psychopathy: BIC values computed for 1‑5 components.
+2026-08-04 18:38:09,012 [INFO]   score_Narcissism: BIC values computed for 1‑5 components.
+2026-08-04 18:38:09,013 [INFO] Person‑centered BIC results saved to results/tables/layer5_person_centered_bic.csv
+2026-08-04 18:38:09,014 [INFO] === PHASE 7 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:41:55,551 [INFO] ===============================================================
+2026-08-04 18:41:55,551 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 18:41:55,551 [INFO] ===============================================================
+2026-08-04 18:41:55,568 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:41:55,601 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 18:41:55,603 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 18:41:55,616 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 18:41:55,635 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 18:41:55,648 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 18:41:55,660 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 18:41:55,660 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-08-04 18:41:55,661 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-08-04 18:41:55,665 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-08-04 18:41:55,665 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 18:41:55,669 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 18:41:55,681 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 18:41:55,681 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 18:41:55,688 [INFO] CFA N=5902
+2026-08-04 18:41:55,717 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 18:41:55,719 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 18:41:55,719 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:46:52,525 [INFO] ===============================================================
+2026-08-04 18:46:52,702 [INFO]  DT³ PHASE 2.1 (REMEDIATED v6): Symbolic Regression (Unscaled + Wide Constants)
+2026-08-04 18:46:52,702 [INFO] ===============================================================
+2026-08-04 18:46:52,704 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:46:52,737 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 18:46:52,744 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:46:52,744 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:46:52,761 [INFO] --- Executing Symbolic Regression (Unscaled Targets, Non‑Linear) ---
+2026-08-04 18:46:52,761 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 18:47:40,344 [INFO] Discovered Form [score_Machiavellianism]: abs(sub(sub(abs(add(add(abs(BFI_E_sum), -11.780), TEQ_sum)), add(min(BFI_C_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))), BFI_A_sum))
+2026-08-04 18:47:40,344 [INFO] Validation R² -> Discovery: 0.148 | Replication: 0.093
+2026-08-04 18:47:40,344 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 18:48:30,462 [INFO] Discovered Form [score_Psychopathy]: sub(abs(max(sub(sub(sub(add(8.685, BFI_O_sum), add(add(add(BFI_C_sum, TEQ_sum), BFI_N_sum), max(BFI_N_sum, age))), BFI_A_sum), BFI_A_sum), 8.022)), add(BFI_A_sum, TEQ_sum))
+2026-08-04 18:48:30,462 [INFO] Validation R² -> Discovery: 0.254 | Replication: 0.184
+2026-08-04 18:48:30,462 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 18:49:15,607 [INFO] Discovered Form [score_Narcissism]: sub(sub(add(add(min(min(abs(-14.287), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), BFI_O_sum), BFI_E_sum), age), BFI_A_sum)
+2026-08-04 18:49:15,607 [INFO] Validation R² -> Discovery: 0.106 | Replication: 0.143
+2026-08-04 18:49:15,791 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 18:49:15,805 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:56:34,974 [INFO] ===============================================================
+2026-08-04 18:56:34,975 [INFO]  DT³ PHASE 1 (REMEDIATED): Data Preprocessing
+2026-08-04 18:56:34,975 [INFO] ===============================================================
+2026-08-04 18:56:34,987 [INFO] Cryptographic Hash (sample_1_community): a625842f3a471aedfbb067d656e1b8ab2b583052eaeea2c2ebd8a1e1da0e9a7d
+2026-08-04 18:56:34,994 [INFO] Cryptographic Hash (sample_2_student): 2133bcd49c37f4551fa329427308dcdf5a4e3886e2fba3e82fbe79497d6ee83a
+2026-08-04 18:56:34,997 [INFO] Cryptographic Hash (sample_3_representative): 38ebfd78a2d84554f7c1d43239a88c844d0b548e8f3a21f64480675a6352e55d
+2026-08-04 18:56:35,027 [INFO] --- Cleaning sample_1_community ---
+2026-08-04 18:56:35,029 [INFO] Age filter removed 3534 rows.
+2026-08-04 18:56:35,032 [INFO] After DTDD item cleaning: 5903 rows remain.
+2026-08-04 18:56:35,035 [INFO] Computed BFI_A_sum from 9 items in sample_1_community.
+2026-08-04 18:56:35,036 [INFO] Computed BFI_C_sum from 9 items in sample_1_community.
+2026-08-04 18:56:35,037 [INFO] Computed BFI_N_sum from 8 items in sample_1_community.
+2026-08-04 18:56:35,037 [INFO] Computed BFI_O_sum from 10 items in sample_1_community.
+2026-08-04 18:56:35,038 [INFO] Computed BFI_E_sum from 8 items in sample_1_community.
+2026-08-04 18:56:35,039 [INFO] Computed TEQ_sum from 7 items in sample_1_community.
+2026-08-04 18:56:35,040 [INFO] Computed RSES_sum from 10 items in sample_1_community.
+2026-08-04 18:56:35,040 [INFO] Finished cleaning sample_1_community: retained 5903 / 10518 rows.
+2026-08-04 18:56:35,055 [INFO] --- Cleaning sample_2_student ---
+2026-08-04 18:56:35,058 [INFO] Age filter removed 37 rows.
+2026-08-04 18:56:35,059 [INFO] After DTDD item cleaning: 2071 rows remain.
+2026-08-04 18:56:35,060 [WARNING] No items found for prefix BFI_A_. Skipping composite BFI_A_sum.
+2026-08-04 18:56:35,060 [WARNING] No items found for prefix BFI_C_. Skipping composite BFI_C_sum.
+2026-08-04 18:56:35,061 [INFO] Computed BFI_N_sum from 8 items in sample_2_student.
+2026-08-04 18:56:35,061 [WARNING] No items found for prefix BFI_O_. Skipping composite BFI_O_sum.
+2026-08-04 18:56:35,061 [WARNING] No BFI‑E items found in sample_2_student. Extraversion will be missing.
+2026-08-04 18:56:35,062 [INFO] Computed TEQ_sum from 19 items in sample_2_student.
+2026-08-04 18:56:35,062 [INFO] Computed RSES_sum from 10 items in sample_2_student.
+2026-08-04 18:56:35,062 [INFO] Finished cleaning sample_2_student: retained 2071 / 5334 rows.
+2026-08-04 18:56:35,068 [INFO] --- Cleaning sample_3_representative ---
+2026-08-04 18:56:35,069 [INFO] Age filter removed 2 rows.
+2026-08-04 18:56:35,070 [INFO] After DTDD item cleaning: 1492 rows remain.
+2026-08-04 18:56:35,071 [INFO] Computed BFI_A_sum from 9 items in sample_3_representative.
+2026-08-04 18:56:35,072 [INFO] Computed BFI_C_sum from 9 items in sample_3_representative.
+2026-08-04 18:56:35,072 [INFO] Computed BFI_N_sum from 8 items in sample_3_representative.
+2026-08-04 18:56:35,073 [INFO] Computed BFI_O_sum from 10 items in sample_3_representative.
+2026-08-04 18:56:35,073 [INFO] Computed BFI_E_sum from 8 items in sample_3_representative.
+2026-08-04 18:56:35,074 [INFO] Computed TEQ_sum from 7 items in sample_3_representative.
+2026-08-04 18:56:35,074 [WARNING] No items found for prefix RSES_. Skipping composite RSES_sum.
+2026-08-04 18:56:35,074 [INFO] Finished cleaning sample_3_representative: retained 1492 / 1665 rows.
+2026-08-04 18:56:35,077 [INFO] BFI_E_sum successfully constructed and included.
+2026-08-04 18:56:35,264 [INFO] Saved master dataset to data/processed/dt3_master_dataset.csv with shape (9466, 128)
+2026-08-04 18:56:35,284 [INFO] Saved test‑retest dataset to data/processed/dt3_test_retest.csv with 61 matched pairs.
+2026-08-04 18:56:35,284 [INFO] === PHASE 1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:56:36,879 [INFO] ===============================================================
+2026-08-04 18:56:36,879 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-08-04 18:56:36,879 [INFO] ===============================================================
+2026-08-04 18:56:36,882 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:56:36,919 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-08-04 18:56:36,920 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-08-04 18:56:36,929 [INFO] Processing sample_1_community (N=5902)
+2026-08-04 18:56:36,953 [INFO] Processing sample_2_student (N=2071)
+2026-08-04 18:56:36,966 [INFO] Processing sample_3_representative (N=1492)
+2026-08-04 18:56:36,978 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-08-04 18:56:36,978 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-08-04 18:56:36,980 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-08-04 18:56:36,983 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-08-04 18:56:36,983 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-08-04 18:56:36,987 [INFO] OLS N=5096 after dropping missing.
+2026-08-04 18:56:36,996 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-08-04 18:56:36,996 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-08-04 18:56:37,001 [INFO] CFA N=5902
+2026-08-04 18:56:37,030 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-08-04 18:56:37,031 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-08-04 18:56:37,032 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:56:37,750 [INFO] ===============================================================
+2026-08-04 18:56:37,750 [INFO]  DT³ PHASE 2.1 (REMEDIATED v6): Symbolic Regression (Unscaled + Wide Constants)
+2026-08-04 18:56:37,750 [INFO] ===============================================================
+2026-08-04 18:56:37,752 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:56:37,785 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 18:56:37,792 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:56:37,792 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:56:37,806 [INFO] --- Executing Symbolic Regression (Unscaled Targets, Non‑Linear) ---
+2026-08-04 18:56:37,806 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 18:57:25,461 [INFO] Discovered Form [score_Machiavellianism]: abs(sub(sub(abs(add(add(abs(BFI_E_sum), -11.780), TEQ_sum)), add(min(BFI_C_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))), BFI_A_sum))
+2026-08-04 18:57:25,461 [INFO] Validation R² -> Discovery: 0.148 | Replication: 0.093
+2026-08-04 18:57:25,461 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 18:58:14,261 [INFO] Discovered Form [score_Psychopathy]: sub(abs(max(sub(sub(sub(add(8.685, BFI_O_sum), add(add(add(BFI_C_sum, TEQ_sum), BFI_N_sum), max(BFI_N_sum, age))), BFI_A_sum), BFI_A_sum), 8.022)), add(BFI_A_sum, TEQ_sum))
+2026-08-04 18:58:14,261 [INFO] Validation R² -> Discovery: 0.254 | Replication: 0.184
+2026-08-04 18:58:14,261 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 18:58:59,590 [INFO] Discovered Form [score_Narcissism]: sub(sub(add(add(min(min(abs(-14.287), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), BFI_O_sum), BFI_E_sum), age), BFI_A_sum)
+2026-08-04 18:58:59,590 [INFO] Validation R² -> Discovery: 0.106 | Replication: 0.143
+2026-08-04 18:58:59,769 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 18:58:59,780 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:59:00,819 [INFO] ===============================================================
+2026-08-04 18:59:00,819 [INFO]  DT³ PHASE 3 (REMEDIATED v4): Layer 1 - Unsupervised Structural
+2026-08-04 18:59:00,819 [INFO] ===============================================================
+2026-08-04 18:59:00,821 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:59:00,854 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+2026-08-04 18:59:00,855 [INFO] Complete‑case N = 9465 (out of 9466 total)
+2026-08-04 18:59:00,863 [INFO] Using complete‑case correlation (N=9465, P=12).
+2026-08-04 18:59:01,471 [INFO] EBIC Optimization Complete. Min EBIC: 68747.33 at Alpha: 0.0100
+2026-08-04 18:59:01,471 [INFO] Network constructed with 50 non‑zero edges.
+2026-08-04 18:59:01,471 [INFO] Louvain Community Detection identified 3 clusters.
+2026-08-04 18:59:01,747 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png
+2026-08-04 18:59:01,748 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+2026-08-04 18:59:01,749 [INFO] Complete‑case N = 0 (out of 9466 total)
+2026-08-04 18:59:01,749 [INFO] Complete‑case N < 30; switching to pairwise‑deletion correlation.
+2026-08-04 18:59:02,538 [INFO] Using projected pairwise correlation (effective N≈6734, P=88).
+2026-08-04 18:59:11,737 [INFO] EBIC Optimization Complete. Min EBIC: 393790.72 at Alpha: 0.0346
+2026-08-04 18:59:11,738 [INFO] Network constructed with 697 non‑zero edges.
+2026-08-04 18:59:11,741 [INFO] Louvain Community Detection identified 20 clusters.
+2026-08-04 18:59:12,041 [INFO] Network visualization saved to results/figures/layer1_ggm_network_Full_Item_Space.png
+2026-08-04 18:59:12,041 [INFO] --- Executing Topological Data Analysis (Mapper) ---
+2026-08-04 18:59:12,042 [INFO] Topological Space: 9465 observations, 12 dimensions.
+2026-08-04 18:59:12,300 [INFO] TDA Mapper topology saved to results/figures/layer1_tda_mapper.html
+2026-08-04 18:59:12,300 [INFO] === PHASE 3 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:59:14,289 [INFO] ===============================================================
+2026-08-04 18:59:14,289 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+2026-08-04 18:59:14,289 [INFO] ===============================================================
+2026-08-04 18:59:14,306 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:59:14,345 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-08-04 18:59:14,345 [INFO] Sample counts in master dataset:
+2026-08-04 18:59:14,348 [INFO]   sample_1_community: 5903
+2026-08-04 18:59:14,349 [INFO]   sample_2_student: 2071
+2026-08-04 18:59:14,350 [INFO]   sample_3_representative: 1492
+2026-08-04 18:59:14,356 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-08-04 18:59:14,356 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+2026-08-04 18:59:14,356 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+2026-08-04 18:59:14,357 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:59:14,369 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+2026-08-04 18:59:14,369 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+2026-08-04 18:59:14,369 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+2026-08-04 18:59:27,378 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7743
+2026-08-04 18:59:27,378 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+2026-08-04 18:59:27,378 [INFO] Identified 325 high scorers for score_Machiavellianism
+2026-08-04 18:59:27,379 [INFO] Identified 343 high scorers for score_Psychopathy
+2026-08-04 18:59:27,379 [INFO] Identified 390 high scorers for score_Narcissism
+2026-08-04 18:59:27,545 [INFO] Observed mean CKA: 0.0553 | Null mean: 0.0912 ± 0.0043 | p (lower) = 0.0000
+2026-08-04 18:59:27,552 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+2026-08-04 18:59:27,616 [INFO] XGBoost [score_Machiavellianism]: R²=0.147, Top Driver=BFI_A_sum
+2026-08-04 18:59:27,677 [INFO] XGBoost [score_Psychopathy]: R²=0.218, Top Driver=TEQ_sum
+2026-08-04 18:59:27,733 [INFO] XGBoost [score_Narcissism]: R²=0.132, Top Driver=age
+2026-08-04 18:59:27,736 [INFO] === PHASE 4 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 18:59:28,720 [INFO] ===============================================================
+2026-08-04 18:59:28,720 [INFO]  DT³ PHASE 5 (REMEDIATED v2): Layer 3 – Exploratory Dependence & Frozen Counterfactuals
+2026-08-04 18:59:28,720 [INFO] ===============================================================
+2026-08-04 18:59:28,722 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 18:59:28,755 [INFO] --- Preparing Layer 3 Data (Exploratory Dependence + Counterfactuals) ---
+2026-08-04 18:59:28,762 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 18:59:28,762 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 18:59:28,773 [INFO] --- Executing Exploratory Dependence Graph (Partial Correlations) ---
+2026-08-04 18:59:28,773 [INFO] Exploratory Dependence Graph: 16 significant edges (α corrected = 0.000048).
+2026-08-04 18:59:28,775 [INFO] --- Executing Frozen‑Demographics Counterfactual Analysis (Grid Search) ---
+2026-08-04 18:59:28,775 [INFO] Immutable features (frozen): ['age']
+2026-08-04 18:59:28,864 [INFO] Median threshold for score_Machiavellianism: 9.00
+2026-08-04 18:59:28,950 [INFO] Median threshold for score_Psychopathy: 9.00
+2026-08-04 18:59:29,035 [INFO] Median threshold for score_Narcissism: 12.00
+2026-08-04 18:59:29,036 [INFO] Counterfactuals for score_Machiavellianism: 325 high scorers (≥15.00).
+2026-08-04 18:59:53,314 [INFO]   [score_Machiavellianism] Primary tipping feature: BFI_A_sum (20.6%)
+2026-08-04 18:59:53,314 [INFO] Counterfactuals for score_Psychopathy: 343 high scorers (≥14.00).
+2026-08-04 19:00:15,500 [INFO]   [score_Psychopathy] Primary tipping feature: TEQ_sum (35.0%)
+2026-08-04 19:00:15,500 [INFO] Counterfactuals for score_Narcissism: 390 high scorers (≥16.00).
+2026-08-04 19:00:33,839 [INFO]   [score_Narcissism] Primary tipping feature: BFI_A_sum (61.8%)
+2026-08-04 19:00:33,841 [INFO] Counterfactual results saved to results/tables/layer3_counterfactual_flipping.csv
+2026-08-04 19:00:33,841 [INFO] === PHASE 5 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 19:00:36,733 [INFO] ===============================================================
+2026-08-04 19:00:36,733 [INFO]  DT³ PHASE 6 (REMEDIATED): Layer 4 - Semantic Triangulation 
+2026-08-04 19:00:36,733 [INFO] ===============================================================
+2026-08-04 19:00:36,733 [INFO] --- Executing Semantic Embedding Extraction ---
+2026-08-04 19:00:36,733 [INFO] Initializing SentenceTransformer (all-MiniLM-L6-v2)...
+2026-08-04 19:00:36,746 [INFO] No device provided, using mps
+2026-08-04 19:00:38,045 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:38,047 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-04 19:00:38,321 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:38,860 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:39,474 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:39,478 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-08-04 19:00:40,089 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:40,810 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:41,317 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:41,829 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+2026-08-04 19:00:42,589 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:43,160 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:43,590 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:44,082 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:44,594 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 19:00:45,106 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:45,618 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:46,130 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 19:00:46,642 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 19:00:47,461 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 19:00:47,974 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-04 19:00:48,494 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:48,783 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:49,508 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:51,352 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:53,140 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:53,364 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:53,672 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:54,015 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:54,527 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-08-04 19:00:54,848 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 19:00:55,243 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 19:00:55,551 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-08-04 19:00:55,964 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-08-04 19:00:56,343 [INFO] Successfully extracted embeddings. Shape: (12, 384)
+2026-08-04 19:00:56,344 [INFO] Executing Agglomerative Hierarchical Clustering (k=3)...
+2026-08-04 19:00:56,355 [INFO] Clustering Metrics -> ARI: 0.5045 (Moderate) | Silhouette: 0.1214
+2026-08-04 19:00:56,355 [INFO] Executing 1,000-iteration Permutation Test for ARI significance...
+2026-08-04 19:00:56,594 [INFO] Permutation Test -> Null Mean ARI: 0.0002 ± 0.1098 | p-value: 0.0070
+2026-08-04 19:00:56,604 [INFO] 
+--- SEMANTIC FRACTURE ANALYSIS ---
+Empirical_Cluster  0  1  2
+Theoretical_Trait         
+Machiavellianism   4  0  0
+Narcissism         3  1  0
+Psychopathy        0  0  4
+----------------------------------
+2026-08-04 19:00:56,739 [INFO] Dendrogram saved to results/figures/layer4_semantic_dendrogram.png
+2026-08-04 19:00:56,739 [INFO] === PHASE 6 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 19:00:58,607 [INFO] ===============================================================
+2026-08-04 19:00:58,607 [INFO]  DT³ PHASE 7 (REMEDIATED v3): Layer 5 – Rigor, Robustness & Person‑Centered
+2026-08-04 19:00:58,607 [INFO] ===============================================================
+2026-08-04 19:00:58,623 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 19:00:58,657 [INFO] --- Preparing Layer 5 Data (Rigor & Robustness) ---
+2026-08-04 19:00:58,663 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 19:00:58,663 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 19:00:58,679 [INFO] Aligned training rows: 5215 (DTDD) vs 5215 (predictors)
+2026-08-04 19:00:58,679 [INFO] --- Executing Formal SHAP Divergence Index (Pseudo‑Trait Null, Out‑of‑Sample) ---
+2026-08-04 19:00:58,998 [INFO] Observed SDI (out‑of‑sample): 0.2591
+2026-08-04 19:01:29,691 [INFO]   SDI null permutation 100/500
+2026-08-04 19:02:00,379 [INFO]   SDI null permutation 200/500
+2026-08-04 19:02:31,078 [INFO]   SDI null permutation 300/500
+2026-08-04 19:03:01,714 [INFO]   SDI null permutation 400/500
+2026-08-04 19:03:32,379 [INFO]   SDI null permutation 500/500
+2026-08-04 19:03:32,379 [INFO] SDI Null: mean 0.0953 ± 0.0588, p = 0.0100
+2026-08-04 19:03:32,381 [INFO] --- Executing Multi‑Architecture Robustness (Rashomon Set) ---
+2026-08-04 19:03:32,382 [INFO] Rashomon [score_Machiavellianism - Elastic-Net]: R² = 0.145
+2026-08-04 19:03:32,656 [INFO] Rashomon [score_Machiavellianism - Random Forest]: R² = 0.134
+2026-08-04 19:03:32,751 [INFO] Rashomon [score_Machiavellianism - XGBoost]: R² = 0.147
+2026-08-04 19:03:32,752 [INFO] Rashomon [score_Psychopathy - Elastic-Net]: R² = 0.237
+2026-08-04 19:03:33,022 [INFO] Rashomon [score_Psychopathy - Random Forest]: R² = 0.219
+2026-08-04 19:03:33,110 [INFO] Rashomon [score_Psychopathy - XGBoost]: R² = 0.218
+2026-08-04 19:03:33,111 [INFO] Rashomon [score_Narcissism - Elastic-Net]: R² = 0.144
+2026-08-04 19:03:33,382 [INFO] Rashomon [score_Narcissism - Random Forest]: R² = 0.126
+2026-08-04 19:03:33,471 [INFO] Rashomon [score_Narcissism - XGBoost]: R² = 0.132
+2026-08-04 19:03:33,479 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 19:03:33,479 [INFO] --- Executing Cross‑Sample Replication & Conformal Prediction ---
+2026-08-04 19:03:34,654 [INFO] Replication [sample_1_community - score_Machiavellianism]: N=5215, CV R² = 0.189, PI width = 18.962
+2026-08-04 19:03:35,479 [INFO] Replication [sample_1_community - score_Psychopathy]: N=5215, CV R² = 0.312, PI width = 17.451
+2026-08-04 19:03:36,306 [INFO] Replication [sample_1_community - score_Narcissism]: N=5215, CV R² = 0.115, PI width = 19.760
+2026-08-04 19:03:36,416 [INFO] Replication [sample_3_representative - score_Machiavellianism]: N=1492, CV R² = 0.197, PI width = 17.494
+2026-08-04 19:03:37,205 [INFO] Replication [sample_3_representative - score_Psychopathy]: N=1492, CV R² = 0.237, PI width = 14.052
+2026-08-04 19:03:37,315 [INFO] Replication [sample_3_representative - score_Narcissism]: N=1492, CV R² = 0.133, PI width = 17.668
+2026-08-04 19:03:37,318 [WARNING] Skipping sample_2_student: insufficient data (N=0).
+2026-08-04 19:03:37,320 [INFO] --- Executing Person‑Centered GMM (BIC) Analysis (Out‑of‑Sample) ---
+2026-08-04 19:03:37,461 [INFO]   score_Machiavellianism: BIC values computed for 1‑5 components.
+2026-08-04 19:03:37,637 [INFO]   score_Psychopathy: BIC values computed for 1‑5 components.
+2026-08-04 19:03:37,809 [INFO]   score_Narcissism: BIC values computed for 1‑5 components.
+2026-08-04 19:03:37,811 [INFO] Person‑centered BIC results saved to results/tables/layer5_person_centered_bic.csv
+2026-08-04 19:03:37,811 [INFO] === PHASE 7 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 19:03:39,508 [INFO] ===============================================================
+2026-08-04 19:03:39,508 [INFO]  DT³ PHASE 8 (REMEDIATED): SHAP Interactions Extension 
+2026-08-04 19:03:39,508 [INFO] ===============================================================
+2026-08-04 19:03:39,524 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 19:03:39,524 [INFO] --- Preparing Data for SHAP Interactions ---
+2026-08-04 19:03:39,564 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 19:03:39,564 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 19:03:39,574 [INFO] --- Executing SHAP Interaction Analysis ---
+2026-08-04 19:03:39,799 [INFO]   score_Machiavellianism: top interaction = BFI_A_sum x ...
+2026-08-04 19:03:40,029 [INFO]   score_Psychopathy: top interaction = BFI_A_sum x ...
+2026-08-04 19:03:40,254 [INFO]   score_Narcissism: top interaction = BFI_A_sum x ...
+2026-08-04 19:03:40,259 [INFO] SHAP interactions saved to results/tables/layer2_shap_interactions.csv
+2026-08-04 19:03:40,259 [INFO] === PHASE 8 EXTENSIONS EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 19:03:40,552 [INFO] ===============================================================
+2026-08-04 19:03:40,552 [INFO]  DT³ PHASE 8 (REMEDIATED v2): Master Synthesis Matrix 
+2026-08-04 19:03:40,552 [INFO] ===============================================================
+2026-08-04 19:03:40,552 [INFO] --- Compiling DT³ Master Synthesis Matrix ---
+2026-08-04 19:03:40,564 [INFO] Master Synthesis Matrix compiled with 11 paradigm proofs.
+2026-08-04 19:03:40,564 [INFO] Saved to: results/DT3_Master_Synthesis_Matrix.csv
+2026-08-04 19:14:46,528 [INFO] ===============================================================
+2026-08-04 19:14:46,528 [INFO]  DT³ PHASE 2.1 (REMEDIATED v6): Symbolic Regression (Unscaled + Wide Constants)
+2026-08-04 19:14:46,528 [INFO] ===============================================================
+2026-08-04 19:14:46,545 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-08-04 19:14:46,579 [INFO] --- Preparing Symbolic Regression Data ---
+2026-08-04 19:14:46,586 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-08-04 19:14:46,587 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-08-04 19:14:46,608 [INFO] --- Executing Symbolic Regression (Unscaled Targets, Non‑Linear) ---
+2026-08-04 19:14:46,608 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-08-04 19:15:30,608 [INFO] Discovered Form [score_Machiavellianism]: abs(sub(sub(abs(add(add(abs(BFI_E_sum), -11.780), TEQ_sum)), add(min(BFI_C_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))), BFI_A_sum))
+2026-08-04 19:15:30,608 [INFO] Validation R² -> Discovery: 0.148 | Replication: 0.093
+2026-08-04 19:15:30,608 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-08-04 19:16:17,004 [INFO] Discovered Form [score_Psychopathy]: sub(abs(max(sub(sub(sub(add(8.685, BFI_O_sum), add(add(add(BFI_C_sum, TEQ_sum), BFI_N_sum), max(BFI_N_sum, age))), BFI_A_sum), BFI_A_sum), 8.022)), add(BFI_A_sum, TEQ_sum))
+2026-08-04 19:16:17,005 [INFO] Validation R² -> Discovery: 0.254 | Replication: 0.184
+2026-08-04 19:16:17,005 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-08-04 19:17:00,816 [INFO] Discovered Form [score_Narcissism]: sub(sub(add(add(min(min(abs(-14.287), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), BFI_O_sum), BFI_E_sum), age), BFI_A_sum)
+2026-08-04 19:17:00,816 [INFO] Validation R² -> Discovery: 0.106 | Replication: 0.143
+2026-08-04 19:17:00,999 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-08-04 19:17:01,012 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-08-04 19:18:03,632 [INFO] ===============================================================
+2026-08-04 19:18:03,632 [INFO]  DT³ PHASE 8 (REMEDIATED v2): Master Synthesis Matrix 
+2026-08-04 19:18:03,632 [INFO] ===============================================================
+2026-08-04 19:18:03,632 [INFO] --- Compiling DT³ Master Synthesis Matrix ---
+2026-08-04 19:18:03,647 [INFO] Master Synthesis Matrix compiled with 11 paradigm proofs.
+2026-08-04 19:18:03,647 [INFO] Saved to: results/DT3_Master_Synthesis_Matrix.csv
+2026-08-05 00:28:28,277 [INFO] ===============================================================
+2026-08-05 00:28:28,277 [INFO]  DT³ PHASE 8 (REMEDIATED v3): Master Synthesis Matrix 
+2026-08-05 00:28:28,277 [INFO] ===============================================================
+2026-08-05 00:28:28,277 [INFO] --- Compiling DT³ Master Synthesis Matrix ---
+2026-08-05 00:28:28,295 [INFO] Master Synthesis Matrix compiled with 11 paradigm proofs.
+2026-08-05 00:28:28,295 [INFO] Saved to: results/DT3_Master_Synthesis_Matrix.csv

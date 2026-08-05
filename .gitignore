@@ -21,3 +21,10 @@ data/interim/*
 
 # Secrets
 *.env
+scripts/python/11_compile_manuscript_blueprint.py
+DT3_Manuscript_Blueprint.md
+.DS_Store
+._*
+__pycache__/
+data/
+docs/codebook/

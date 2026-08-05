@@ -1,4 +1,0 @@
-sample,raw_file,final_n,study_reported_n,bfi_a,bfi_c,bfi_n,bfi_o,teq,rses
-sample_1_community,imported_data_expro_filtred.Rds,5902,3524,True,True,True,True,True,True
-sample_2_student,imported_data_filtred_2.Rds,2071,1915,False,False,True,False,True,True
-sample_3_representative,imported_data_filtred_3.Rds,1492,1244,True,True,True,True,True,False

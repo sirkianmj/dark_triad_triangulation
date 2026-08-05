@@ -1,4 +1,0 @@
-,Equation,Train_MAE,Test_MAE,Baseline_MAE,Depth,Note
-score_Machiavellianism,"mul(add(BFI_O_sum, BFI_N_sum), 0.204)",5.23,5.59,4.652,2,NEAR_BASELINE
-score_Psychopathy,"mul(0.234, add(mul(0.349, age), BFI_N_sum))",4.652,4.796,4.108,3,NEAR_BASELINE
-score_Narcissism,"mul(TEQ_sum, 0.618)",5.79,5.946,4.875,1,NEAR_BASELINE

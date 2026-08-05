@@ -1,2 +1,0 @@
-ARI,Null_Mean_ARI,Null_Std_ARI,P_Value,N_Permutations,Silhouette,Evidence_Level
-0.5045,0.0002,0.1098,0.0070 (7/1000 perms ≥ obs),1000,0.1214,STRONG

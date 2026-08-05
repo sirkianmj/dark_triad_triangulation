@@ -1,0 +1,1189 @@
+
+
+========================================
+FILE: data_DTDD_pretest.Rds 
+========================================
+Class: spec_tbl_df, tbl_df, tbl, data.frame 
+Dimensions: 4657 x 4 
+
+Column names:
+[1] "code"          "question_name" "value"         "duration"     
+
+Structure (str):
+Classes ‘spec_tbl_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	4657 obs. of  4 variables:
+ $ code         : chr  "b8v9zy73tiw7qwpfg" "b8v9zy73tiw7qwpfg" "b8v9zy73tiw7qwpfg" "b8v9zy73tiw7qwpfg" ...
+ $ question_name: chr  "questionnaire_started" "questionnaire_finished" "questionnaire_duration" "broker" ...
+ $ value        : chr  "2023-01-18 13:40:09 UTC" "2023-01-18 13:47:53 UTC" "464.0" "Web Oushi" ...
+ $ duration     : num  0 0 0 0 0 0 0 0 0 0 ...
+ - attr(*, "spec")=List of 3
+  ..$ cols   :List of 4
+  .. ..$ code         : list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+  .. ..$ question_name: list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+  .. ..$ value        : list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+  .. ..$ duration     : list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_double" "collector"
+  ..$ default: list()
+  .. ..- attr(*, "class")= chr [1:2] "collector_guess" "collector"
+  ..$ delim  : chr ","
+  ..- attr(*, "class")= chr "col_spec"
+ - attr(*, "problems")=<pointer: 0x0> 
+
+First 5 rows:
+               code          question_name                   value duration
+1 b8v9zy73tiw7qwpfg  questionnaire_started 2023-01-18 13:40:09 UTC        0
+2 b8v9zy73tiw7qwpfg questionnaire_finished 2023-01-18 13:47:53 UTC        0
+3 b8v9zy73tiw7qwpfg questionnaire_duration                   464.0        0
+4 b8v9zy73tiw7qwpfg                 broker               Web Oushi        0
+5 b8v9zy73tiw7qwpfg     broker_assignement  DTDD_DJGLS_PET_pretest        0
+
+Summary:
+        code        question_name        value         duration       
+ Length   :4657   Length   :4657   Length   :4657   Min.   :    0.00  
+ N.unique :  80   N.unique : 100   N.unique : 394   1st Qu.:    8.00  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   Median :   29.00  
+ Min.nchar:   6   Min.nchar:   3   Min.nchar:   1   Mean   :   68.72  
+ Max.nchar:  78   Max.nchar:  40   Max.nchar: 286   3rd Qu.:   71.00  
+ NAs      :   9                    NAs      : 123   Max.   :40758.00  
+
+
+========================================
+FILE: data_DTDD_retest.Rds 
+========================================
+Class: spec_tbl_df, tbl_df, tbl, data.frame 
+Dimensions: 3913 x 4 
+
+Column names:
+[1] "code"          "question_name" "value"         "duration"     
+
+Structure (str):
+Classes ‘spec_tbl_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	3913 obs. of  4 variables:
+ $ code         : chr  "tbjqnyi7ob5cwlalw" "tbjqnyi7ob5cwlalw" "tbjqnyi7ob5cwlalw" "tbjqnyi7ob5cwlalw" ...
+ $ question_name: chr  "questionnaire_started" "questionnaire_finished" "questionnaire_duration" "broker" ...
+ $ value        : chr  "2023-01-31 23:20:42 UTC" "2023-01-31 23:36:39 UTC" "957.0" "Web Oushi" ...
+ $ duration     : num  0 0 0 0 0 0 0 0 0 11 ...
+ - attr(*, "spec")=List of 3
+  ..$ cols   :List of 4
+  .. ..$ code         : list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+  .. ..$ question_name: list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+  .. ..$ value        : list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+  .. ..$ duration     : list()
+  .. .. ..- attr(*, "class")= chr [1:2] "collector_double" "collector"
+  ..$ default: list()
+  .. ..- attr(*, "class")= chr [1:2] "collector_guess" "collector"
+  ..$ delim  : chr ","
+  ..- attr(*, "class")= chr "col_spec"
+ - attr(*, "problems")=<pointer: 0x0> 
+
+First 5 rows:
+               code          question_name                   value duration
+1 tbjqnyi7ob5cwlalw  questionnaire_started 2023-01-31 23:20:42 UTC        0
+2 tbjqnyi7ob5cwlalw questionnaire_finished 2023-01-31 23:36:39 UTC        0
+3 tbjqnyi7ob5cwlalw questionnaire_duration                   957.0        0
+4 tbjqnyi7ob5cwlalw                 broker               Web Oushi        0
+5 tbjqnyi7ob5cwlalw     broker_assignement   DTDD_DJGLS_PET_retest        0
+
+Summary:
+        code        question_name        value         duration      
+ Length   :3913   Length   :3913   Length   :3913   Min.   :   0.00  
+ N.unique :  61   N.unique :  99   N.unique : 529   1st Qu.:   6.00  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   Median :  17.00  
+ Min.nchar:  17   Min.nchar:   3   Min.nchar:   1   Mean   :  42.62  
+ Max.nchar:  17   Max.nchar:  40   Max.nchar: 297   3rd Qu.:  61.00  
+                                   NAs      :  61   Max.   :1285.00  
+
+
+========================================
+FILE: imported_data_expro_filtred.Rds 
+========================================
+Class: tbl_df, tbl, data.frame 
+Dimensions: 10518 x 100 
+
+Column names:
+  [1] "BFI_N_1"                "BFI_N_2"                "BFI_N_3"               
+  [4] "BFI_N_4"                "BFI_N_5"                "BFI_N_6"               
+  [7] "BFI_N_7"                "BFI_N_8"                "BFI_O_1"               
+ [10] "BFI_O_7"                "BFI_O_4"                "BFI_O_8"               
+ [13] "BFI_O_3"                "BFI_O_9"                "BFI_O_2"               
+ [16] "BFI_O_5"                "BFI_O_6"                "BFI_O_10"              
+ [19] "BFI_C_1"                "BFI_C_3"                "BFI_C_4"               
+ [22] "BFI_C_9"                "BFI_C_6"                "BFI_C_7"               
+ [25] "BFI_C_8"                "BFI_C_5"                "BFI_C_2"               
+ [28] "BFI_E_5"                "BFI_E_6"                "BFI_E_8"               
+ [31] "BFI_E_1"                "BFI_E_3"                "BFI_E_2"               
+ [34] "BFI_E_4"                "BFI_E_7"                "BFI_A_4"               
+ [37] "BFI_A_1"                "BFI_A_5"                "BFI_A_3"               
+ [40] "BFI_A_6"                "BFI_A_7"                "BFI_A_8"               
+ [43] "BFI_A_9"                "BFI_A_2"                "DTDD_1m"               
+ [46] "DTDD_2m"                "DTDD_3m"                "DTDD_4m"               
+ [49] "DTDD_1p"                "DTDD_2p"                "DTDD_3p"               
+ [52] "DTDD_4p"                "DTDD_1n"                "DTDD_2n"               
+ [55] "DTDD_3n"                "DTDD_4n"                "DTDD_1g"               
+ [58] "DTDD_1i"                "DTDD_1ma"               "RSES_1"                
+ [61] "RSES_2"                 "RSES_3"                 "RSES_4"                
+ [64] "RSES_5"                 "RSES_6"                 "RSES_7"                
+ [67] "RSES_8"                 "RSES_9"                 "RSES_10"               
+ [70] "TEQ_1"                  "TEQ_3"                  "TEQ_5"                 
+ [73] "TEQ_16"                 "TEQ_CON_2"              "TEQ_CON_4"             
+ [76] "TEQ_CON_14"             "health_behaviour_1"     "health_behaviour_2"    
+ [79] "health_behaviour_3"     "health_behaviour_4"     "health_behaviour_5"    
+ [82] "Age"                    "Education"              "Gender"                
+ [85] "Household"              "Household_less_than_18" "Economical_status"     
+ [88] "Family_status"          "questionnaire_started"  "questionnaire_finished"
+ [91] "questionnaire_duration" "Personal_source"        "user_agent"            
+ [94] "vaha1"                  "vaha2"                  "vyska1"                
+ [97] "vyska2"                 "rok_narozeni"           "mesic_narozeni"        
+[100] "code"                  
+
+Structure (str):
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	10518 obs. of  100 variables:
+ $ BFI_N_1               : num  NA 1 NA 1 2 NA NA 1 1 1 ...
+ $ BFI_N_2               : num  NA 5 NA 1 4 NA NA 3 2 3 ...
+ $ BFI_N_3               : num  NA 1 NA 2 5 NA NA 3 4 4 ...
+ $ BFI_N_4               : num  NA 1 NA 3 5 NA NA 2 2 4 ...
+ $ BFI_N_5               : num  NA 5 NA 2 5 NA NA 3 4 4 ...
+ $ BFI_N_6               : num  NA 1 NA 4 3 NA NA 4 2 4 ...
+ $ BFI_N_7               : num  NA 5 NA 3 3 NA NA 3 2 4 ...
+ $ BFI_N_8               : num  NA 1 NA 3 4 NA NA 3 2 4 ...
+ $ BFI_O_1               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_7               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_4               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_8               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_3               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_9               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_2               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_5               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_6               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_O_10              : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_1               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_3               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_4               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_9               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_6               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_7               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_8               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_5               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_C_2               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_5               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_6               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_8               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_1               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_3               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_2               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_4               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_E_7               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_4               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_1               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_5               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_3               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_6               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_7               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_8               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_9               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ BFI_A_2               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_1m               : num  NA 1 NA 4 2 NA NA 2 1 2 ...
+ $ DTDD_2m               : num  NA 1 NA 4 3 NA NA 2 2 2 ...
+ $ DTDD_3m               : num  NA 1 NA 4 6 NA NA 3 4 5 ...
+ $ DTDD_4m               : num  NA 1 NA 4 1 NA NA 2 2 1 ...
+ $ DTDD_1p               : num  NA 1 NA 4 1 NA NA 4 3 1 ...
+ $ DTDD_2p               : num  NA 1 NA 3 1 NA NA 2 2 1 ...
+ $ DTDD_3p               : num  NA 1 NA 2 1 NA NA 1 3 1 ...
+ $ DTDD_4p               : num  NA 1 NA 4 1 NA NA 3 3 3 ...
+ $ DTDD_1n               : num  NA 1 NA 6 7 NA NA 3 5 6 ...
+ $ DTDD_2n               : num  NA 1 NA 7 3 NA NA 2 5 6 ...
+ $ DTDD_3n               : num  NA 1 NA 6 7 NA NA 3 5 3 ...
+ $ DTDD_4n               : num  NA 1 NA 3 1 NA NA 2 2 3 ...
+ $ DTDD_1g               : num  NA 1 NA 3 1 NA NA 2 1 2 ...
+ $ DTDD_1i               : num  NA 1 NA 4 1 NA NA 3 4 2 ...
+ $ DTDD_1ma              : num  NA 1 NA 3 1 NA NA 1 2 1 ...
+ $ RSES_1                : num  NA 4 NA 3 3 NA NA 3 4 3 ...
+ $ RSES_2                : num  NA 1 NA 3 2 NA NA 3 3 2 ...
+ $ RSES_3                : num  NA 4 NA 3 4 NA NA 4 3 4 ...
+ $ RSES_4                : num  NA 4 NA 3 4 NA NA 3 3 4 ...
+ $ RSES_5                : num  NA 1 NA 3 2 NA NA 3 3 4 ...
+ $ RSES_6                : num  NA 1 NA 3 2 NA NA 3 3 3 ...
+ $ RSES_7                : num  NA 4 NA 3 3 NA NA 3 3 4 ...
+ $ RSES_8                : num  NA 1 NA 2 1 NA NA 3 3 2 ...
+ $ RSES_9                : num  NA 1 NA 2 3 NA NA 3 3 3 ...
+ $ RSES_10               : num  NA 4 NA 3 3 NA NA 4 4 3 ...
+ $ TEQ_1                 : num  NA 0 NA 3 2 NA NA 3 3 3 ...
+ $ TEQ_3                 : num  NA 0 NA 3 4 NA NA 2 3 4 ...
+ $ TEQ_5                 : num  NA 0 NA 4 4 NA NA 2 4 4 ...
+ $ TEQ_16                : num  NA 0 NA 3 3 NA NA 1 4 3 ...
+ $ TEQ_CON_2             : num  NA 0 NA 2 3 NA NA 2 2 2 ...
+ $ TEQ_CON_4             : num  NA 0 NA 4 3 NA NA 3 3 4 ...
+ $ TEQ_CON_14            : num  NA 0 NA 3 3 NA NA 3 4 4 ...
+ $ health_behaviour_1    : num  NA 1 NA 1 1 NA NA 1 1 1 ...
+ $ health_behaviour_2    : num  NA 1 NA 2 2 NA NA 2 4 2 ...
+ $ health_behaviour_3    : num  NA 1 NA 2 1 NA NA 1 1 1 ...
+ $ health_behaviour_4    : num  NA 1 NA 2 5 NA NA 4 3 4 ...
+ $ health_behaviour_5    : num  NA 1 NA 3 5 NA NA 3 5 5 ...
+ $ Age                   : num  58 99 NA 22 20 NA NA 18 23 19 ...
+ $ Education             : num  1 1 NA 3 3 NA NA 3 3 3 ...
+ $ Gender                : num  1 1 NA 1 0 NA NA 0 0 0 ...
+ $ Household             : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ Household_less_than_18: num  NA NA NA NA NA NA NA NA NA NA ...
+ $ Economical_status     : chr  "2" "3" NA "1" ...
+ $ Family_status         : chr  NA NA NA NA ...
+ $ questionnaire_started : chr  "2022-12-12 13:38:52 UTC" "2022-12-12 14:06:20 UTC" "2022-12-12 22:52:27 UTC" "2022-12-13 06:00:44 UTC" ...
+ $ questionnaire_finished: chr  NA "2022-12-12 14:09:04 UTC" NA "2022-12-13 07:07:26 UTC" ...
+ $ questionnaire_duration: chr  "0" "164.0" "0" "4002.0" ...
+ $ Personal_source       : chr  "pokus23" "0" NA "WH182" ...
+ $ user_agent            : chr  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" ...
+ $ vaha1                 : chr  "158" "99" NA "84" ...
+ $ vaha2                 : chr  NA "99" NA "84" ...
+ $ vyska1                : chr  "158" "99" NA "194" ...
+ $ vyska2                : chr  NA "99" NA "194" ...
+ $ rok_narozeni          : chr  NA "1995" NA "2000" ...
+ $ mesic_narozeni        : chr  NA "3" NA "2" ...
+ $ code                  : chr  "tq8ubw7go2lvyqhdv" "gkc7c2s4avm68oln9" "uqme3jgjpagfkwk8s" "usb5g79szl3rwgq42" ...
+
+First 5 rows:
+  BFI_N_1 BFI_N_2 BFI_N_3 BFI_N_4 BFI_N_5 BFI_N_6 BFI_N_7 BFI_N_8 BFI_O_1
+1      NA      NA      NA      NA      NA      NA      NA      NA      NA
+2       1       5       1       1       5       1       5       1      NA
+3      NA      NA      NA      NA      NA      NA      NA      NA      NA
+4       1       1       2       3       2       4       3       3      NA
+5       2       4       5       5       5       3       3       4      NA
+  BFI_O_7 BFI_O_4 BFI_O_8 BFI_O_3 BFI_O_9 BFI_O_2 BFI_O_5 BFI_O_6 BFI_O_10
+1      NA      NA      NA      NA      NA      NA      NA      NA       NA
+2      NA      NA      NA      NA      NA      NA      NA      NA       NA
+3      NA      NA      NA      NA      NA      NA      NA      NA       NA
+4      NA      NA      NA      NA      NA      NA      NA      NA       NA
+5      NA      NA      NA      NA      NA      NA      NA      NA       NA
+  BFI_C_1 BFI_C_3 BFI_C_4 BFI_C_9 BFI_C_6 BFI_C_7 BFI_C_8 BFI_C_5 BFI_C_2
+1      NA      NA      NA      NA      NA      NA      NA      NA      NA
+2      NA      NA      NA      NA      NA      NA      NA      NA      NA
+3      NA      NA      NA      NA      NA      NA      NA      NA      NA
+4      NA      NA      NA      NA      NA      NA      NA      NA      NA
+5      NA      NA      NA      NA      NA      NA      NA      NA      NA
+  BFI_E_5 BFI_E_6 BFI_E_8 BFI_E_1 BFI_E_3 BFI_E_2 BFI_E_4 BFI_E_7 BFI_A_4
+1      NA      NA      NA      NA      NA      NA      NA      NA      NA
+2      NA      NA      NA      NA      NA      NA      NA      NA      NA
+3      NA      NA      NA      NA      NA      NA      NA      NA      NA
+4      NA      NA      NA      NA      NA      NA      NA      NA      NA
+5      NA      NA      NA      NA      NA      NA      NA      NA      NA
+  BFI_A_1 BFI_A_5 BFI_A_3 BFI_A_6 BFI_A_7 BFI_A_8 BFI_A_9 BFI_A_2 DTDD_1m
+1      NA      NA      NA      NA      NA      NA      NA      NA      NA
+2      NA      NA      NA      NA      NA      NA      NA      NA       1
+3      NA      NA      NA      NA      NA      NA      NA      NA      NA
+4      NA      NA      NA      NA      NA      NA      NA      NA       4
+5      NA      NA      NA      NA      NA      NA      NA      NA       2
+  DTDD_2m DTDD_3m DTDD_4m DTDD_1p DTDD_2p DTDD_3p DTDD_4p DTDD_1n DTDD_2n
+1      NA      NA      NA      NA      NA      NA      NA      NA      NA
+2       1       1       1       1       1       1       1       1       1
+3      NA      NA      NA      NA      NA      NA      NA      NA      NA
+4       4       4       4       4       3       2       4       6       7
+5       3       6       1       1       1       1       1       7       3
+  DTDD_3n DTDD_4n DTDD_1g DTDD_1i DTDD_1ma RSES_1 RSES_2 RSES_3 RSES_4 RSES_5
+1      NA      NA      NA      NA       NA     NA     NA     NA     NA     NA
+2       1       1       1       1        1      4      1      4      4      1
+3      NA      NA      NA      NA       NA     NA     NA     NA     NA     NA
+4       6       3       3       4        3      3      3      3      3      3
+5       7       1       1       1        1      3      2      4      4      2
+  RSES_6 RSES_7 RSES_8 RSES_9 RSES_10 TEQ_1 TEQ_3 TEQ_5 TEQ_16 TEQ_CON_2
+1     NA     NA     NA     NA      NA    NA    NA    NA     NA        NA
+2      1      4      1      1       4     0     0     0      0         0
+3     NA     NA     NA     NA      NA    NA    NA    NA     NA        NA
+4      3      3      2      2       3     3     3     4      3         2
+5      2      3      1      3       3     2     4     4      3         3
+  TEQ_CON_4 TEQ_CON_14 health_behaviour_1 health_behaviour_2 health_behaviour_3
+1        NA         NA                 NA                 NA                 NA
+2         0          0                  1                  1                  1
+3        NA         NA                 NA                 NA                 NA
+4         4          3                  1                  2                  2
+5         3          3                  1                  2                  1
+  health_behaviour_4 health_behaviour_5 Age Education Gender Household
+1                 NA                 NA  58         1      1        NA
+2                  1                  1  99         1      1        NA
+3                 NA                 NA  NA        NA     NA        NA
+4                  2                  3  22         3      1        NA
+5                  5                  5  20         3      0        NA
+  Household_less_than_18 Economical_status Family_status   questionnaire_started
+1                     NA                 2          <NA> 2022-12-12 13:38:52 UTC
+2                     NA                 3          <NA> 2022-12-12 14:06:20 UTC
+3                     NA              <NA>          <NA> 2022-12-12 22:52:27 UTC
+4                     NA                 1          <NA> 2022-12-13 06:00:44 UTC
+5                     NA                 1          <NA> 2022-12-13 07:34:18 UTC
+   questionnaire_finished questionnaire_duration Personal_source
+1                    <NA>                      0         pokus23
+2 2022-12-12 14:09:04 UTC                  164.0               0
+3                    <NA>                      0            <NA>
+4 2022-12-13 07:07:26 UTC                 4002.0           WH182
+5 2022-12-13 08:14:38 UTC                 2420.0            NH41
+                                                                                                       user_agent
+1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+2 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+3                                Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+4           Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+5 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+  vaha1 vaha2 vyska1 vyska2 rok_narozeni mesic_narozeni              code
+1   158  <NA>    158   <NA>         <NA>           <NA> tq8ubw7go2lvyqhdv
+2    99    99     99     99         1995              3 gkc7c2s4avm68oln9
+3  <NA>  <NA>   <NA>   <NA>         <NA>           <NA> uqme3jgjpagfkwk8s
+4    84    84    194    194         2000              2 usb5g79szl3rwgq42
+5    55    55    159    159         2002              4 2mwbq8kms2th7inpa
+
+Summary:
+    BFI_N_1        BFI_N_2         BFI_N_3         BFI_N_4        BFI_N_5     
+ Min.   :1.0    Min.   :1.000   Min.   :1.000   Min.   :1.0    Min.   :1.000  
+ 1st Qu.:2.0    1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.0    1st Qu.:2.000  
+ Median :2.0    Median :3.000   Median :3.000   Median :3.0    Median :3.000  
+ Mean   :2.5    Mean   :3.157   Mean   :3.231   Mean   :3.1    Mean   :3.109  
+ 3rd Qu.:3.0    3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.0    3rd Qu.:4.000  
+ Max.   :5.0    Max.   :5.000   Max.   :5.000   Max.   :5.0    Max.   :5.000  
+ NAs    :5109   NAs    :5109    NAs    :5109    NAs    :5109   NAs    :5109   
+    BFI_N_6         BFI_N_7         BFI_N_8         BFI_O_1         BFI_O_7     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :3.057   Mean   :3.005   Mean   :3.161   Mean   :3.332   Mean   :2.929  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :5109    NAs    :5109    NAs    :5109    NAs    :5191    NAs    :5191   
+    BFI_O_4         BFI_O_8         BFI_O_3         BFI_O_9         BFI_O_2     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:3.000  
+ Median :4.000   Median :4.000   Median :4.000   Median :3.000   Median :4.000  
+ Mean   :3.684   Mean   :3.598   Mean   :3.542   Mean   :2.758   Mean   :3.663  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :5191    NAs    :5191    NAs    :5191    NAs    :5191    NAs    :5191   
+    BFI_O_5         BFI_O_6         BFI_O_10        BFI_C_1         BFI_C_3    
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.00  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.00  
+ Median :4.000   Median :4.000   Median :3.000   Median :4.000   Median :4.00  
+ Mean   :3.401   Mean   :3.443   Mean   :2.962   Mean   :3.748   Mean   :3.79  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.00  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.00  
+ NAs    :5191    NAs    :5191    NAs    :5191    NAs    :5202    NAs    :5202  
+    BFI_C_4         BFI_C_9         BFI_C_6         BFI_C_7         BFI_C_8     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000  
+ Median :3.000   Median :3.000   Median :4.000   Median :3.000   Median :4.000  
+ Mean   :3.242   Mean   :2.912   Mean   :3.521   Mean   :3.288   Mean   :3.411  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :5202    NAs    :5202    NAs    :5202    NAs    :5202    NAs    :5202   
+    BFI_C_5         BFI_C_2        BFI_E_5         BFI_E_6        BFI_E_8     
+ Min.   :1.000   Min.   :1.00   Min.   :1.000   Min.   :1.00   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:2.00   1st Qu.:2.000   1st Qu.:2.00   1st Qu.:3.000  
+ Median :3.000   Median :3.00   Median :3.000   Median :3.00   Median :4.000  
+ Mean   :2.921   Mean   :3.26   Mean   :2.865   Mean   :3.16   Mean   :3.382  
+ 3rd Qu.:4.000   3rd Qu.:4.00   3rd Qu.:4.000   3rd Qu.:4.00   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.00   Max.   :5.000   Max.   :5.00   Max.   :5.000  
+ NAs    :5202    NAs    :5202   NAs    :5209    NAs    :5209   NAs    :5209   
+    BFI_E_1         BFI_E_3         BFI_E_2         BFI_E_4         BFI_E_7     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :3.221   Mean   :3.312   Mean   :2.982   Mean   :3.185   Mean   :2.993  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :5209    NAs    :5209    NAs    :5209    NAs    :5209    NAs    :5209   
+    BFI_A_4         BFI_A_1         BFI_A_5         BFI_A_3         BFI_A_6     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :3.000   Median :4.000   Median :4.000   Median :4.000   Median :3.000  
+ Mean   :3.038   Mean   :3.477   Mean   :3.367   Mean   :3.997   Mean   :3.226  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:5.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :5223    NAs    :5223    NAs    :5223    NAs    :5223    NAs    :5223   
+    BFI_A_7        BFI_A_8         BFI_A_9         BFI_A_2         DTDD_1m     
+ Min.   :1.00   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.00   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:1.000  
+ Median :4.00   Median :4.000   Median :4.000   Median :4.000   Median :2.000  
+ Mean   :3.58   Mean   :3.505   Mean   :3.472   Mean   :3.769   Mean   :2.802  
+ 3rd Qu.:4.00   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.00   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :7.000  
+ NAs    :5223   NAs    :5223    NAs    :5223    NAs    :5223    NAs    :4505   
+    DTDD_2m         DTDD_3m         DTDD_4m         DTDD_1p        DTDD_2p     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.00   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.00   1st Qu.:1.000  
+ Median :3.000   Median :4.000   Median :2.000   Median :2.00   Median :2.000  
+ Mean   :3.061   Mean   :3.606   Mean   :2.472   Mean   :2.45   Mean   :2.201  
+ 3rd Qu.:4.000   3rd Qu.:5.000   3rd Qu.:4.000   3rd Qu.:4.00   3rd Qu.:3.000  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.00   Max.   :7.000  
+ NAs    :4505    NAs    :4505    NAs    :4505    NAs    :4505   NAs    :4505   
+    DTDD_3p         DTDD_4p         DTDD_1n         DTDD_2n         DTDD_3n     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.000   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median :1.000   Median :3.000   Median :3.000   Median :4.000   Median :3.000  
+ Mean   :2.235   Mean   :2.968   Mean   :3.455   Mean   :3.852   Mean   :3.501  
+ 3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:5.000   3rd Qu.:5.000   3rd Qu.:5.000  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000  
+ NAs    :4505    NAs    :4505    NAs    :4506    NAs    :4505    NAs    :4505   
+    DTDD_4n         DTDD_1g         DTDD_1i         DTDD_1ma        RSES_1     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.00   Min.   :1.000  
+ 1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.00   1st Qu.:3.000  
+ Median :2.000   Median :2.000   Median :2.000   Median :2.00   Median :3.000  
+ Mean   :2.909   Mean   :2.202   Mean   :2.687   Mean   :2.22   Mean   :2.866  
+ 3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:3.00   3rd Qu.:3.000  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.00   Max.   :4.000  
+ NAs    :4505    NAs    :4505    NAs    :4505    NAs    :4505   NAs    :5282   
+     RSES_2          RSES_3          RSES_4          RSES_5          RSES_6     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.512   Mean   :3.117   Mean   :3.096   Mean   :2.873   Mean   :2.707  
+ 3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+ NAs    :5282    NAs    :5282    NAs    :5282    NAs    :5282    NAs    :5282   
+     RSES_7          RSES_8          RSES_9         RSES_10          TEQ_1      
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :0.000  
+ 1st Qu.:3.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :3.000   Median :2.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.938   Mean   :2.244   Mean   :2.658   Mean   :2.909   Mean   :2.638  
+ 3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:3.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+ NAs    :5282    NAs    :5282    NAs    :5282    NAs    :5282    NAs    :4677   
+     TEQ_3           TEQ_5           TEQ_16        TEQ_CON_2       TEQ_CON_4    
+ Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.972   Mean   :3.099   Mean   :2.722   Mean   :2.468   Mean   :3.039  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:4.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+ NAs    :4677    NAs    :4677    NAs    :4677    NAs    :4677    NAs    :4677   
+   TEQ_CON_14    health_behaviour_1 health_behaviour_2 health_behaviour_3
+ Min.   :0.000   Min.   :1.000      Min.   :1.00       Min.   :1.000     
+ 1st Qu.:2.000   1st Qu.:1.000      1st Qu.:2.00       1st Qu.:1.000     
+ Median :3.000   Median :1.000      Median :2.00       Median :1.000     
+ Mean   :2.964   Mean   :1.978      Mean   :2.42       Mean   :1.189     
+ 3rd Qu.:4.000   3rd Qu.:2.000      3rd Qu.:3.00       3rd Qu.:1.000     
+ Max.   :4.000   Max.   :6.000      Max.   :6.00       Max.   :6.000     
+ NAs    :4677    NAs    :5286       NAs    :5286       NAs    :5286      
+ health_behaviour_4 health_behaviour_5      Age           Education    
+ Min.   :1.000      Min.   :1.000      Min.   :  1.00   Min.   :1.000  
+ 1st Qu.:2.000      1st Qu.:3.000      1st Qu.: 21.00   1st Qu.:3.000  
+ Median :4.000      Median :5.000      Median : 25.00   Median :3.000  
+ Mean   :3.736      Mean   :4.255      Mean   : 30.92   Mean   :3.452  
+ 3rd Qu.:5.000      3rd Qu.:5.000      3rd Qu.: 40.00   3rd Qu.:5.000  
+ Max.   :6.000      Max.   :6.000      Max.   :110.00   Max.   :7.000  
+ NAs    :5286       NAs    :5286       NAs    :3359     NAs    :3358   
+     Gender         Household       Household_less_than_18 Economical_status
+ Min.   :0.0000   Min.   :  0.000   Min.   : 0.0000        Length   :10518  
+ 1st Qu.:0.0000   1st Qu.:  1.000   1st Qu.: 0.0000        N.unique :    8  
+ Median :0.0000   Median :  2.000   Median : 0.0000        N.blank  :    0  
+ Mean   :0.3747   Mean   :  2.509   Mean   : 0.7569        Min.nchar:    1  
+ 3rd Qu.:1.0000   3rd Qu.:  3.000   3rd Qu.: 1.0000        Max.nchar:    1  
+ Max.   :1.0000   Max.   :100.000   Max.   :99.0000        NAs      : 3360  
+ NAs    :3344     NAs    :3449      NAs    :3450                            
+   Family_status   questionnaire_started questionnaire_finished
+ Length   :10518   Length   :10518       Length   :10518       
+ N.unique :    6   N.unique :10477       N.unique : 5201       
+ N.blank  :    0   N.blank  :    0       N.blank  :    0       
+ Min.nchar:    1   Min.nchar:   23       Min.nchar:   23       
+ Max.nchar:    1   Max.nchar:   23       Max.nchar:   23       
+ NAs      : 3458                         NAs      : 5308       
+                                                               
+ questionnaire_duration  Personal_source      user_agent          vaha1      
+ Length   :10518        Length   :10518   Length   :10518   Length   :10518  
+ N.unique : 3442        N.unique :  483   N.unique : 2724   N.unique :  138  
+ N.blank  :    0        N.blank  :    0   N.blank  :    0   N.blank  :    0  
+ Min.nchar:    1        Min.nchar:    1   Min.nchar:   65   Min.nchar:    1  
+ Max.nchar:    9        Max.nchar:   78   Max.nchar:  326   Max.nchar:   11  
+                        NAs      : 3382   NAs      : 1731   NAs      : 3371  
+                                                                             
+       vaha2             vyska1            vyska2         rok_narozeni  
+ Length   :10518   Length   :10518   Length   :10518   Length   :10518  
+ N.unique :  127   N.unique :   88   N.unique :   93   N.unique :   74  
+ N.blank  :    0   N.blank  :    0   N.blank  :    0   N.blank  :    0  
+ Min.nchar:    1   Min.nchar:    1   Min.nchar:    1   Min.nchar:    4  
+ Max.nchar:    4   Max.nchar:    6   Max.nchar:    4   Max.nchar:    4  
+ NAs      : 5305   NAs      : 3370   NAs      : 5304   NAs      : 5304  
+                                                                        
+   mesic_narozeni         code      
+ Length   :10518   Length   :10518  
+ N.unique :   12   N.unique :10518  
+ N.blank  :    0   N.blank  :    0  
+ Min.nchar:    1   Min.nchar:   17  
+ Max.nchar:    2   Max.nchar:   17  
+ NAs      : 5304                    
+                                    
+
+
+========================================
+FILE: imported_data_filtred_2.Rds 
+========================================
+Class: tbl_df, tbl, data.frame 
+Dimensions: 5334 x 75 
+
+Column names:
+ [1] "BFI_N_1"                "BFI_N_2"                "BFI_N_3"               
+ [4] "BFI_N_4"                "BFI_N_5"                "BFI_N_6"               
+ [7] "BFI_N_7"                "BFI_N_8"                "DTDD_1m"               
+[10] "DTDD_2m"                "DTDD_3m"                "DTDD_4m"               
+[13] "DTDD_1p"                "DTDD_2p"                "DTDD_3p"               
+[16] "DTDD_4p"                "DTDD_1n"                "DTDD_2n"               
+[19] "DTDD_3n"                "DTDD_4n"                "DTDD_1g"               
+[22] "DTDD_1i"                "DTDD_1ma"               "RSES_1"                
+[25] "RSES_2"                 "RSES_3"                 "RSES_4"                
+[28] "RSES_5"                 "RSES_6"                 "RSES_7"                
+[31] "RSES_8"                 "RSES_9"                 "RSES_10"               
+[34] "TEQ_1"                  "TEQ_2"                  "TEQ_3"                 
+[37] "TEQ_4"                  "TEQ_5"                  "TEQ_6"                 
+[40] "TEQ_7"                  "TEQ_8"                  "TEQ_9"                 
+[43] "TEQ_10"                 "TEQ_11"                 "TEQ_12"                
+[46] "TEQ_13"                 "TEQ_14"                 "TEQ_15"                
+[49] "TEQ_16"                 "TEQ_CON_2"              "TEQ_CON_4"             
+[52] "TEQ_CON_14"             "health_behaviour_1"     "health_behaviour_2"    
+[55] "health_behaviour_3"     "health_behaviour_4"     "health_behaviour_5"    
+[58] "age"                    "education"              "sex"                   
+[61] "household"              "marital_status"         "economical_status"     
+[64] "questionnaire_started"  "questionnaire_finished" "questionnaire_duration"
+[67] "Personal_source"        "user_agent"             "vaha1"                 
+[70] "vaha2"                  "vyska1"                 "vyska2"                
+[73] "rok_narozeni"           "mesic_narozeni"         "code"                  
+
+Structure (str):
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	5334 obs. of  75 variables:
+ $ BFI_N_1               : num  1 1 3 1 3 3 1 NA 1 1 ...
+ $ BFI_N_2               : num  5 4 1 1 4 3 1 NA 2 1 ...
+ $ BFI_N_3               : num  1 5 4 3 3 3 1 NA 1 3 ...
+ $ BFI_N_4               : num  1 4 5 2 3 3 1 NA 1 2 ...
+ $ BFI_N_5               : num  5 3 3 3 3 3 1 NA 1 2 ...
+ $ BFI_N_6               : num  1 5 4 3 4 3 1 NA 3 4 ...
+ $ BFI_N_7               : num  5 2 2 3 3 3 1 NA 3 3 ...
+ $ BFI_N_8               : num  1 3 3 3 2 3 1 NA 1 1 ...
+ $ DTDD_1m               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_2m               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_3m               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_4m               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_1p               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_2p               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_3p               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_4p               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_1n               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_2n               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_3n               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_4n               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_1g               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_1i               : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ DTDD_1ma              : num  NA NA NA NA NA NA NA NA NA NA ...
+ $ RSES_1                : num  3 2 3 3 3 3 NA NA NA 4 ...
+ $ RSES_2                : num  1 2 2 3 3 3 NA NA NA 3 ...
+ $ RSES_3                : num  3 3 3 3 3 3 NA NA NA 4 ...
+ $ RSES_4                : num  4 2 3 3 2 3 NA NA NA 4 ...
+ $ RSES_5                : num  2 2 3 3 3 3 NA NA NA 1 ...
+ $ RSES_6                : num  2 2 2 3 2 3 NA NA NA 4 ...
+ $ RSES_7                : num  4 3 4 3 3 3 NA NA NA 4 ...
+ $ RSES_8                : num  2 3 3 3 2 3 NA NA NA 2 ...
+ $ RSES_9                : num  1 3 3 4 2 3 NA NA NA 4 ...
+ $ RSES_10               : num  4 3 3 3 3 3 NA NA NA 4 ...
+ $ TEQ_1                 : chr  "3" "2" "2" "2" ...
+ $ TEQ_2                 : chr  "4" "3" "1" "1" ...
+ $ TEQ_3                 : chr  "4" "0" "0" "0" ...
+ $ TEQ_4                 : chr  "3" "1" "0" "2" ...
+ $ TEQ_5                 : chr  "2" "4" "4" "2" ...
+ $ TEQ_6                 : chr  "3" "2" "4" "2" ...
+ $ TEQ_7                 : chr  "4" "0" "0" "3" ...
+ $ TEQ_8                 : chr  "3" "4" "3" "3" ...
+ $ TEQ_9                 : chr  "3" "4" "3" "0" ...
+ $ TEQ_10                : chr  "2" "2" "0" "2" ...
+ $ TEQ_11                : chr  "4" "0" "0" "1" ...
+ $ TEQ_12                : chr  "2" "0" "0" "2" ...
+ $ TEQ_13                : chr  "3" "3" "3" "2" ...
+ $ TEQ_14                : chr  "3" "1" "0" "1" ...
+ $ TEQ_15                : chr  "4" "0" "0" "2" ...
+ $ TEQ_16                : chr  "2" "4" "4" "1" ...
+ $ TEQ_CON_2             : chr  NA NA NA NA ...
+ $ TEQ_CON_4             : chr  NA NA NA NA ...
+ $ TEQ_CON_14            : chr  NA NA NA NA ...
+ $ health_behaviour_1    : chr  "1" "1" "5" "1" ...
+ $ health_behaviour_2    : chr  "1" "2" "2" "3" ...
+ $ health_behaviour_3    : chr  "1" "1" "1" "1" ...
+ $ health_behaviour_4    : chr  "1" "5" "5" "5" ...
+ $ health_behaviour_5    : chr  "1" "5" "5" "6" ...
+ $ age                   : num  29 53 34 73 65 49 60 36 58 28 ...
+ $ education             : num  5 6 5 3 6 6 2 5 5 6 ...
+ $ sex                   : num  1 0 0 1 1 0 0 1 1 1 ...
+ $ household             : chr  "4" "1" "1" "3" ...
+ $ marital_status        : chr  "1" "2" "2" "3" ...
+ $ economical_status     : chr  NA NA NA NA ...
+ $ questionnaire_started : chr  "2020-08-20 12:39:48 UTC" "2020-08-20 12:40:09 UTC" "2020-08-20 12:40:18 UTC" "2020-08-20 12:40:46 UTC" ...
+ $ questionnaire_finished: chr  "2020-08-20 12:59:28 UTC" "2020-08-20 13:51:39 UTC" "2020-08-20 13:56:50 UTC" "2020-08-20 13:29:41 UTC" ...
+ $ questionnaire_duration: chr  "1180.0" "4290.0" "4592.0" "2935.0" ...
+ $ Personal_source       : chr  NA NA NA NA ...
+ $ user_agent            : chr  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "Mozilla/5.0 (X11; CrOS aarch64 13099.102.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.127 Safari/537.36" ...
+ $ vaha1                 : chr  "65" "67" "50" "290" ...
+ $ vaha2                 : chr  "65" "67" "50" "290" ...
+ $ vyska1                : chr  "173" "166" "5" "511" ...
+ $ vyska2                : chr  "173" "166" "5" "511" ...
+ $ rok_narozeni          : chr  "1991" "1967" "1985" "1946" ...
+ $ mesic_narozeni        : chr  "1" "1" "8" "10" ...
+ $ code                  : chr  "ea1b3470-9788-6cb8-cf6b-0330b26c7fb6" "01ac785d-4ac5-2362-7846-4f874221bea0" "5f770eee-611c-5b30-a3f5-395c37c99511" "efdbeae7-6734-b5ad-0ffc-ddf0596f9034" ...
+
+First 5 rows:
+  BFI_N_1 BFI_N_2 BFI_N_3 BFI_N_4 BFI_N_5 BFI_N_6 BFI_N_7 BFI_N_8 DTDD_1m
+1       1       5       1       1       5       1       5       1      NA
+2       1       4       5       4       3       5       2       3      NA
+3       3       1       4       5       3       4       2       3      NA
+4       1       1       3       2       3       3       3       3      NA
+5       3       4       3       3       3       4       3       2      NA
+  DTDD_2m DTDD_3m DTDD_4m DTDD_1p DTDD_2p DTDD_3p DTDD_4p DTDD_1n DTDD_2n
+1      NA      NA      NA      NA      NA      NA      NA      NA      NA
+2      NA      NA      NA      NA      NA      NA      NA      NA      NA
+3      NA      NA      NA      NA      NA      NA      NA      NA      NA
+4      NA      NA      NA      NA      NA      NA      NA      NA      NA
+5      NA      NA      NA      NA      NA      NA      NA      NA      NA
+  DTDD_3n DTDD_4n DTDD_1g DTDD_1i DTDD_1ma RSES_1 RSES_2 RSES_3 RSES_4 RSES_5
+1      NA      NA      NA      NA       NA      3      1      3      4      2
+2      NA      NA      NA      NA       NA      2      2      3      2      2
+3      NA      NA      NA      NA       NA      3      2      3      3      3
+4      NA      NA      NA      NA       NA      3      3      3      3      3
+5      NA      NA      NA      NA       NA      3      3      3      2      3
+  RSES_6 RSES_7 RSES_8 RSES_9 RSES_10 TEQ_1 TEQ_2 TEQ_3 TEQ_4 TEQ_5 TEQ_6 TEQ_7
+1      2      4      2      1       4     3     4     4     3     2     3     4
+2      2      3      3      3       3     2     3     0     1     4     2     0
+3      2      4      3      3       3     2     1     0     0     4     4     0
+4      3      3      3      4       3     2     1     0     2     2     2     3
+5      2      3      2      2       3     2     0     4     1     3     4     1
+  TEQ_8 TEQ_9 TEQ_10 TEQ_11 TEQ_12 TEQ_13 TEQ_14 TEQ_15 TEQ_16 TEQ_CON_2
+1     3     3      2      4      2      3      3      4      2      <NA>
+2     4     4      2      0      0      3      1      0      4      <NA>
+3     3     3      0      0      0      3      0      0      4      <NA>
+4     3     0      2      1      2      2      1      2      1      <NA>
+5     3     2      1      1      0      3      0      0      3      <NA>
+  TEQ_CON_4 TEQ_CON_14 health_behaviour_1 health_behaviour_2 health_behaviour_3
+1      <NA>       <NA>                  1                  1                  1
+2      <NA>       <NA>                  1                  2                  1
+3      <NA>       <NA>                  5                  2                  1
+4      <NA>       <NA>                  1                  3                  1
+5      <NA>       <NA>                  1                  1                  1
+  health_behaviour_4 health_behaviour_5 age education sex household
+1                  1                  1  29         5   1         4
+2                  5                  5  53         6   0         1
+3                  5                  5  34         5   0         1
+4                  5                  6  73         3   1         3
+5                  1                  3  65         6   1         1
+  marital_status economical_status   questionnaire_started
+1              1              <NA> 2020-08-20 12:39:48 UTC
+2              2              <NA> 2020-08-20 12:40:09 UTC
+3              2              <NA> 2020-08-20 12:40:18 UTC
+4              3              <NA> 2020-08-20 12:40:46 UTC
+5              2              <NA> 2020-08-20 12:40:53 UTC
+   questionnaire_finished questionnaire_duration Personal_source
+1 2020-08-20 12:59:28 UTC                 1180.0            <NA>
+2 2020-08-20 13:51:39 UTC                 4290.0            <NA>
+3 2020-08-20 13:56:50 UTC                 4592.0            <NA>
+4 2020-08-20 13:29:41 UTC                 2935.0            <NA>
+5 2020-08-20 13:44:17 UTC                 3804.0            <NA>
+                                                                                                             user_agent
+1   Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36
+2   Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+3   Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36
+4 Mozilla/5.0 (X11; CrOS aarch64 13099.102.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.127 Safari/537.36
+5   Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36
+  vaha1 vaha2 vyska1 vyska2 rok_narozeni mesic_narozeni
+1    65    65    173    173         1991              1
+2    67    67    166    166         1967              1
+3    50    50      5      5         1985              8
+4   290   290    511    511         1946             10
+5   250   250      6      6         1954             11
+                                  code
+1 ea1b3470-9788-6cb8-cf6b-0330b26c7fb6
+2 01ac785d-4ac5-2362-7846-4f874221bea0
+3 5f770eee-611c-5b30-a3f5-395c37c99511
+4 efdbeae7-6734-b5ad-0ffc-ddf0596f9034
+5 33059a50-b937-c541-d14b-ad2e02ef7183
+
+Summary:
+    BFI_N_1         BFI_N_2         BFI_N_3         BFI_N_4         BFI_N_5     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median :2.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.352   Mean   :2.959   Mean   :3.209   Mean   :3.208   Mean   :3.026  
+ 3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :750     NAs    :750     NAs    :750     NAs    :750     NAs    :750    
+    BFI_N_6         BFI_N_7         BFI_N_8         DTDD_1m         DTDD_2m     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:1.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :2.000   Median :2.000  
+ Mean   :3.027   Mean   :2.858   Mean   :3.101   Mean   :2.964   Mean   :2.896  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :7.000   Max.   :7.000  
+ NAs    :750     NAs    :750     NAs    :750     NAs    :3238    NAs    :3238   
+    DTDD_3m         DTDD_4m         DTDD_1p         DTDD_2p         DTDD_3p     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000  
+ Median :3.000   Median :1.000   Median :1.000   Median :1.000   Median :1.000  
+ Mean   :3.284   Mean   :2.052   Mean   :1.814   Mean   :1.534   Mean   :1.706  
+ 3rd Qu.:5.000   3rd Qu.:3.000   3rd Qu.:2.000   3rd Qu.:1.000   3rd Qu.:2.000  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000  
+ NAs    :3238    NAs    :3238    NAs    :3238    NAs    :3238    NAs    :3238   
+    DTDD_4p         DTDD_1n        DTDD_2n         DTDD_3n         DTDD_4n     
+ Min.   :1.000   Min.   :1.00   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.000   1st Qu.:2.00   1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.000  
+ Median :2.000   Median :4.00   Median :4.000   Median :3.000   Median :2.000  
+ Mean   :2.866   Mean   :3.62   Mean   :3.918   Mean   :3.158   Mean   :2.773  
+ 3rd Qu.:4.000   3rd Qu.:5.00   3rd Qu.:5.000   3rd Qu.:5.000   3rd Qu.:4.000  
+ Max.   :7.000   Max.   :7.00   Max.   :7.000   Max.   :7.000   Max.   :7.000  
+ NAs    :3238    NAs    :3238   NAs    :3238    NAs    :3238    NAs    :3238   
+    DTDD_1g         DTDD_1i         DTDD_1ma         RSES_1          RSES_2    
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.00  
+ 1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:2.00  
+ Median :1.000   Median :1.000   Median :1.000   Median :3.000   Median :2.00  
+ Mean   :1.798   Mean   :2.303   Mean   :1.533   Mean   :2.888   Mean   :2.55  
+ 3rd Qu.:2.000   3rd Qu.:3.000   3rd Qu.:2.000   3rd Qu.:3.000   3rd Qu.:3.00  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :4.000   Max.   :4.00  
+ NAs    :3238    NAs    :3238    NAs    :3238    NAs    :1103    NAs    :1103  
+     RSES_3          RSES_4          RSES_5          RSES_6          RSES_7     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :3.243   Mean   :3.172   Mean   :2.837   Mean   :2.636   Mean   :3.062  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:4.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+ NAs    :1103    NAs    :1103    NAs    :1103    NAs    :1103    NAs    :1104   
+     RSES_8          RSES_9         RSES_10            TEQ_1     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Length   :5334  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000   N.unique :   5  
+ Median :2.000   Median :3.000   Median :3.000   N.blank  :   0  
+ Mean   :2.264   Mean   :2.764   Mean   :2.957   Min.nchar:   1  
+ 3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:3.000   Max.nchar:   1  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   NAs      :1595  
+ NAs    :1103    NAs    :1103    NAs    :1103                    
+       TEQ_2            TEQ_3            TEQ_4            TEQ_5     
+ Length   :5334   Length   :5334   Length   :5334   Length   :5334  
+ N.unique :   5   N.unique :   5   N.unique :   5   N.unique :   5  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1   Min.nchar:   1  
+ Max.nchar:   1   Max.nchar:   1   Max.nchar:   1   Max.nchar:   1  
+ NAs      :2659   NAs      :1771   NAs      :3736   NAs      : 518  
+                                                                    
+       TEQ_6            TEQ_7            TEQ_8            TEQ_9     
+ Length   :5334   Length   :5334   Length   :5334   Length   :5334  
+ N.unique :   5   N.unique :   5   N.unique :   5   N.unique :   5  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1   Min.nchar:   1  
+ Max.nchar:   1   Max.nchar:   1   Max.nchar:   1   Max.nchar:   1  
+ NAs      :2659   NAs      :3736   NAs      :2659   NAs      :3736  
+                                                                    
+       TEQ_10           TEQ_11           TEQ_12           TEQ_13    
+ Length   :5334   Length   :5334   Length   :5334   Length   :5334  
+ N.unique :   5   N.unique :   5   N.unique :   5   N.unique :   5  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1   Min.nchar:   1  
+ Max.nchar:   1   Max.nchar:   1   Max.nchar:   1   Max.nchar:   1  
+ NAs      :3736   NAs      :2659   NAs      :2659   NAs      :2659  
+                                                                    
+       TEQ_14           TEQ_15           TEQ_16         TEQ_CON_2   
+ Length   :5334   Length   :5334   Length   :5334   Length   :5334  
+ N.unique :   5   N.unique :   5   N.unique :   5   N.unique :   5  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1   Min.nchar:   1  
+ Max.nchar:   1   Max.nchar:   1   Max.nchar:   1   Max.nchar:   1  
+ NAs      :3736   NAs      :3736   NAs      :1595   NAs      :3193  
+                                                                    
+     TEQ_CON_4        TEQ_CON_14   health_behaviour_1 health_behaviour_2
+ Length   :5334   Length   :5334   Length   :5334     Length   :5334    
+ N.unique :   5   N.unique :   5   N.unique :   6     N.unique :   6    
+ N.blank  :   0   N.blank  :   0   N.blank  :   0     N.blank  :   0    
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1     Min.nchar:   1    
+ Max.nchar:   1   Max.nchar:   1   Max.nchar:   1     Max.nchar:   1    
+ NAs      :3193   NAs      :3193   NAs      :1111     NAs      :1111    
+                                                                        
+ health_behaviour_3 health_behaviour_4 health_behaviour_5      age        
+ Length   :5334     Length   :5334     Length   :5334     Min.   :  1.00  
+ N.unique :   6     N.unique :   6     N.unique :   6     1st Qu.: 28.00  
+ N.blank  :   0     N.blank  :   0     N.blank  :   0     Median : 38.00  
+ Min.nchar:   1     Min.nchar:   1     Min.nchar:   1     Mean   : 39.60  
+ Max.nchar:   1     Max.nchar:   1     Max.nchar:   1     3rd Qu.: 49.75  
+ NAs      :1111     NAs      :1111     NAs      :1111     Max.   :110.00  
+                                                                          
+   education          sex            household      marital_status
+ Min.   :1.000   Min.   :0.000   Length   :5334   Length   :5334  
+ 1st Qu.:3.000   1st Qu.:0.000   N.unique : 244   N.unique :   6  
+ Median :5.000   Median :0.000   N.blank  :   0   N.blank  :   0  
+ Mean   :4.194   Mean   :0.369   Min.nchar:   1   Min.nchar:   1  
+ 3rd Qu.:5.000   3rd Qu.:1.000   Max.nchar: 130   Max.nchar:   1  
+ Max.   :7.000   Max.   :1.000   NAs      :   2   NAs      :   1  
+                 NAs    :1                                        
+ economical_status questionnaire_started questionnaire_finished
+ Length   :5334    Length   :5334        Length   :5334        
+ N.unique :  43    N.unique :5301        N.unique :4197        
+ N.blank  :   0    N.blank  :   0        N.blank  :   0        
+ Min.nchar:   1    Min.nchar:  23        Min.nchar:  23        
+ Max.nchar: 363    Max.nchar:  23        Max.nchar:  23        
+ NAs      :2918                          NAs      :1132        
+                                                               
+ questionnaire_duration  Personal_source     user_agent         vaha1     
+ Length   :5334         Length   :5334   Length   :5334   Length   :5334  
+ N.unique :2936         N.unique :   9   N.unique : 908   N.unique : 229  
+ N.blank  :   0         N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1         Min.nchar:   1   Min.nchar:  61   Min.nchar:   1  
+ Max.nchar:   9         Max.nchar: 171   Max.nchar: 188   Max.nchar:   7  
+                        NAs      :4970                    NAs      :   6  
+                                                                          
+       vaha2            vyska1           vyska2        rok_narozeni 
+ Length   :5334   Length   :5334   Length   :5334   Length   :5334  
+ N.unique : 226   N.unique : 149   N.unique : 148   N.unique :  79  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1   Min.nchar:   4  
+ Max.nchar:   6   Max.nchar:   6   Max.nchar:   5   Max.nchar:   4  
+ NAs      : 814   NAs      :   6   NAs      : 814   NAs      : 815  
+                                                                    
+   mesic_narozeni        code     
+ Length   :5334   Length   :5334  
+ N.unique :  12   N.unique :5334  
+ N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   6  
+ Max.nchar:   2   Max.nchar:  36  
+ NAs      : 815                   
+                                  
+
+
+========================================
+FILE: imported_data_filtred_3.Rds 
+========================================
+Class: tbl_df, tbl, data.frame 
+Dimensions: 1665 x 83 
+
+Column names:
+ [1] "BFI_N_2"                "BFI_N_8"                "BFI_N_7"               
+ [4] "BFI_N_1"                "BFI_N_3"                "BFI_N_5"               
+ [7] "BFI_N_4"                "BFI_N_6"                "BFI_O_3"               
+[10] "BFI_O_2"                "BFI_O_9"                "BFI_O_5"               
+[13] "BFI_O_6"                "BFI_O_1"                "BFI_O_10"              
+[16] "BFI_O_7"                "BFI_O_8"                "BFI_O_4"               
+[19] "BFI_C_1"                "BFI_C_2"                "BFI_C_3"               
+[22] "BFI_C_5"                "BFI_C_4"                "BFI_C_9"               
+[25] "BFI_C_8"                "BFI_C_6"                "BFI_C_7"               
+[28] "BFI_E_3"                "BFI_E_6"                "BFI_E_4"               
+[31] "BFI_E_2"                "BFI_E_8"                "BFI_E_7"               
+[34] "BFI_E_1"                "BFI_E_5"                "BFI_A_2"               
+[37] "BFI_A_5"                "BFI_A_3"                "BFI_A_8"               
+[40] "BFI_A_7"                "BFI_A_9"                "BFI_A_1"               
+[43] "BFI_A_6"                "BFI_A_4"                "DTDD_1m"               
+[46] "DTDD_1n"                "DTDD_1p"                "DTDD_3n"               
+[49] "DTDD_2n"                "DTDD_4n"                "DTDD_4m"               
+[52] "DTDD_4p"                "DTDD_1i"                "DTDD_3m"               
+[55] "DTDD_2p"                "DTDD_3p"                "DTDD_1ma"              
+[58] "DTDD_1g"                "DTDD_2m"                "TEQ_1"                 
+[61] "TEQ_CON_2"              "TEQ_3"                  "TEQ_CON_4"             
+[64] "TEQ_CON_14"             "TEQ_16"                 "TEQ_5"                 
+[67] "age"                    "Education"              "education_type"        
+[70] "Gender"                 "Economical_status"      "Family_status"         
+[73] "questionnaire_started"  "questionnaire_finished" "questionnaire_duration"
+[76] "user_agent"             "vaha1"                  "vaha2"                 
+[79] "vyska1"                 "vyska2"                 "rok_narozeni"          
+[82] "mesic_narozeni"         "code"                  
+
+Structure (str):
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	1665 obs. of  83 variables:
+ $ BFI_N_2               : num  2 2 2 2 2 2 3 3 3 4 ...
+ $ BFI_N_8               : num  2 2 2 4 3 2 2 4 3 2 ...
+ $ BFI_N_7               : num  2 3 2 3 2 2 4 4 3 4 ...
+ $ BFI_N_1               : num  3 3 1 2 1 2 2 3 3 2 ...
+ $ BFI_N_3               : num  3 4 4 3 1 2 3 4 3 2 ...
+ $ BFI_N_5               : num  3 4 4 2 3 2 3 4 3 3 ...
+ $ BFI_N_4               : num  3 3 2 1 2 3 3 4 3 2 ...
+ $ BFI_N_6               : num  2 3 2 4 1 4 3 2 4 2 ...
+ $ BFI_O_3               : num  4 3 3 3 4 4 4 3 3 2 ...
+ $ BFI_O_2               : num  4 5 4 4 4 5 3 4 3 2 ...
+ $ BFI_O_9               : num  3 1 2 4 5 2 3 2 3 4 ...
+ $ BFI_O_5               : num  3 4 2 3 3 3 4 4 3 2 ...
+ $ BFI_O_6               : num  4 4 2 2 5 5 3 4 3 2 ...
+ $ BFI_O_1               : num  3 3 2 3 4 3 4 4 3 2 ...
+ $ BFI_O_10              : num  3 3 4 1 1 3 3 4 3 2 ...
+ $ BFI_O_7               : num  2 1 4 3 1 2 4 4 3 4 ...
+ $ BFI_O_8               : num  4 4 2 4 3 3 4 2 3 2 ...
+ $ BFI_O_4               : num  4 4 4 4 4 4 4 3 3 2 ...
+ $ BFI_C_1               : num  3 3 4 4 5 3 5 4 3 4 ...
+ $ BFI_C_2               : num  3 3 3 3 5 2 3 3 3 2 ...
+ $ BFI_C_3               : num  4 4 4 4 5 2 5 4 3 4 ...
+ $ BFI_C_5               : num  2 2 2 4 5 2 1 4 3 2 ...
+ $ BFI_C_4               : num  2 3 5 3 5 4 4 3 3 2 ...
+ $ BFI_C_9               : num  3 3 2 3 4 4 2 4 3 2 ...
+ $ BFI_C_8               : num  3 2 4 2 5 4 4 3 4 4 ...
+ $ BFI_C_6               : num  2 4 4 4 5 4 3 4 4 4 ...
+ $ BFI_C_7               : num  4 4 2 4 5 3 4 4 3 2 ...
+ $ BFI_E_3               : num  4 3 2 4 4 4 2 4 3 4 ...
+ $ BFI_E_6               : num  3 3 2 3 4 2 3 2 3 4 ...
+ $ BFI_E_4               : num  3 3 3 4 5 4 3 3 3 4 ...
+ $ BFI_E_2               : num  3 2 4 3 2 3 2 4 3 4 ...
+ $ BFI_E_8               : num  3 4 2 4 5 2 1 5 3 4 ...
+ $ BFI_E_7               : num  2 2 4 1 1 3 2 3 3 4 ...
+ $ BFI_E_1               : num  4 4 4 4 4 3 1 2 3 2 ...
+ $ BFI_E_5               : num  2 2 4 2 1 4 4 4 3 4 ...
+ $ BFI_A_2               : num  4 4 4 5 5 4 4 4 3 4 ...
+ $ BFI_A_5               : num  3 4 4 4 3 4 2 3 3 4 ...
+ $ BFI_A_3               : num  4 4 2 4 4 4 4 4 3 4 ...
+ $ BFI_A_8               : num  3 4 4 4 5 5 2 3 3 4 ...
+ $ BFI_A_7               : num  3 4 4 4 5 4 4 3 3 4 ...
+ $ BFI_A_9               : num  2 4 4 4 5 3 4 4 3 3 ...
+ $ BFI_A_1               : num  2 4 4 5 3 3 3 2 3 2 ...
+ $ BFI_A_6               : num  2 4 2 4 5 4 2 3 4 4 ...
+ $ BFI_A_4               : num  3 3 4 4 4 3 2 5 3 4 ...
+ $ DTDD_1m               : num  4 4 5 1 1 2 1 2 2 5 ...
+ $ DTDD_1n               : num  5 3 1 3 1 2 3 4 1 4 ...
+ $ DTDD_1p               : num  4 2 5 1 1 2 1 3 5 5 ...
+ $ DTDD_3n               : num  3 3 2 1 1 2 3 5 3 4 ...
+ $ DTDD_2n               : num  3 4 2 3 2 3 2 3 3 4 ...
+ $ DTDD_4n               : num  3 3 2 1 1 2 5 2 4 4 ...
+ $ DTDD_4m               : num  4 4 6 1 1 2 1 3 4 4 ...
+ $ DTDD_4p               : num  2 4 5 1 1 2 3 2 2 3 ...
+ $ DTDD_1i               : num  5 3 6 2 2 2 1 4 3 3 ...
+ $ DTDD_3m               : num  4 3 5 2 1 2 2 2 2 5 ...
+ $ DTDD_2p               : num  5 2 3 1 1 2 1 3 3 4 ...
+ $ DTDD_3p               : num  4 2 5 1 1 2 3 3 3 3 ...
+ $ DTDD_1ma              : num  5 3 5 3 1 2 3 2 2 4 ...
+ $ DTDD_1g               : num  4 2 2 1 1 2 1 3 3 3 ...
+ $ DTDD_2m               : num  3 3 5 1 1 2 2 4 4 4 ...
+ $ TEQ_1                 : num  2 2 3 3 3 2 3 3 2 1 ...
+ $ TEQ_CON_2             : num  2 3 2 3 4 3 2 1 2 3 ...
+ $ TEQ_3                 : num  2 4 2 3 4 2 3 3 2 3 ...
+ $ TEQ_CON_4             : num  3 2 3 3 4 4 4 4 2 3 ...
+ $ TEQ_CON_14            : num  3 3 2 3 4 4 3 4 2 1 ...
+ $ TEQ_16                : num  1 4 1 2 3 3 3 4 2 2 ...
+ $ TEQ_5                 : num  1 2 3 3 4 3 4 4 2 3 ...
+ $ age                   : chr  "27" "27" "48" "51" ...
+ $ Education             : chr  "3" "6" "2" "3" ...
+ $ education_type        : chr  NA "1" NA NA ...
+ $ Gender                : chr  "0" "1" "1" "1" ...
+ $ Economical_status     : chr  "3" "3" "3" "3" ...
+ $ Family_status         : chr  "2" "2" "3" "3" ...
+ $ questionnaire_started : chr  "2021-04-22 10:02:08 UTC" "2021-04-22 10:45:43 UTC" "2021-04-27 09:23:39 UTC" "2021-04-27 09:24:31 UTC" ...
+ $ questionnaire_finished: chr  "2021-04-22 10:27:49 UTC" "2021-04-22 11:53:36 UTC" NA "2021-04-27 10:22:37 UTC" ...
+ $ questionnaire_duration: chr  "1541.0" "4073.0" "0" "3486.0" ...
+ $ user_agent            : chr  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36" ...
+ $ vaha1                 : chr  "60" "60" "75" "100" ...
+ $ vaha2                 : chr  "60" "60" "75" "100" ...
+ $ vyska1                : chr  "165" "165" "171" "179" ...
+ $ vyska2                : chr  "165" "165" "173" "180" ...
+ $ rok_narozeni          : chr  "1993" "1993" "1970" "1969" ...
+ $ mesic_narozeni        : chr  "3" "9" "2" "12" ...
+ $ code                  : chr  "TEST66012d93961af0124cec0110a87720a2" "TESTb4fb03f7bad63c001375472ee13b746d" "f0d141279f35823f633a4ff75a9a1b39" "461dbef838b50688b3369f6e5050b3a0" ...
+
+First 5 rows:
+  BFI_N_2 BFI_N_8 BFI_N_7 BFI_N_1 BFI_N_3 BFI_N_5 BFI_N_4 BFI_N_6 BFI_O_3
+1       2       2       2       3       3       3       3       2       4
+2       2       2       3       3       4       4       3       3       3
+3       2       2       2       1       4       4       2       2       3
+4       2       4       3       2       3       2       1       4       3
+5       2       3       2       1       1       3       2       1       4
+  BFI_O_2 BFI_O_9 BFI_O_5 BFI_O_6 BFI_O_1 BFI_O_10 BFI_O_7 BFI_O_8 BFI_O_4
+1       4       3       3       4       3        3       2       4       4
+2       5       1       4       4       3        3       1       4       4
+3       4       2       2       2       2        4       4       2       4
+4       4       4       3       2       3        1       3       4       4
+5       4       5       3       5       4        1       1       3       4
+  BFI_C_1 BFI_C_2 BFI_C_3 BFI_C_5 BFI_C_4 BFI_C_9 BFI_C_8 BFI_C_6 BFI_C_7
+1       3       3       4       2       2       3       3       2       4
+2       3       3       4       2       3       3       2       4       4
+3       4       3       4       2       5       2       4       4       2
+4       4       3       4       4       3       3       2       4       4
+5       5       5       5       5       5       4       5       5       5
+  BFI_E_3 BFI_E_6 BFI_E_4 BFI_E_2 BFI_E_8 BFI_E_7 BFI_E_1 BFI_E_5 BFI_A_2
+1       4       3       3       3       3       2       4       2       4
+2       3       3       3       2       4       2       4       2       4
+3       2       2       3       4       2       4       4       4       4
+4       4       3       4       3       4       1       4       2       5
+5       4       4       5       2       5       1       4       1       5
+  BFI_A_5 BFI_A_3 BFI_A_8 BFI_A_7 BFI_A_9 BFI_A_1 BFI_A_6 BFI_A_4 DTDD_1m
+1       3       4       3       3       2       2       2       3       4
+2       4       4       4       4       4       4       4       3       4
+3       4       2       4       4       4       4       2       4       5
+4       4       4       4       4       4       5       4       4       1
+5       3       4       5       5       5       3       5       4       1
+  DTDD_1n DTDD_1p DTDD_3n DTDD_2n DTDD_4n DTDD_4m DTDD_4p DTDD_1i DTDD_3m
+1       5       4       3       3       3       4       2       5       4
+2       3       2       3       4       3       4       4       3       3
+3       1       5       2       2       2       6       5       6       5
+4       3       1       1       3       1       1       1       2       2
+5       1       1       1       2       1       1       1       2       1
+  DTDD_2p DTDD_3p DTDD_1ma DTDD_1g DTDD_2m TEQ_1 TEQ_CON_2 TEQ_3 TEQ_CON_4
+1       5       4        5       4       3     2         2     2         3
+2       2       2        3       2       3     2         3     4         2
+3       3       5        5       2       5     3         2     2         3
+4       1       1        3       1       1     3         3     3         3
+5       1       1        1       1       1     3         4     4         4
+  TEQ_CON_14 TEQ_16 TEQ_5 age Education education_type Gender Economical_status
+1          3      1     1  27         3           <NA>      0                 3
+2          3      4     2  27         6              1      1                 3
+3          2      1     3  48         2           <NA>      1                 3
+4          3      2     3  51         3           <NA>      1                 3
+5          4      3     4  69         2           <NA>      1                 7
+  Family_status   questionnaire_started  questionnaire_finished
+1             2 2021-04-22 10:02:08 UTC 2021-04-22 10:27:49 UTC
+2             2 2021-04-22 10:45:43 UTC 2021-04-22 11:53:36 UTC
+3             3 2021-04-27 09:23:39 UTC                    <NA>
+4             3 2021-04-27 09:24:31 UTC 2021-04-27 10:22:37 UTC
+5             3 2021-04-27 09:27:45 UTC 2021-04-27 10:09:29 UTC
+  questionnaire_duration
+1                 1541.0
+2                 4073.0
+3                      0
+4                 3486.0
+5                 2504.0
+                                                                                                                          user_agent
+1                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+2                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+3                                                     Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0
+4                 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36
+5 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46
+  vaha1 vaha2 vyska1 vyska2 rok_narozeni mesic_narozeni
+1    60    60    165    165         1993              3
+2    60    60    165    165         1993              9
+3    75    75    171    173         1970              2
+4   100   100    179    180         1969             12
+5   103   103    183    183         1951             12
+                                  code
+1 TEST66012d93961af0124cec0110a87720a2
+2 TESTb4fb03f7bad63c001375472ee13b746d
+3     f0d141279f35823f633a4ff75a9a1b39
+4     461dbef838b50688b3369f6e5050b3a0
+5     2329ecf9be45d65bc45ae08f50dcc7fa
+
+Summary:
+    BFI_N_2         BFI_N_8        BFI_N_7         BFI_N_1         BFI_N_3    
+ Min.   :1.000   Min.   :1.00   Min.   :1.000   Min.   :1.000   Min.   :1.00  
+ 1st Qu.:2.000   1st Qu.:2.00   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.00  
+ Median :3.000   Median :3.00   Median :3.000   Median :2.000   Median :3.00  
+ Mean   :2.932   Mean   :2.95   Mean   :2.885   Mean   :2.417   Mean   :2.95  
+ 3rd Qu.:4.000   3rd Qu.:4.00   3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:4.00  
+ Max.   :5.000   Max.   :5.00   Max.   :5.000   Max.   :5.000   Max.   :5.00  
+ NAs    :53      NAs    :53     NAs    :53      NAs    :53      NAs    :53    
+    BFI_N_5         BFI_N_4         BFI_N_6         BFI_O_3         BFI_O_2     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.000  
+ Median :3.000   Median :3.000   Median :3.000   Median :4.000   Median :4.000  
+ Mean   :2.892   Mean   :2.884   Mean   :2.771   Mean   :3.515   Mean   :3.655  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :53      NAs    :53      NAs    :53      NAs    :160     NAs    :160    
+    BFI_O_9        BFI_O_5         BFI_O_6         BFI_O_1         BFI_O_10    
+ Min.   :1.00   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.00   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :3.00   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.92   Mean   :3.368   Mean   :3.247   Mean   :3.216   Mean   :2.725  
+ 3rd Qu.:4.00   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000  
+ Max.   :5.00   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :160    NAs    :160     NAs    :160     NAs    :160     NAs    :160    
+    BFI_O_7         BFI_O_8         BFI_O_4         BFI_C_1         BFI_C_2     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000  
+ Median :3.000   Median :4.000   Median :4.000   Median :4.000   Median :3.000  
+ Mean   :2.987   Mean   :3.527   Mean   :3.632   Mean   :3.896   Mean   :3.235  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :160     NAs    :160     NAs    :160     NAs    :161     NAs    :161    
+    BFI_C_3        BFI_C_5         BFI_C_4         BFI_C_9         BFI_C_8     
+ Min.   :1.00   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.00   1st Qu.:2.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000  
+ Median :4.00   Median :3.000   Median :4.000   Median :3.000   Median :4.000  
+ Mean   :3.87   Mean   :2.997   Mean   :3.488   Mean   :3.092   Mean   :3.568  
+ 3rd Qu.:4.00   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.00   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :162    NAs    :162     NAs    :162     NAs    :162     NAs    :162    
+    BFI_C_6         BFI_C_7         BFI_E_3         BFI_E_6         BFI_E_4     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:3.000  
+ Median :4.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :3.718   Mean   :3.349   Mean   :3.214   Mean   :3.069   Mean   :3.072  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :162     NAs    :162     NAs    :162     NAs    :162     NAs    :162    
+    BFI_E_2         BFI_E_8         BFI_E_7        BFI_E_1         BFI_E_5     
+ Min.   :1.000   Min.   :1.000   Min.   :1.00   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.00   1st Qu.:2.000   1st Qu.:2.000  
+ Median :3.000   Median :3.000   Median :3.00   Median :3.000   Median :3.000  
+ Mean   :3.204   Mean   :3.347   Mean   :3.09   Mean   :3.001   Mean   :3.114  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.00   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.00   Max.   :5.000   Max.   :5.000  
+ NAs    :162     NAs    :162     NAs    :162    NAs    :162     NAs    :162    
+    BFI_A_2         BFI_A_5         BFI_A_3         BFI_A_8         BFI_A_7     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000  
+ Median :4.000   Median :4.000   Median :4.000   Median :4.000   Median :4.000  
+ Mean   :3.775   Mean   :3.405   Mean   :4.016   Mean   :3.547   Mean   :3.584  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:5.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000  
+ NAs    :164     NAs    :164     NAs    :164     NAs    :164     NAs    :164    
+    BFI_A_9         BFI_A_1         BFI_A_6         BFI_A_4         DTDD_1m     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:3.000   1st Qu.:3.000   1st Qu.:3.000   1st Qu.:2.000   1st Qu.:1.000  
+ Median :4.000   Median :3.000   Median :3.000   Median :3.000   Median :2.000  
+ Mean   :3.472   Mean   :3.351   Mean   :3.172   Mean   :3.117   Mean   :2.418  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000  
+ Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :5.000   Max.   :7.000  
+ NAs    :164     NAs    :164     NAs    :164     NAs    :164     NAs    :173    
+    DTDD_1n         DTDD_1p         DTDD_3n         DTDD_2n         DTDD_4n     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:2.000   1st Qu.:1.000  
+ Median :3.000   Median :2.000   Median :3.000   Median :3.000   Median :2.000  
+ Mean   :3.048   Mean   :2.582   Mean   :2.866   Mean   :3.342   Mean   :2.657  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000  
+ NAs    :173     NAs    :173     NAs    :173     NAs    :173     NAs    :173    
+    DTDD_4m         DTDD_4p         DTDD_1i         DTDD_3m         DTDD_2p     
+ Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:1.000  
+ Median :2.000   Median :2.000   Median :2.000   Median :3.000   Median :2.000  
+ Mean   :2.279   Mean   :2.773   Mean   :2.482   Mean   :2.869   Mean   :2.314  
+ 3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000  
+ Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000   Max.   :7.000  
+ NAs    :173     NAs    :173     NAs    :173     NAs    :173     NAs    :173    
+    DTDD_3p         DTDD_1ma       DTDD_1g         DTDD_2m        TEQ_1     
+ Min.   :1.000   Min.   :1.00   Min.   :1.000   Min.   :1.0   Min.   :0.00  
+ 1st Qu.:1.000   1st Qu.:1.00   1st Qu.:1.000   1st Qu.:1.0   1st Qu.:2.00  
+ Median :2.000   Median :2.00   Median :2.000   Median :2.0   Median :2.00  
+ Mean   :2.198   Mean   :2.24   Mean   :2.162   Mean   :2.6   Mean   :2.44  
+ 3rd Qu.:3.000   3rd Qu.:3.00   3rd Qu.:3.000   3rd Qu.:4.0   3rd Qu.:3.00  
+ Max.   :7.000   Max.   :7.00   Max.   :7.000   Max.   :7.0   Max.   :4.00  
+ NAs    :173     NAs    :173    NAs    :173     NAs    :173   NAs    :173   
+   TEQ_CON_2         TEQ_3         TEQ_CON_4       TEQ_CON_14        TEQ_16     
+ Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000   Min.   :0.000  
+ 1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:2.000  
+ Median :2.000   Median :3.000   Median :3.000   Median :3.000   Median :3.000  
+ Mean   :2.412   Mean   :2.913   Mean   :3.001   Mean   :2.976   Mean   :2.641  
+ 3rd Qu.:3.000   3rd Qu.:3.000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.000  
+ Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000   Max.   :4.000  
+ NAs    :173     NAs    :173     NAs    :173     NAs    :173     NAs    :173    
+     TEQ_5              age           Education      education_type
+ Min.   :0.000   Length   :1665   Length   :1665   Length   :1665  
+ 1st Qu.:2.000   N.unique :  75   N.unique :   8   N.unique : 159  
+ Median :3.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Mean   :2.879   Min.nchar:   2   Min.nchar:   1   Min.nchar:   1  
+ 3rd Qu.:3.000   Max.nchar:   2   Max.nchar:  12   Max.nchar:  82  
+ Max.   :4.000   NAs      :   2   NAs      :   2   NAs      :1287  
+ NAs    :173                                                       
+       Gender     Economical_status   Family_status  questionnaire_started
+ Length   :1665   Length   :1665    Length   :1665   Length   :1665       
+ N.unique :   2   N.unique :  23    N.unique :   5   N.unique :1663       
+ N.blank  :   0   N.blank  :   0    N.blank  :   0   N.blank  :   0       
+ Min.nchar:   1   Min.nchar:   1    Min.nchar:   1   Min.nchar:  23       
+ Max.nchar:   1   Max.nchar:  83    Max.nchar:   1   Max.nchar:  23       
+ NAs      :   2   NAs      :  12    NAs      :   2                        
+                                                                          
+ questionnaire_finished questionnaire_duration     user_agent         vaha1     
+ Length   :1665         Length   :1665         Length   :1665   Length   :1665  
+ N.unique :1345         N.unique :1157         N.unique : 183   N.unique : 107  
+ N.blank  :   0         N.blank  :   0         N.blank  :   0   N.blank  :   0  
+ Min.nchar:  23         Min.nchar:   1         Min.nchar:  61   Min.nchar:   1  
+ Max.nchar:  23         Max.nchar:   8         Max.nchar: 149   Max.nchar:   4  
+ NAs      : 318                                                 NAs      :   2  
+                                                                                
+       vaha2            vyska1           vyska2        rok_narozeni 
+ Length   :1665   Length   :1665   Length   :1665   Length   :1665  
+ N.unique : 106   N.unique :  65   N.unique :  72   N.unique :  72  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:   1   Min.nchar:   1   Min.nchar:   4  
+ Max.nchar:   5   Max.nchar:   5   Max.nchar:   5   Max.nchar:   4  
+ NAs      : 206   NAs      :   3   NAs      : 206   NAs      : 206  
+                                                                    
+   mesic_narozeni        code     
+ Length   :1665   Length   :1665  
+ N.unique :  12   N.unique :1664  
+ N.blank  :   0   N.blank  :   0  
+ Min.nchar:   1   Min.nchar:  32  
+ Max.nchar:   2   Max.nchar:  36  
+ NAs      : 206   NAs      :   1  
+                                  

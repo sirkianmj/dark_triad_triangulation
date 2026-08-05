@@ -1,0 +1,10 @@
+Trait,Architecture,Test_R2
+Machiavellianism,Elastic-Net,0.145
+Machiavellianism,Random Forest,0.134
+Machiavellianism,XGBoost,0.147
+Psychopathy,Elastic-Net,0.237
+Psychopathy,Random Forest,0.219
+Psychopathy,XGBoost,0.218
+Narcissism,Elastic-Net,0.144
+Narcissism,Random Forest,0.126
+Narcissism,XGBoost,0.132
