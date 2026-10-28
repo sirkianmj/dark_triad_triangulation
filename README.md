@@ -208,7 +208,7 @@ Rscript -e "renv::restore()"
 
 **4. Download the source data**
 
-The raw data is hosted on OSF. Download all files from the [DTDD Czech Validation Study](https://dx.doi.org/10.2139/ssrn.7306299) and place them in `data/raw/osf_original/data/`.
+The raw data is hosted on OSF. Download the archive from the [DTDD Czech Validation Study on OSF](https://osf.io/8dp72) and place them in `data/raw/osf_original/data/`.
 
 ### Reproducing the Pipeline
 
@@ -327,7 +327,8 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 ## 🔗 Links
 
 - **Repository:** [https://github.com/sirkanmj/dark_triad_triangulation](https://github.com/sirkanmj/dark_triad_triangulation)
-- **OSF Data / Preprint:** [https://dx.doi.org/10.2139/ssrn.7306299](https://dx.doi.org/10.2139/ssrn.7306299)
+- **OSF Data:** [https://osf.io/8dp72](https://osf.io/8dp72)
+- **Preprint:** [https://dx.doi.org/10.2139/ssrn.7306299](https://dx.doi.org/10.2139/ssrn.7306299)
 
 ---
 
