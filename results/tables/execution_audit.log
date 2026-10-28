@@ -2147,3 +2147,21 @@ Psychopathy        0  0  4
 2026-10-28 12:33:44,904 [INFO] --- Compiling DT³ Master Synthesis Matrix ---
 2026-10-28 12:33:44,908 [INFO] Master Synthesis Matrix compiled with 11 paradigm proofs.
 2026-10-28 12:33:44,908 [INFO] Saved to: results/DT3_Master_Synthesis_Matrix.csv
+2026-10-28 12:57:53,397 [INFO] ===============================================================
+2026-10-28 12:57:53,397 [INFO]  DT³ PHASE 2.2 (ADDITIVE): Bifactor CFA
+2026-10-28 12:57:53,397 [INFO] ===============================================================
+2026-10-28 12:57:53,397 [INFO] Reading data/processed/dt3_master_dataset.csv
+2026-10-28 12:57:53,428 [INFO] Community sample N = 5902 (matches baseline CFA N)
+2026-10-28 12:57:53,428 [INFO] Fitting bifactor model with semopy ...
+2026-10-28 12:57:53,455 [INFO] Wrote results/tables/baseline_06_bifactor_fit.csv
+2026-10-28 12:57:53,456 [INFO] Wrote results/tables/baseline_07_bifactor_loadings.csv
+2026-10-28 12:57:53,456 [INFO] === PHASE 2.2 BIFACTOR EXECUTION SUCCESSFULLY COMPLETED ===
+2026-10-28 13:10:33,322 [INFO] ===============================================================
+2026-10-28 13:10:33,322 [INFO]  DT³ PHASE 2.2 (ADDITIVE): Bifactor CFA
+2026-10-28 13:10:33,323 [INFO] ===============================================================
+2026-10-28 13:10:33,323 [INFO] Reading data/processed/dt3_master_dataset.csv
+2026-10-28 13:10:33,351 [INFO] Community sample N = 5902 (matches baseline CFA N)
+2026-10-28 13:10:33,351 [INFO] Fitting bifactor model with semopy ...
+2026-10-28 13:10:33,376 [INFO] Wrote results/tables/baseline_06_bifactor_fit.csv
+2026-10-28 13:10:33,377 [INFO] Wrote results/tables/baseline_07_bifactor_loadings.csv
+2026-10-28 13:10:33,377 [INFO] === PHASE 2.2 BIFACTOR EXECUTION SUCCESSFULLY COMPLETED ===

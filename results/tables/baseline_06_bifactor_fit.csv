@@ -1,0 +1,2 @@
+Model,Chi_Square,Degrees_of_Freedom,CFI,TLI,RMSEA,N,ECV,Omega_H,Omega_HS_Ms,Omega_HS_Ps,Omega_HS_Ns
+Bifactor (D + Ms + Ps + Ns),1109.75,42,0.965,0.944,0.066,5902,0.576,0.734,0.036,0.45,0.532

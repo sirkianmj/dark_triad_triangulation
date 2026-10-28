@@ -1,0 +1,13 @@
+Item,D_loading,Specific_loading,Specific_factor
+DTDD_1m,0.765,0.075,Ms
+DTDD_2m,0.69,0.404,Ms
+DTDD_3m,0.613,0.234,Ms
+DTDD_4m,0.872,-0.096,Ms
+DTDD_1p,0.338,0.54,Ps
+DTDD_2p,0.454,0.523,Ps
+DTDD_3p,0.504,0.658,Ps
+DTDD_4p,0.474,0.343,Ps
+DTDD_1n,0.478,0.71,Ns
+DTDD_2n,0.407,0.685,Ns
+DTDD_3n,0.452,0.601,Ns
+DTDD_4n,0.534,0.415,Ns
