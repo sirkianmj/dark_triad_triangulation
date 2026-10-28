@@ -1,0 +1,4 @@
+Target,N_train,N_test,R2_train_insample,R2_test_outsample,MSE_test
+Machiavellianism,5215,1492,0.182,0.154,22.583
+Psychopathy,5215,1492,0.279,0.235,15.239
+Narcissism,5215,1492,0.119,0.151,21.57

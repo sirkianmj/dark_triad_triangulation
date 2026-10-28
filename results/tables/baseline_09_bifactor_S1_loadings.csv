@@ -1,0 +1,13 @@
+Item,D_loading,Ps_loading,Ns_loading
+DTDD_1m,0.78,,
+DTDD_2m,0.705,,
+DTDD_3m,0.637,,
+DTDD_4m,0.832,,
+DTDD_1p,0.332,0.548,
+DTDD_2p,0.446,0.533,
+DTDD_3p,0.499,0.657,
+DTDD_4p,0.481,0.337,
+DTDD_1n,0.497,,0.696
+DTDD_2n,0.427,,0.673
+DTDD_3n,0.467,,0.59
+DTDD_4n,0.541,,0.403

@@ -2171,3 +2171,27 @@ Psychopathy        0  0  4
 2026-10-28 13:31:46,800 [INFO] Community sample N = 5902 (matches baseline_04 CFA N)
 2026-10-28 13:31:46,811 [INFO] Wrote results/tables/baseline_08_cfa_2factor_mach_narc.csv
 2026-10-28 13:31:46,811 [INFO] === PHASE 2.3 EXECUTION SUCCESSFULLY COMPLETED ===
+2026-10-28 13:55:16,204 [INFO] ===============================================================
+2026-10-28 13:55:16,204 [INFO]  PHASE 2.4: Bifactor-(S-1) and Bifactor-(S.I-1)
+2026-10-28 13:55:16,204 [INFO] ===============================================================
+2026-10-28 13:55:16,236 [INFO] Community N = 5902
+2026-10-28 13:55:16,236 [INFO] === Bifactor-(S-1) [Mach reference] ===
+2026-10-28 13:55:16,257 [INFO] Wrote baseline_09_bifactor_S1_indices.csv and _loadings.csv
+2026-10-28 13:55:16,257 [INFO] === Bifactor-(S.I-1) [DTDD_4m reference] ===
+2026-10-28 13:55:16,280 [INFO] Wrote baseline_10_bifactor_SI1_indices.csv and _loadings.csv
+2026-10-28 13:55:29,078 [INFO] ===============================================================
+2026-10-28 13:55:29,078 [INFO]  PHASE 2.5: OLS age-aligned (matching ML split)
+2026-10-28 13:55:29,078 [INFO] ===============================================================
+2026-10-28 13:55:29,103 [INFO] Train N=5215  Test N=1492
+2026-10-28 13:55:29,103 [INFO] Predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-10-28 13:55:29,123 [INFO] Wrote baseline_11_ols_age_coefficients.csv and baseline_12_ols_age_performance.csv
+2026-10-28 13:55:38,517 [INFO] ===============================================================
+2026-10-28 13:55:38,517 [INFO]  PHASE 7.2: Signed SHAP Divergence Index
+2026-10-28 13:55:38,517 [INFO] ===============================================================
+2026-10-28 13:55:38,794 [INFO] Observed unsigned SDI: 0.2591   signed SDI: 0.2870
+2026-10-28 13:56:02,675 [INFO]   null 100/500
+2026-10-28 13:56:26,830 [INFO]   null 200/500
+2026-10-28 13:56:51,111 [INFO]   null 300/500
+2026-10-28 13:57:15,375 [INFO]   null 400/500
+2026-10-28 13:57:39,660 [INFO]   null 500/500
+2026-10-28 13:57:39,663 [INFO] Wrote results/tables/layer5b_signed_sdi.csv
