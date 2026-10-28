@@ -1,0 +1,109 @@
+════════════════════════════════════════════════════════════════
+DT³ DIAGNOSTIC + RERUN — Wed Oct 28 10:17:52 +0330 2026
+Python: Python 3.11.18 @ /Users/kianm.j/miniforge3/envs/dt3/bin/python
+════════════════════════════════════════════════════════════════
+
+── §1. GIT DIFF OF MODIFIED SCRIPTS (what is on disk vs HEAD) ──
+ results/figures/layer1_ggm_network_DTDD_Only.png   | Bin 826567 -> 863246 bytes
+ .../figures/layer1_ggm_network_Full_Item_Space.png | Bin 4551273 -> 3872283 bytes
+ results/figures/layer4_semantic_dendrogram.png     | Bin 146770 -> 146770 bytes
+ results/tables/baseline_03_ols_regressions.csv     |  36 +-
+ results/tables/execution_audit.log                 | 365 +++++++++++++++++++++
+ results/tables/layer2_cka_null_distribution.csv    | 154 ++++-----
+ scripts/python/03_layer1_unsupervised.py           |  35 +-
+ 7 files changed, 486 insertions(+), 104 deletions(-)
+
+diff --git a/scripts/python/03_layer1_unsupervised.py b/scripts/python/03_layer1_unsupervised.py
+index 5d82d66..3a9184e 100644
+--- a/scripts/python/03_layer1_unsupervised.py
++++ b/scripts/python/03_layer1_unsupervised.py
+@@ -38,7 +38,10 @@ from sklearn.covariance import graphical_lasso  # functional API – critical fi
+ from sklearn.preprocessing import StandardScaler
+ from sklearn.decomposition import PCA
+ from sklearn.cluster import DBSCAN
+-import kmapper as km
++try:
++    import kmapper as km
++except ImportError:
++    km = None
+ 
+ # -----------------------------------------------------------------------------
+ # DIRECTORY & LOGGING CONFIGURATION
+@@ -281,23 +284,37 @@ def run_ebic_glasso_network(df, items, title_suffix="", min_complete=30):
+     comm_path = os.path.join(TABLES_DIR, f"layer1_ggm_communities_{title_suffix}.csv")
+     comm_df.to_csv(comm_path, index=False)
+ 
+-    # Visualization
+-    plt.figure(figsize=(14, 12))
+-    pos = nx.spring_layout(G, k=0.6, seed=42)
++    # Visualization (Q1 revision: larger fonts, legend, PDF export)
++    figsize = (16, 14) if P_actual > 20 else (14, 12)
++    plt.figure(figsize=figsize)
++    k_val = 1.2 if P_actual > 20 else 0.6
++    pos = nx.spring_layout(G, k=k_val, seed=42, iterations=200)
+     cmap = plt.get_cmap('viridis')
+-    colors = [cmap(partition[node] / max(1, n_communities - 1)) for node in G.nodes()]
++    node_colors = [cmap(partition[node] / max(1, n_communities - 1)) for node in G.nodes()]
+     edge_colors = ['green' if G[u][v]['sign'] > 0 else 'red' for u, v in G.edges()]
+     edge_weights = [G[u][v]['weight'] * 10 for u, v in G.edges()]
+-    nx.draw_networkx_nodes(G, pos, node_size=500, node_color=colors, edgecolors='black', alpha=0.9)
++    node_size = 500 if P_actual <= 20 else 200
++    nx.draw_networkx_nodes(G, pos, node_size=node_size, node_color=node_colors, edgecolors='black', alpha=0.9)
+     nx.draw_networkx_edges(G, pos, edge_color=edge_colors, width=edge_weights, alpha=0.5)
+-    font_size = 10 if P_actual <= 20 else 6
++    font_size = 10 if P_actual <= 20 else 9
+     nx.draw_networkx_labels(G, pos, font_size=font_size, font_family="sans-serif")
+-    plt.title(f"EBICglasso Network ({title_suffix})\nAlpha={best_alpha:.4f}, Edges={edges_added}, Clusters={n_communities}")
++    from matplotlib.patches import Patch
++    legend_handles = [
++        Patch(facecolor=cmap(c / max(1, n_communities - 1)), edgecolor='black',
++              label=f'Community {c}')
++        for c in sorted(set(partition.values()))
++    ]
++    plt.legend(handles=legend_handles, loc='upper left', bbox_to_anchor=(1.02, 1),
++               title='Louvain communities', fontsize=9, title_fontsize=10, frameon=True)
++    plt.title(f"EBIC-selected Graphical LASSO Network ({title_suffix})\n"
++              f"L1 alpha (EBIC-selected)={best_alpha:.4f}, Edges={edges_added}, Communities={n_communities}",
++              fontsize=13)
+     plt.axis('off')
+     fig_path = os.path.join(FIGURES_DIR, f"layer1_ggm_network_{title_suffix}.png")
+     plt.savefig(fig_path, dpi=300, bbox_inches='tight')
++    plt.savefig(fig_path.replace('.png', '.pdf'), bbox_inches='tight')
+     plt.close()
+-    logging.info(f"Network visualization saved to {fig_path}")
++    logging.info(f"Network visualization saved to {fig_path} (+ PDF)")
+     return G, partition
+ 
+ # -----------------------------------------------------------------------------
+
+── §2. CLAIMED OUTPUTS vs ACTUAL FILES ──
+Each script's docstring 'OUTPUT' vs whether the file exists.
+  01_preprocess_data                     OK
+  02_baseline_reproduction               OK
+  02.1_layer2_symbolic_regression        OK
+  03_layer1_unsupervised                 OK
+  04_layer2_supervised                   MISSING 1/5
+      ✗ results/tables/layer2_mtl_performance.csv
+  05_layer3_directed_dependence          OK
+  06_layer4_semantic                     OK
+  07_layer5_robustness                   OK
+  08_layer5_extensions                   OK
+  09_synthesis_matrix                    OK
+
+── §3. PHASE 4 ISOLATED TEST (correct zsh exit code) ──
+2026-10-28 10:17:53,728 [INFO] ===============================================================
+2026-10-28 10:17:53,728 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+2026-10-28 10:17:53,728 [INFO] ===============================================================
+2026-10-28 10:17:53,731 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-10-28 10:17:53,751 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-10-28 10:17:53,751 [INFO] Sample counts in master dataset:
+2026-10-28 10:17:53,753 [INFO]   sample_1_community: 5903
+2026-10-28 10:17:53,754 [INFO]   sample_2_student: 2071
+2026-10-28 10:17:53,755 [INFO]   sample_3_representative: 1492
+2026-10-28 10:17:53,760 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-10-28 10:17:53,760 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+2026-10-28 10:17:53,760 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+2026-10-28 10:17:53,760 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-10-28 10:17:53,767 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+2026-10-28 10:17:53,767 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+2026-10-28 10:17:53,767 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---

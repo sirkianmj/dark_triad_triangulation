@@ -1,0 +1,4 @@
+Trait,Discovered_Equation,Discovery_R2,Replication_R2,Equation_Complexity_Nodes
+Machiavellianism,"abs(sub(sub(abs(add(add(abs(BFI_E_sum), -11.780), TEQ_sum)), add(min(BFI_C_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))), BFI_A_sum))",0.148,0.093,18
+Psychopathy,"sub(abs(max(sub(sub(sub(add(8.685, BFI_O_sum), add(add(add(BFI_C_sum, TEQ_sum), BFI_N_sum), max(BFI_N_sum, age))), BFI_A_sum), BFI_A_sum), 8.022)), add(BFI_A_sum, TEQ_sum))",0.254,0.184,24
+Narcissism,"sub(sub(add(add(min(min(abs(-14.287), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), BFI_O_sum), BFI_E_sum), age), BFI_A_sum)",0.106,0.143,22

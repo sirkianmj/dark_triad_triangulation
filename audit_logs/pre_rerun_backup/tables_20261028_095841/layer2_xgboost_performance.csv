@@ -1,0 +1,4 @@
+Trait,XGB_Test_R2,XGB_Test_MSE,Primary_Driver,Secondary_Driver,Tertiary_Driver
+Machiavellianism,0.147,22.766,BFI_A_sum,age,TEQ_sum
+Psychopathy,0.218,15.574,TEQ_sum,BFI_A_sum,age
+Narcissism,0.132,22.046,age,BFI_A_sum,BFI_E_sum

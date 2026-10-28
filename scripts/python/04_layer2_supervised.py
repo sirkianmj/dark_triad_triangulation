@@ -18,7 +18,6 @@ CRITICAL CHANGES:
 - XGBoost and SHAP on the same sample split.
 
 OUTPUT FILES (results/tables/):
-- layer2_mtl_performance.csv
 - layer2_cka_divergence.csv
 - layer2_cka_null_distribution.csv
 - layer2_xgboost_performance.csv

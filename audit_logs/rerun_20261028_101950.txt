@@ -1,0 +1,626 @@
+DT³ RERUN — Wed Oct 28 10:19:50 +0330 2026
+Python: Python 3.11.18   Env: # * -> active
+dt3                  *   /Users/kianm.j/miniforge3/envs/dt3
+
+════════════════════════════════════════════════════════════════
+  01_preprocess_data.py
+════════════════════════════════════════════════════════════════
+2026-10-28 10:19:50,609 [INFO] ===============================================================
+2026-10-28 10:19:50,609 [INFO]  DT³ PHASE 1 (REMEDIATED): Data Preprocessing
+2026-10-28 10:19:50,609 [INFO] ===============================================================
+2026-10-28 10:19:50,613 [INFO] Cryptographic Hash (sample_1_community): a625842f3a471aedfbb067d656e1b8ab2b583052eaeea2c2ebd8a1e1da0e9a7d
+2026-10-28 10:19:50,615 [INFO] Cryptographic Hash (sample_2_student): 2133bcd49c37f4551fa329427308dcdf5a4e3886e2fba3e82fbe79497d6ee83a
+2026-10-28 10:19:50,616 [INFO] Cryptographic Hash (sample_3_representative): 38ebfd78a2d84554f7c1d43239a88c844d0b548e8f3a21f64480675a6352e55d
+2026-10-28 10:19:50,631 [INFO] --- Cleaning sample_1_community ---
+2026-10-28 10:19:50,633 [INFO] Age filter removed 3534 rows.
+2026-10-28 10:19:50,634 [INFO] After DTDD item cleaning: 5903 rows remain.
+2026-10-28 10:19:50,636 [INFO] Computed BFI_A_sum from 9 items in sample_1_community.
+/Users/kianm.j/dark_triad_triangulation/scripts/python/01_preprocess_data.py:171: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[composite_name] = df[sub_items].sum(axis=1, min_count=max(1, required_count))
+2026-10-28 10:19:50,636 [INFO] Computed BFI_C_sum from 9 items in sample_1_community.
+2026-10-28 10:19:50,637 [INFO] Computed BFI_N_sum from 8 items in sample_1_community.
+2026-10-28 10:19:50,637 [INFO] Computed BFI_O_sum from 10 items in sample_1_community.
+2026-10-28 10:19:50,638 [INFO] Computed BFI_E_sum from 8 items in sample_1_community.
+2026-10-28 10:19:50,638 [INFO] Computed TEQ_sum from 7 items in sample_1_community.
+2026-10-28 10:19:50,639 [INFO] Computed RSES_sum from 10 items in sample_1_community.
+/Users/kianm.j/dark_triad_triangulation/scripts/python/01_preprocess_data.py:174: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df['sample_origin'] = sample_id
+2026-10-28 10:19:50,639 [INFO] Finished cleaning sample_1_community: retained 5903 / 10518 rows.
+2026-10-28 10:19:50,646 [INFO] --- Cleaning sample_2_student ---
+2026-10-28 10:19:50,647 [INFO] Age filter removed 37 rows.
+2026-10-28 10:19:50,648 [INFO] After DTDD item cleaning: 2071 rows remain.
+2026-10-28 10:19:50,649 [WARNING] No items found for prefix BFI_A_. Skipping composite BFI_A_sum.
+2026-10-28 10:19:50,649 [WARNING] No items found for prefix BFI_C_. Skipping composite BFI_C_sum.
+2026-10-28 10:19:50,649 [INFO] Computed BFI_N_sum from 8 items in sample_2_student.
+2026-10-28 10:19:50,649 [WARNING] No items found for prefix BFI_O_. Skipping composite BFI_O_sum.
+2026-10-28 10:19:50,649 [WARNING] No BFI‑E items found in sample_2_student. Extraversion will be missing.
+2026-10-28 10:19:50,650 [INFO] Computed TEQ_sum from 19 items in sample_2_student.
+2026-10-28 10:19:50,650 [INFO] Computed RSES_sum from 10 items in sample_2_student.
+2026-10-28 10:19:50,650 [INFO] Finished cleaning sample_2_student: retained 2071 / 5334 rows.
+2026-10-28 10:19:50,653 [INFO] --- Cleaning sample_3_representative ---
+2026-10-28 10:19:50,653 [INFO] Age filter removed 2 rows.
+2026-10-28 10:19:50,654 [INFO] After DTDD item cleaning: 1492 rows remain.
+2026-10-28 10:19:50,655 [INFO] Computed BFI_A_sum from 9 items in sample_3_representative.
+2026-10-28 10:19:50,655 [INFO] Computed BFI_C_sum from 9 items in sample_3_representative.
+2026-10-28 10:19:50,655 [INFO] Computed BFI_N_sum from 8 items in sample_3_representative.
+2026-10-28 10:19:50,656 [INFO] Computed BFI_O_sum from 10 items in sample_3_representative.
+2026-10-28 10:19:50,656 [INFO] Computed BFI_E_sum from 8 items in sample_3_representative.
+2026-10-28 10:19:50,656 [INFO] Computed TEQ_sum from 7 items in sample_3_representative.
+2026-10-28 10:19:50,656 [WARNING] No items found for prefix RSES_. Skipping composite RSES_sum.
+2026-10-28 10:19:50,657 [INFO] Finished cleaning sample_3_representative: retained 1492 / 1665 rows.
+2026-10-28 10:19:50,659 [INFO] BFI_E_sum successfully constructed and included.
+2026-10-28 10:19:50,819 [INFO] Saved master dataset to data/processed/dt3_master_dataset.csv with shape (9466, 128)
+2026-10-28 10:19:50,831 [INFO] Saved test‑retest dataset to data/processed/dt3_test_retest.csv with 61 matched pairs.
+2026-10-28 10:19:50,831 [INFO] === PHASE 1 EXECUTION SUCCESSFULLY COMPLETED ===
+
+════════════════════════════════════════════════════════════════
+  02_baseline_reproduction.py
+════════════════════════════════════════════════════════════════
+2026-10-28 10:19:52,105 [INFO] ===============================================================
+2026-10-28 10:19:52,105 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+2026-10-28 10:19:52,105 [INFO] ===============================================================
+2026-10-28 10:19:52,107 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-10-28 10:19:52,127 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+2026-10-28 10:19:52,129 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+2026-10-28 10:19:52,134 [INFO] Processing sample_1_community (N=5902)
+2026-10-28 10:19:52,152 [INFO] Processing sample_2_student (N=2071)
+2026-10-28 10:19:52,163 [INFO] Processing sample_3_representative (N=1492)
+2026-10-28 10:19:52,173 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+2026-10-28 10:19:52,173 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+2026-10-28 10:19:52,174 [INFO] Test‑Retest Execution N=61 matched pairs.
+2026-10-28 10:19:52,175 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+2026-10-28 10:19:52,175 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+2026-10-28 10:19:52,178 [INFO] OLS N=5096 after dropping missing.
+2026-10-28 10:19:52,183 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+2026-10-28 10:19:52,183 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+2026-10-28 10:19:52,187 [INFO] CFA N=5902
+2026-10-28 10:19:52,213 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+2026-10-28 10:19:52,213 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+2026-10-28 10:19:52,213 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+
+════════════════════════════════════════════════════════════════
+  02.1_layer2_symbolic_regression.py
+════════════════════════════════════════════════════════════════
+2026-10-28 10:19:52,886 [INFO] ===============================================================
+2026-10-28 10:19:52,886 [INFO]  DT³ PHASE 2.1 (REMEDIATED v6): Symbolic Regression (Unscaled + Wide Constants)
+2026-10-28 10:19:52,886 [INFO] ===============================================================
+2026-10-28 10:19:52,888 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-10-28 10:19:52,907 [INFO] --- Preparing Symbolic Regression Data ---
+2026-10-28 10:19:52,912 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+2026-10-28 10:19:52,912 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-10-28 10:19:52,918 [INFO] --- Executing Symbolic Regression (Unscaled Targets, Non‑Linear) ---
+2026-10-28 10:19:52,918 [INFO] Initiating genetic evolution for score_Machiavellianism...
+2026-10-28 10:20:35,450 [INFO] Discovered Form [score_Machiavellianism]: abs(sub(sub(abs(add(add(abs(BFI_E_sum), -11.780), TEQ_sum)), add(min(BFI_C_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))), BFI_A_sum))
+2026-10-28 10:20:35,451 [INFO] Validation R² -> Discovery: 0.148 | Replication: 0.093
+2026-10-28 10:20:35,451 [INFO] Initiating genetic evolution for score_Psychopathy...
+2026-10-28 10:21:21,093 [INFO] Discovered Form [score_Psychopathy]: sub(abs(max(sub(sub(sub(add(8.685, BFI_O_sum), add(add(add(BFI_C_sum, TEQ_sum), BFI_N_sum), max(BFI_N_sum, age))), BFI_A_sum), BFI_A_sum), 8.022)), add(BFI_A_sum, TEQ_sum))
+2026-10-28 10:21:21,093 [INFO] Validation R² -> Discovery: 0.254 | Replication: 0.184
+2026-10-28 10:21:21,093 [INFO] Initiating genetic evolution for score_Narcissism...
+2026-10-28 10:22:04,541 [INFO] Discovered Form [score_Narcissism]: sub(sub(add(add(min(min(abs(-14.287), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), BFI_O_sum), BFI_E_sum), age), BFI_A_sum)
+2026-10-28 10:22:04,542 [INFO] Validation R² -> Discovery: 0.106 | Replication: 0.143
+2026-10-28 10:22:04,542 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+2026-10-28 10:22:04,551 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+
+════════════════════════════════════════════════════════════════
+  03_layer1_unsupervised.py
+════════════════════════════════════════════════════════════════
+2026-10-28 10:22:05,494 [INFO] ===============================================================
+2026-10-28 10:22:05,494 [INFO]  DT³ PHASE 3 (REMEDIATED v4): Layer 1 - Unsupervised Structural
+2026-10-28 10:22:05,494 [INFO] ===============================================================
+2026-10-28 10:22:05,497 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-10-28 10:22:05,516 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+2026-10-28 10:22:05,516 [INFO] Complete‑case N = 9465 (out of 9466 total)
+2026-10-28 10:22:05,519 [INFO] Using complete‑case correlation (N=9465, P=12).
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -3.887e-04
+  warnings.warn(
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -4.503e-04
+  warnings.warn(
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -1.071e-03
+  warnings.warn(
+2026-10-28 10:22:06,107 [INFO] EBIC Optimization Complete. Min EBIC: 68747.33 at Alpha: 0.0100
+2026-10-28 10:22:06,107 [INFO] Network constructed with 50 non‑zero edges.
+2026-10-28 10:22:06,108 [INFO] Louvain Community Detection identified 3 clusters.
+2026-10-28 10:22:06,445 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png (+ PDF)
+2026-10-28 10:22:06,445 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+2026-10-28 10:22:06,447 [INFO] Complete‑case N = 0 (out of 9466 total)
+2026-10-28 10:22:06,447 [INFO] Complete‑case N < 30; switching to pairwise‑deletion correlation.
+2026-10-28 10:22:07,219 [INFO] Using projected pairwise correlation (effective N≈6734, P=88).
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -2.269e-03
+  warnings.warn(
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -1.257e-03
+  warnings.warn(
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -4.331e-03
+  warnings.warn(
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/sklearn/covariance/_graph_lasso.py:197: ConvergenceWarning: graphical_lasso: did not converge after 1000 iteration: dual gap: -1.434e-03
+  warnings.warn(
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kianm.j/miniforge3/envs/dt3/lib/python3.11/site-packages/numpy/linalg/_linalg.py:2350: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+2026-10-28 10:22:18,059 [INFO] EBIC Optimization Complete. Min EBIC: 393790.72 at Alpha: 0.0346
+2026-10-28 10:22:18,059 [INFO] Network constructed with 697 non‑zero edges.
+2026-10-28 10:22:18,062 [INFO] Louvain Community Detection identified 20 clusters.
+2026-10-28 10:22:18,470 [INFO] Network visualization saved to results/figures/layer1_ggm_network_Full_Item_Space.png (+ PDF)
+2026-10-28 10:22:18,470 [INFO] --- Executing Topological Data Analysis (Mapper) ---
+2026-10-28 10:22:18,471 [INFO] Topological Space: 9465 observations, 12 dimensions.
+2026-10-28 10:22:18,722 [INFO] TDA Mapper topology saved to results/figures/layer1_tda_mapper.html
+2026-10-28 10:22:18,722 [INFO] === PHASE 3 EXECUTION SUCCESSFULLY COMPLETED ===
+
+════════════════════════════════════════════════════════════════
+  04_layer2_supervised.py
+════════════════════════════════════════════════════════════════
+2026-10-28 10:22:20,335 [INFO] ===============================================================
+2026-10-28 10:22:20,335 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+2026-10-28 10:22:20,335 [INFO] ===============================================================
+2026-10-28 10:22:20,338 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-10-28 10:22:20,357 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-10-28 10:22:20,357 [INFO] Sample counts in master dataset:
+2026-10-28 10:22:20,359 [INFO]   sample_1_community: 5903
+2026-10-28 10:22:20,360 [INFO]   sample_2_student: 2071
+2026-10-28 10:22:20,361 [INFO]   sample_3_representative: 1492
+2026-10-28 10:22:20,365 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-10-28 10:22:20,365 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+2026-10-28 10:22:20,365 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+2026-10-28 10:22:20,365 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-10-28 10:22:20,372 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+2026-10-28 10:22:20,372 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+2026-10-28 10:22:20,372 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+2026-10-28 10:22:32,201 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7743
+2026-10-28 10:22:32,203 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+2026-10-28 10:22:32,203 [INFO] Identified 325 high scorers for score_Machiavellianism
+2026-10-28 10:22:32,204 [INFO] Identified 343 high scorers for score_Psychopathy
+2026-10-28 10:22:32,204 [INFO] Identified 390 high scorers for score_Narcissism
+2026-10-28 10:22:32,249 [INFO] Observed mean CKA: 0.0553 | Null mean: 0.0912 ± 0.0043 | p (lower) = 0.0000
+2026-10-28 10:22:32,250 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+  >>> EXIT CODE = 139  — FAILED
+  >>> Downgrading xgboost / shap and retrying Phase 4 once…
+  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno 8] nodename nor servname provided, or not known)")': /packages/f5/b6/653a70910739f127adffbefb688ebc22b51139292757de7c22b1e04ce792/xgboost-2.1.4-py3-none-macosx_12_0_arm64.whl.metadata
+  WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno 8] nodename nor servname provided, or not known)")': /packages/f5/b6/653a70910739f127adffbefb688ebc22b51139292757de7c22b1e04ce792/xgboost-2.1.4-py3-none-macosx_12_0_arm64.whl.metadata
+  WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno 8] nodename nor servname provided, or not known)")': /packages/f5/b6/653a70910739f127adffbefb688ebc22b51139292757de7c22b1e04ce792/xgboost-2.1.4-py3-none-macosx_12_0_arm64.whl.metadata
+  WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno 8] nodename nor servname provided, or not known)")': /packages/f5/b6/653a70910739f127adffbefb688ebc22b51139292757de7c22b1e04ce792/xgboost-2.1.4-py3-none-macosx_12_0_arm64.whl.metadata
+  WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno 8] nodename nor servname provided, or not known)")': /packages/f5/b6/653a70910739f127adffbefb688ebc22b51139292757de7c22b1e04ce792/xgboost-2.1.4-py3-none-macosx_12_0_arm64.whl.metadata
+error: connection-failed
+
+× Failed to connect to files.pythonhosted.org while fetching https://files.pythonhosted.org/packages/f5/b6/653a70910739f127adffbefb688ebc22b51139292757de7c22b1e04ce792/xgboost-2.1.4-py3-none-macosx_12_0_arm64.whl.metadata
+╰─> Failed to resolve IP address for 'files.pythonhosted.org' ([Errno 8] nodename nor servname provided, or not known)
+
+hint: Are you connected to the Internet? If so, check whether your system can connect to files.pythonhosted.org before trying again. There may be a firewall or proxy that's preventing the connection.
+2026-10-28 10:25:41,888 [INFO] ===============================================================
+2026-10-28 10:25:41,888 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+2026-10-28 10:25:41,888 [INFO] ===============================================================
+2026-10-28 10:25:41,890 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+2026-10-28 10:25:41,908 [INFO] --- Data Loading (Strict Sample Separation) ---
+2026-10-28 10:25:41,908 [INFO] Sample counts in master dataset:
+2026-10-28 10:25:41,910 [INFO]   sample_1_community: 5903
+2026-10-28 10:25:41,911 [INFO]   sample_2_student: 2071
+2026-10-28 10:25:41,912 [INFO]   sample_3_representative: 1492
+2026-10-28 10:25:41,916 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+2026-10-28 10:25:41,916 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+2026-10-28 10:25:41,916 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+2026-10-28 10:25:41,916 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+2026-10-28 10:25:41,922 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+2026-10-28 10:25:41,922 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+2026-10-28 10:25:41,922 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+2026-10-28 10:25:53,621 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7743
+2026-10-28 10:25:53,621 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+2026-10-28 10:25:53,621 [INFO] Identified 325 high scorers for score_Machiavellianism
+2026-10-28 10:25:53,621 [INFO] Identified 343 high scorers for score_Psychopathy
+2026-10-28 10:25:53,621 [INFO] Identified 390 high scorers for score_Narcissism
+2026-10-28 10:25:53,663 [INFO] Observed mean CKA: 0.0553 | Null mean: 0.0912 ± 0.0043 | p (lower) = 0.0000
+2026-10-28 10:25:53,664 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+  >>> RETRY EXIT CODE = 139
+  >>> ABORT
+
+════════════════════════════════════════════════════════════════
+  POST-RERUN SYNTHESIS MATRIX
+════════════════════════════════════════════════════════════════
+Paradigm,Layer,Key_Metric,Value,Interpretation,Triangulation_Support
+Representational Similarity (CKA),Layer 2 (Supervised),Mean CKA Score vs. Null,"0.0369 (null: 0.0912 ± 0.0043, p=0.0000)",High‑scorer neural activations are significantly more distinct than random grouping.,STRONG
+LLM Semantic Clustering,Layer 4 (Semantic),Adjusted Rand Index (ARI),0.5045 (p=0.0070) [Machiavellianism: 100% in cluster; Psychopathy: 100% in cluster; Narcissism: 75% in cluster],"Psychopathy items cluster distinctly, but Machiavellianism and Narcissism items are semantically conflated (The Narcissism Fracture).",MODERATE
+SHAP Divergence Index (SDI),Layer 5 (Rigor),SDI vs. Pseudo‑Trait Null,"0.2591 (null: 0.0953, p=0.0100)",Feature importance divergence exceeds expectations from randomly assembled pseudo‑traits.,STRONG
+Rashomon Set Robustness,Layer 5 (Rigor),Max R² Architecture Variance,Δ 0.019,"Predictive performance stable across linear, bagging, and boosting architectures.",STRONG
+SHAP Interaction Geometries,Layer 2 (Supervised),Unique Top Interaction Pairs,3 out of 3,Each trait is driven by structurally distinct covariate interactions.,STRONG
+Cross‑Sample Replication,Layer 5 (Rigor),Replication Across 3 Samples,Community & Representative samples replicated; Student sample: Student sample replication not possible (insufficient data).,Findings generalise across community and representative samples; student sample boundary condition.,STRONG (with caveat)
+Unsupervised Network (EBICglasso),Layer 1 (Unsupervised),Louvain Clusters (DTDD‑only vs Full‑Item),DTDD‑only: 3 clusters. Full‑item space: ALL Dark Triad items collapse into 1 cluster(s).,"Traits are structurally distinct in isolation but fuse into a single ""Dark Core"" when exposed to broader personality correlates.",WEAK
+Counterfactual Tipping Features,Layer 3 (Directed Dependence),Primary Modifiable Feature per Trait,"Machiavellianism: BFI_A_sum, Psychopathy: TEQ_sum, Narcissism: BFI_A_sum","Psychopathy tipping differs (TEQ), but Machiavellianism and Narcissism share identical primary tipping vulnerabilities (Agreeableness). Supports a two‑factor distinction, not three.",MODERATE
+Symbolic Regression (Functional Form),Layer 2 (Supervised),Discovered Equation Uniqueness,3 distinct equations out of 3 traits,"Optimal functional forms differ across traits, supporting distinct generative structures.",STRONG
+Person‑Centered Analysis (GMM BIC),Layer 5 (Person‑Centered),BIC Monotonicity,Some evidence for multimodal structure.,Evidence supports discrete subtypes within traits (BIC drops with more components).,WEAK
+Variance Explained (Limitation),All Supervised Layers,Test R² Range,0.13 – 0.23,"Supervised models explain only ~15‑20% of trait variance. Conclusions about distinctiveness are restricted to the nomological overlap, not the full latent constructs.",N/A (Limitation)
+
+════════════════════════════════════════════════════════════════
+  DIFF vs PRE-RERUN BACKUP
+════════════════════════════════════════════════════════════════
+diff -r audit_logs/backup_20261028_101950/tables/execution_audit.log results/tables/execution_audit.log
+1723a1724,1875
+> 2026-10-28 10:19:50,609 [INFO] ===============================================================
+> 2026-10-28 10:19:50,609 [INFO]  DT³ PHASE 1 (REMEDIATED): Data Preprocessing
+> 2026-10-28 10:19:50,609 [INFO] ===============================================================
+> 2026-10-28 10:19:50,613 [INFO] Cryptographic Hash (sample_1_community): a625842f3a471aedfbb067d656e1b8ab2b583052eaeea2c2ebd8a1e1da0e9a7d
+> 2026-10-28 10:19:50,615 [INFO] Cryptographic Hash (sample_2_student): 2133bcd49c37f4551fa329427308dcdf5a4e3886e2fba3e82fbe79497d6ee83a
+> 2026-10-28 10:19:50,616 [INFO] Cryptographic Hash (sample_3_representative): 38ebfd78a2d84554f7c1d43239a88c844d0b548e8f3a21f64480675a6352e55d
+> 2026-10-28 10:19:50,631 [INFO] --- Cleaning sample_1_community ---
+> 2026-10-28 10:19:50,633 [INFO] Age filter removed 3534 rows.
+> 2026-10-28 10:19:50,634 [INFO] After DTDD item cleaning: 5903 rows remain.
+> 2026-10-28 10:19:50,636 [INFO] Computed BFI_A_sum from 9 items in sample_1_community.
+> 2026-10-28 10:19:50,636 [INFO] Computed BFI_C_sum from 9 items in sample_1_community.
+> 2026-10-28 10:19:50,637 [INFO] Computed BFI_N_sum from 8 items in sample_1_community.
+> 2026-10-28 10:19:50,637 [INFO] Computed BFI_O_sum from 10 items in sample_1_community.
+> 2026-10-28 10:19:50,638 [INFO] Computed BFI_E_sum from 8 items in sample_1_community.
+> 2026-10-28 10:19:50,638 [INFO] Computed TEQ_sum from 7 items in sample_1_community.
+> 2026-10-28 10:19:50,639 [INFO] Computed RSES_sum from 10 items in sample_1_community.
+> 2026-10-28 10:19:50,639 [INFO] Finished cleaning sample_1_community: retained 5903 / 10518 rows.
+> 2026-10-28 10:19:50,646 [INFO] --- Cleaning sample_2_student ---
+> 2026-10-28 10:19:50,647 [INFO] Age filter removed 37 rows.
+> 2026-10-28 10:19:50,648 [INFO] After DTDD item cleaning: 2071 rows remain.
+> 2026-10-28 10:19:50,649 [WARNING] No items found for prefix BFI_A_. Skipping composite BFI_A_sum.
+> 2026-10-28 10:19:50,649 [WARNING] No items found for prefix BFI_C_. Skipping composite BFI_C_sum.
+> 2026-10-28 10:19:50,649 [INFO] Computed BFI_N_sum from 8 items in sample_2_student.
+> 2026-10-28 10:19:50,649 [WARNING] No items found for prefix BFI_O_. Skipping composite BFI_O_sum.
+> 2026-10-28 10:19:50,649 [WARNING] No BFI‑E items found in sample_2_student. Extraversion will be missing.
+> 2026-10-28 10:19:50,650 [INFO] Computed TEQ_sum from 19 items in sample_2_student.
+> 2026-10-28 10:19:50,650 [INFO] Computed RSES_sum from 10 items in sample_2_student.
+> 2026-10-28 10:19:50,650 [INFO] Finished cleaning sample_2_student: retained 2071 / 5334 rows.
+> 2026-10-28 10:19:50,653 [INFO] --- Cleaning sample_3_representative ---
+> 2026-10-28 10:19:50,653 [INFO] Age filter removed 2 rows.
+> 2026-10-28 10:19:50,654 [INFO] After DTDD item cleaning: 1492 rows remain.
+> 2026-10-28 10:19:50,655 [INFO] Computed BFI_A_sum from 9 items in sample_3_representative.
+> 2026-10-28 10:19:50,655 [INFO] Computed BFI_C_sum from 9 items in sample_3_representative.
+> 2026-10-28 10:19:50,655 [INFO] Computed BFI_N_sum from 8 items in sample_3_representative.
+> 2026-10-28 10:19:50,656 [INFO] Computed BFI_O_sum from 10 items in sample_3_representative.
+> 2026-10-28 10:19:50,656 [INFO] Computed BFI_E_sum from 8 items in sample_3_representative.
+> 2026-10-28 10:19:50,656 [INFO] Computed TEQ_sum from 7 items in sample_3_representative.
+> 2026-10-28 10:19:50,656 [WARNING] No items found for prefix RSES_. Skipping composite RSES_sum.
+> 2026-10-28 10:19:50,657 [INFO] Finished cleaning sample_3_representative: retained 1492 / 1665 rows.
+> 2026-10-28 10:19:50,659 [INFO] BFI_E_sum successfully constructed and included.
+> 2026-10-28 10:19:50,819 [INFO] Saved master dataset to data/processed/dt3_master_dataset.csv with shape (9466, 128)
+> 2026-10-28 10:19:50,831 [INFO] Saved test‑retest dataset to data/processed/dt3_test_retest.csv with 61 matched pairs.
+> 2026-10-28 10:19:50,831 [INFO] === PHASE 1 EXECUTION SUCCESSFULLY COMPLETED ===
+> 2026-10-28 10:19:52,105 [INFO] ===============================================================
+> 2026-10-28 10:19:52,105 [INFO]  DT³ PHASE 2 (REMEDIATED): Baseline Reproduction
+> 2026-10-28 10:19:52,105 [INFO] ===============================================================
+> 2026-10-28 10:19:52,107 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+> 2026-10-28 10:19:52,127 [INFO] Cryptographic Hash (Test‑Retest): fc5988c47d96cca44ce17581938764e0a23cc8fd0c09ee42fb25b8c4665ce4dc
+> 2026-10-28 10:19:52,129 [INFO] --- Module 1: Internal Consistency (Remediated Omega) ---
+> 2026-10-28 10:19:52,134 [INFO] Processing sample_1_community (N=5902)
+> 2026-10-28 10:19:52,152 [INFO] Processing sample_2_student (N=2071)
+> 2026-10-28 10:19:52,163 [INFO] Processing sample_3_representative (N=1492)
+> 2026-10-28 10:19:52,173 [INFO] Module 1 saved to results/tables/baseline_01_internal_consistency.csv
+> 2026-10-28 10:19:52,173 [INFO] --- Module 2: Test‑Retest Reliability (Analytical ICC) ---
+> 2026-10-28 10:19:52,174 [INFO] Test‑Retest Execution N=61 matched pairs.
+> 2026-10-28 10:19:52,175 [INFO] Module 2 saved to results/tables/baseline_02_test_retest_icc.csv
+> 2026-10-28 10:19:52,175 [INFO] --- Module 3: Nomological OLS (Community Sample Only) ---
+> 2026-10-28 10:19:52,178 [INFO] OLS N=5096 after dropping missing.
+> 2026-10-28 10:19:52,183 [INFO] Module 3 saved to results/tables/baseline_03_ols_regressions.csv
+> 2026-10-28 10:19:52,183 [INFO] --- Module 4: CFA & Factor Correlations (Community Sample) ---
+> 2026-10-28 10:19:52,187 [INFO] CFA N=5902
+> 2026-10-28 10:19:52,213 [INFO] CFA fit indices saved to results/tables/baseline_04_cfa_fit_indices.csv
+> 2026-10-28 10:19:52,213 [INFO] Factor correlations saved to results/tables/baseline_05_cfa_factor_correlations.csv
+> 2026-10-28 10:19:52,213 [INFO] === PHASE 2 EXECUTION SUCCESSFULLY COMPLETED ===
+> 2026-10-28 10:19:52,886 [INFO] ===============================================================
+> 2026-10-28 10:19:52,886 [INFO]  DT³ PHASE 2.1 (REMEDIATED v6): Symbolic Regression (Unscaled + Wide Constants)
+> 2026-10-28 10:19:52,886 [INFO] ===============================================================
+> 2026-10-28 10:19:52,888 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+> 2026-10-28 10:19:52,907 [INFO] --- Preparing Symbolic Regression Data ---
+> 2026-10-28 10:19:52,912 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative, excluded.
+> 2026-10-28 10:19:52,912 [INFO] Common predictors: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+> 2026-10-28 10:19:52,918 [INFO] --- Executing Symbolic Regression (Unscaled Targets, Non‑Linear) ---
+> 2026-10-28 10:19:52,918 [INFO] Initiating genetic evolution for score_Machiavellianism...
+> 2026-10-28 10:20:35,450 [INFO] Discovered Form [score_Machiavellianism]: abs(sub(sub(abs(add(add(abs(BFI_E_sum), -11.780), TEQ_sum)), add(min(BFI_C_sum, BFI_A_sum), sub(BFI_A_sum, BFI_E_sum))), BFI_A_sum))
+> 2026-10-28 10:20:35,451 [INFO] Validation R² -> Discovery: 0.148 | Replication: 0.093
+> 2026-10-28 10:20:35,451 [INFO] Initiating genetic evolution for score_Psychopathy...
+> 2026-10-28 10:21:21,093 [INFO] Discovered Form [score_Psychopathy]: sub(abs(max(sub(sub(sub(add(8.685, BFI_O_sum), add(add(add(BFI_C_sum, TEQ_sum), BFI_N_sum), max(BFI_N_sum, age))), BFI_A_sum), BFI_A_sum), 8.022)), add(BFI_A_sum, TEQ_sum))
+> 2026-10-28 10:21:21,093 [INFO] Validation R² -> Discovery: 0.254 | Replication: 0.184
+> 2026-10-28 10:21:21,093 [INFO] Initiating genetic evolution for score_Narcissism...
+> 2026-10-28 10:22:04,541 [INFO] Discovered Form [score_Narcissism]: sub(sub(add(add(min(min(abs(-14.287), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), sub(sub(14.263, BFI_A_sum), BFI_C_sum)), BFI_O_sum), BFI_E_sum), age), BFI_A_sum)
+> 2026-10-28 10:22:04,542 [INFO] Validation R² -> Discovery: 0.106 | Replication: 0.143
+> 2026-10-28 10:22:04,542 [INFO] Symbolic regression results saved to results/tables/layer2_symbolic_regression_equations.csv
+> 2026-10-28 10:22:04,551 [INFO] === PHASE 2.1 EXECUTION SUCCESSFULLY COMPLETED ===
+> 2026-10-28 10:22:05,494 [INFO] ===============================================================
+> 2026-10-28 10:22:05,494 [INFO]  DT³ PHASE 3 (REMEDIATED v4): Layer 1 - Unsupervised Structural
+> 2026-10-28 10:22:05,494 [INFO] ===============================================================
+> 2026-10-28 10:22:05,497 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+> 2026-10-28 10:22:05,516 [INFO] --- Executing EBICglasso Network Analysis (DTDD_Only) ---
+> 2026-10-28 10:22:05,516 [INFO] Complete‑case N = 9465 (out of 9466 total)
+> 2026-10-28 10:22:05,519 [INFO] Using complete‑case correlation (N=9465, P=12).
+> 2026-10-28 10:22:06,107 [INFO] EBIC Optimization Complete. Min EBIC: 68747.33 at Alpha: 0.0100
+> 2026-10-28 10:22:06,107 [INFO] Network constructed with 50 non‑zero edges.
+> 2026-10-28 10:22:06,108 [INFO] Louvain Community Detection identified 3 clusters.
+> 2026-10-28 10:22:06,445 [INFO] Network visualization saved to results/figures/layer1_ggm_network_DTDD_Only.png (+ PDF)
+> 2026-10-28 10:22:06,445 [INFO] --- Executing EBICglasso Network Analysis (Full_Item_Space) ---
+> 2026-10-28 10:22:06,447 [INFO] Complete‑case N = 0 (out of 9466 total)
+> 2026-10-28 10:22:06,447 [INFO] Complete‑case N < 30; switching to pairwise‑deletion correlation.
+> 2026-10-28 10:22:07,219 [INFO] Using projected pairwise correlation (effective N≈6734, P=88).
+> 2026-10-28 10:22:18,059 [INFO] EBIC Optimization Complete. Min EBIC: 393790.72 at Alpha: 0.0346
+> 2026-10-28 10:22:18,059 [INFO] Network constructed with 697 non‑zero edges.
+> 2026-10-28 10:22:18,062 [INFO] Louvain Community Detection identified 20 clusters.
+> 2026-10-28 10:22:18,470 [INFO] Network visualization saved to results/figures/layer1_ggm_network_Full_Item_Space.png (+ PDF)
+> 2026-10-28 10:22:18,470 [INFO] --- Executing Topological Data Analysis (Mapper) ---
+> 2026-10-28 10:22:18,471 [INFO] Topological Space: 9465 observations, 12 dimensions.
+> 2026-10-28 10:22:18,722 [INFO] TDA Mapper topology saved to results/figures/layer1_tda_mapper.html
+> 2026-10-28 10:22:18,722 [INFO] === PHASE 3 EXECUTION SUCCESSFULLY COMPLETED ===
+> 2026-10-28 10:22:20,335 [INFO] ===============================================================
+> 2026-10-28 10:22:20,335 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+> 2026-10-28 10:22:20,335 [INFO] ===============================================================
+> 2026-10-28 10:22:20,338 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+> 2026-10-28 10:22:20,357 [INFO] --- Data Loading (Strict Sample Separation) ---
+> 2026-10-28 10:22:20,357 [INFO] Sample counts in master dataset:
+> 2026-10-28 10:22:20,359 [INFO]   sample_1_community: 5903
+> 2026-10-28 10:22:20,360 [INFO]   sample_2_student: 2071
+> 2026-10-28 10:22:20,361 [INFO]   sample_3_representative: 1492
+> 2026-10-28 10:22:20,365 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+> 2026-10-28 10:22:20,365 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+> 2026-10-28 10:22:20,365 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+> 2026-10-28 10:22:20,365 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+> 2026-10-28 10:22:20,372 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+> 2026-10-28 10:22:20,372 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+> 2026-10-28 10:22:20,372 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+> 2026-10-28 10:22:32,201 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7743
+> 2026-10-28 10:22:32,203 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+> 2026-10-28 10:22:32,203 [INFO] Identified 325 high scorers for score_Machiavellianism
+> 2026-10-28 10:22:32,204 [INFO] Identified 343 high scorers for score_Psychopathy
+> 2026-10-28 10:22:32,204 [INFO] Identified 390 high scorers for score_Narcissism
+> 2026-10-28 10:22:32,249 [INFO] Observed mean CKA: 0.0553 | Null mean: 0.0912 ± 0.0043 | p (lower) = 0.0000
+> 2026-10-28 10:22:32,250 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+> 2026-10-28 10:25:41,888 [INFO] ===============================================================
+> 2026-10-28 10:25:41,888 [INFO]  DT³ PHASE 4 (REMEDIATED v4.3): Layer 2 - Supervised Divergence
+> 2026-10-28 10:25:41,888 [INFO] ===============================================================
+> 2026-10-28 10:25:41,890 [INFO] Cryptographic Hash (Master): be7c0abd856f83c628632c49bfc1126cba36203d310ac2c85af41c56f7d237a5
+> 2026-10-28 10:25:41,908 [INFO] --- Data Loading (Strict Sample Separation) ---
+> 2026-10-28 10:25:41,908 [INFO] Sample counts in master dataset:
+> 2026-10-28 10:25:41,910 [INFO]   sample_1_community: 5903
+> 2026-10-28 10:25:41,911 [INFO]   sample_2_student: 2071
+> 2026-10-28 10:25:41,912 [INFO]   sample_3_representative: 1492
+> 2026-10-28 10:25:41,916 [WARNING]   Predictor 'RSES_sum' is >90% missing in sample_3_representative and will be excluded.
+> 2026-10-28 10:25:41,916 [INFO] Predictors available in community: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum', 'RSES_sum']
+> 2026-10-28 10:25:41,916 [INFO] Predictors available in representative: ['age', 'BFI_A_sum', 'BFI_C_sum', 'BFI_N_sum', 'BFI_O_sum', 'BFI_E_sum', 'TEQ_sum']
+> 2026-10-28 10:25:41,916 [INFO] Common predictors used for both samples: ['BFI_A_sum', 'BFI_C_sum', 'BFI_E_sum', 'BFI_N_sum', 'BFI_O_sum', 'TEQ_sum', 'age']
+> 2026-10-28 10:25:41,922 [INFO] Train Shape: X=(5215, 7), y=(5215, 3)
+> 2026-10-28 10:25:41,922 [INFO] Test Shape:  X=(1492, 7), y=(1492, 3)
+> 2026-10-28 10:25:41,922 [INFO] --- Executing Shared-Trunk Multi-Task Neural Network ---
+> 2026-10-28 10:25:53,621 [INFO] MTL Network Training Complete. Final Test MSE (scaled): 0.7743
+> 2026-10-28 10:25:53,621 [INFO] --- Executing Representational Similarity Analysis (CKA) ---
+> 2026-10-28 10:25:53,621 [INFO] Identified 325 high scorers for score_Machiavellianism
+> 2026-10-28 10:25:53,621 [INFO] Identified 343 high scorers for score_Psychopathy
+> 2026-10-28 10:25:53,621 [INFO] Identified 390 high scorers for score_Narcissism
+> 2026-10-28 10:25:53,663 [INFO] Observed mean CKA: 0.0553 | Null mean: 0.0912 ± 0.0043 | p (lower) = 0.0000
+> 2026-10-28 10:25:53,664 [INFO] --- Executing XGBoost & SHAP Divergence Analysis ---
+
+════════════════════════════════════════════════════════════════
+  RESULT: PIPELINE ABORTED — see failed phase above
+════════════════════════════════════════════════════════════════

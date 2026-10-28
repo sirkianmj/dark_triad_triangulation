@@ -38,7 +38,10 @@ from sklearn.covariance import graphical_lasso  # functional API – critical fi
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import DBSCAN
-import kmapper as km
+try:
+    import kmapper as km
+except ImportError:
+    km = None
 
 # -----------------------------------------------------------------------------
 # DIRECTORY & LOGGING CONFIGURATION
@@ -281,23 +284,37 @@ def run_ebic_glasso_network(df, items, title_suffix="", min_complete=30):
     comm_path = os.path.join(TABLES_DIR, f"layer1_ggm_communities_{title_suffix}.csv")
     comm_df.to_csv(comm_path, index=False)
 
-    # Visualization
-    plt.figure(figsize=(14, 12))
-    pos = nx.spring_layout(G, k=0.6, seed=42)
+    # Visualization (Q1 revision: larger fonts, legend, PDF export)
+    figsize = (16, 14) if P_actual > 20 else (14, 12)
+    plt.figure(figsize=figsize)
+    k_val = 1.2 if P_actual > 20 else 0.6
+    pos = nx.spring_layout(G, k=k_val, seed=42, iterations=200)
     cmap = plt.get_cmap('viridis')
-    colors = [cmap(partition[node] / max(1, n_communities - 1)) for node in G.nodes()]
+    node_colors = [cmap(partition[node] / max(1, n_communities - 1)) for node in G.nodes()]
     edge_colors = ['green' if G[u][v]['sign'] > 0 else 'red' for u, v in G.edges()]
     edge_weights = [G[u][v]['weight'] * 10 for u, v in G.edges()]
-    nx.draw_networkx_nodes(G, pos, node_size=500, node_color=colors, edgecolors='black', alpha=0.9)
+    node_size = 500 if P_actual <= 20 else 200
+    nx.draw_networkx_nodes(G, pos, node_size=node_size, node_color=node_colors, edgecolors='black', alpha=0.9)
     nx.draw_networkx_edges(G, pos, edge_color=edge_colors, width=edge_weights, alpha=0.5)
-    font_size = 10 if P_actual <= 20 else 6
+    font_size = 10 if P_actual <= 20 else 9
     nx.draw_networkx_labels(G, pos, font_size=font_size, font_family="sans-serif")
-    plt.title(f"EBICglasso Network ({title_suffix})\nAlpha={best_alpha:.4f}, Edges={edges_added}, Clusters={n_communities}")
+    from matplotlib.patches import Patch
+    legend_handles = [
+        Patch(facecolor=cmap(c / max(1, n_communities - 1)), edgecolor='black',
+              label=f'Community {c}')
+        for c in sorted(set(partition.values()))
+    ]
+    plt.legend(handles=legend_handles, loc='upper left', bbox_to_anchor=(1.02, 1),
+               title='Louvain communities', fontsize=9, title_fontsize=10, frameon=True)
+    plt.title(f"EBIC-selected Graphical LASSO Network ({title_suffix})\n"
+              f"L1 alpha (EBIC-selected)={best_alpha:.4f}, Edges={edges_added}, Communities={n_communities}",
+              fontsize=13)
     plt.axis('off')
     fig_path = os.path.join(FIGURES_DIR, f"layer1_ggm_network_{title_suffix}.png")
     plt.savefig(fig_path, dpi=300, bbox_inches='tight')
+    plt.savefig(fig_path.replace('.png', '.pdf'), bbox_inches='tight')
     plt.close()
-    logging.info(f"Network visualization saved to {fig_path}")
+    logging.info(f"Network visualization saved to {fig_path} (+ PDF)")
     return G, partition
 
 # -----------------------------------------------------------------------------
@@ -305,6 +322,9 @@ def run_ebic_glasso_network(df, items, title_suffix="", min_complete=30):
 # -----------------------------------------------------------------------------
 def run_tda_mapper(df, items):
     logging.info("--- Executing Topological Data Analysis (Mapper) ---")
+    if km is None:
+        logging.warning("kmapper not installed; skipping TDA Mapper.")
+        return
     complete_df = df[items].dropna()
     if len(complete_df) < 100:
         raise FatalScienceError("Too few complete cases for Mapper analysis.")

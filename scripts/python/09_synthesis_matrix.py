@@ -60,7 +60,8 @@ def compile_synthesis_matrix():
     if cka_null_df is not None and cka_obs_df is not None:
         try:
             cka_matrix = cka_obs_df.astype(float).values
-            mean_obs = np.nanmean(cka_matrix)
+            iu, ju = np.triu_indices(cka_matrix.shape[0], k=1)
+            mean_obs = float(np.nanmean(cka_matrix[iu, ju]))
         except Exception:
             mean_obs = np.nan
         null_mean = cka_null_df['Null_CKA'].mean()
@@ -254,7 +255,7 @@ def compile_synthesis_matrix():
         'Paradigm': 'Variance Explained (Limitation)',
         'Layer': 'All Supervised Layers',
         'Key_Metric': 'Test R² Range',
-        'Value': '0.13 – 0.23',
+        'Value': '0.13 – 0.24',
         'Interpretation': 'Supervised models explain only ~15‑20% of trait variance. Conclusions about distinctiveness are restricted to the nomological overlap, not the full latent constructs.',
         'Triangulation_Support': 'N/A (Limitation)'
     })
