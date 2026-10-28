@@ -173,6 +173,9 @@ dark_triad_triangulation/
 
 ## 🚀 Getting Started
 
+> **Environment note.** Two environment files are provided. `requirements.txt` captures the exact pip-pinned package versions that produced the committed results (Python 3.11.18, XGBoost 3.2.0, SHAP 0.51.0, semopy 2.3.11, torch 2.14.1, etc.). `environments/environment_dt3.yml` is the equivalent conda specification, regenerated from the same environment and including a `pip:` subsection for pip-installed packages. Use `requirements.txt` if you need to reproduce the exact numeric values; use the yml if you prefer conda-native installation. Both are functionally equivalent.
+
+
 ### Prerequisites
 
 - **Hardware:** Any computer with ≥8GB RAM (Apple Silicon M2 tested; Intel/AMD also supported)
