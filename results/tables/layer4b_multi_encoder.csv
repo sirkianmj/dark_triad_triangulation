@@ -1,0 +1,4 @@
+Encoder,ARI,Silhouette,Purity_Mach,Purity_Psy,Purity_Narc,Error
+all-MiniLM-L6-v2,0.5045,0.1214,1.0,1.0,0.75,
+all-mpnet-base-v2,0.1671,0.152,1.0,0.5,1.0,
+BAAI/bge-small-en-v1.5,0.5714,0.2388,0.5,1.0,1.0,

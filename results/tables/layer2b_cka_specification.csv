@@ -1,0 +1,2 @@
+Method_A_Trunk_Subset,Method_B_Head1D_Subset,Method_C_Head1D_FullSet,Interpretation_A,Interpretation_B,Interpretation_C
+0.0708,0.0031,0.4739,"trunk activations, high-scorer row subsets (ORIGINAL)","1D head predictions, high-scorer subsets (r²-equiv, reviewer expected)","1D head predictions, full test set (r² on continuous predictions)"

@@ -2195,3 +2195,165 @@ Psychopathy        0  0  4
 2026-10-28 13:57:15,375 [INFO]   null 400/500
 2026-10-28 13:57:39,660 [INFO]   null 500/500
 2026-10-28 13:57:39,663 [INFO] Wrote results/tables/layer5b_signed_sdi.csv
+2026-10-28 14:14:36,940 [INFO] ===============================================================
+2026-10-28 14:14:36,940 [INFO]  PHASE 3.2: Clean 88-item network re-estimation
+2026-10-28 14:14:36,940 [INFO] ===============================================================
+2026-10-28 14:14:36,966 [INFO] Community sample: 5903 rows
+2026-10-28 14:14:36,966 [INFO] All 82 clean items present
+2026-10-28 14:14:36,966 [INFO] === Clean network: clean_community ===
+2026-10-28 14:14:36,966 [INFO] Items: 82  Cases: 5903
+2026-10-28 14:14:36,967 [INFO] Complete cases: 0
+2026-10-28 14:14:37,542 [INFO] Pairwise fallback (effective N≈5233, P=82)
+2026-10-28 14:14:51,290 [INFO] Min EBIC=294516.42 at alpha=0.0412, edges=591
+2026-10-28 14:14:51,295 [INFO]   γ=0.5: 30 comms; DTDD → 3 cluster(s)
+2026-10-28 14:14:51,298 [INFO]   γ=1.0: 20 comms; DTDD → 1 cluster(s)
+2026-10-28 14:14:51,300 [INFO]   γ=1.5: 21 comms; DTDD → 2 cluster(s)
+2026-10-28 14:14:51,303 [INFO]   γ=2.0: 24 comms; DTDD → 2 cluster(s)
+2026-10-28 14:14:51,306 [INFO]   γ=3.0: 28 comms; DTDD → 3 cluster(s)
+2026-10-28 14:14:51,310 [INFO] Wrote layer1b_network_summary_clean_community.csv and layer1b_communities_clean_community.csv
+2026-10-28 14:15:03,477 [INFO] ===============================================================
+2026-10-28 14:15:03,477 [INFO]  PHASE 4.2: CKA specification variants (A/B/C)
+2026-10-28 14:15:03,477 [INFO] ===============================================================
+2026-10-28 14:15:03,509 [INFO] Train N=5215  Test N=1492
+2026-10-28 14:15:11,450 [INFO]   High scorers score_Machiavellianism: 325
+2026-10-28 14:15:11,450 [INFO]   High scorers score_Psychopathy: 343
+2026-10-28 14:15:11,450 [INFO]   High scorers score_Narcissism: 390
+2026-10-28 14:15:44,892 [INFO] ===============================================================
+2026-10-28 14:15:44,892 [INFO]  PHASE 5.2: Z-standardized counterfactual analysis
+2026-10-28 14:15:44,892 [INFO] ===============================================================
+2026-10-28 14:15:51,446 [INFO]   [score_Machiavellianism] primary=BFI_A_sum prop=0.206 median|z|=1.400 comp=0.425
+2026-10-28 14:15:57,470 [INFO]   [score_Psychopathy] primary=TEQ_sum prop=0.350 median|z|=0.800 comp=0.544
+2026-10-28 14:16:02,485 [INFO]   [score_Narcissism] primary=BFI_A_sum prop=0.618 median|z|=1.000 comp=0.382
+2026-10-28 14:16:02,486 [INFO] Wrote results/tables/layer3b_counterfactual_standardized.csv
+2026-10-28 14:16:10,479 [INFO] ===============================================================
+2026-10-28 14:16:10,479 [INFO]  PHASE 6.2: Multi-encoder semantic clustering
+2026-10-28 14:16:10,479 [INFO] ===============================================================
+2026-10-28 14:16:10,479 [INFO] === all-MiniLM-L6-v2 ===
+2026-10-28 14:16:10,479 [INFO] No device provided, using mps
+2026-10-28 14:16:11,393 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-10-28 14:16:11,400 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-10-28 14:16:11,725 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 14:16:11,972 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 14:16:12,242 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:16:12,243 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-28 14:16:12,667 [INFO]   ARI=0.5045  Sil=0.1214  Purity: 1.00/1.00/0.75
+2026-10-28 14:16:12,667 [INFO] === all-mpnet-base-v2 ===
+2026-10-28 14:16:12,667 [INFO] No device provided, using mps
+2026-10-28 14:16:12,928 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+2026-10-28 14:16:13,266 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:16:13,385 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:13,521 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:13,752 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:16:13,879 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:13,998 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:14,001 [INFO] Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+2026-10-28 14:16:14,231 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:16:14,357 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/README.md?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2FREADME.md=&etag=%221452a960a1189347d079efa950d3c87d5706c0d6%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:14,482 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/README.md?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2FREADME.md=&etag=%221452a960a1189347d079efa950d3c87d5706c0d6%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:14,714 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:16:14,831 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/sentence_bert_config.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fsentence_bert_config.json=&etag=%224eb670bb4e7f34e9031acec2b86d39e5c921198e%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:14,964 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/sentence_bert_config.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fsentence_bert_config.json=&etag=%224eb670bb4e7f34e9031acec2b86d39e5c921198e%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:15,206 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:16:15,544 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:16:15,660 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fconfig.json=&etag=%22b9fd4298819da011007a6a4ceb728c860914fc88%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:15,814 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fconfig.json=&etag=%22b9fd4298819da011007a6a4ceb728c860914fc88%22 "HTTP/1.1 200 OK"
+2026-10-28 14:16:16,078 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/model.safetensors "HTTP/1.1 302 Found"
+2026-10-28 14:16:16,334 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/xet-read-token/e8c3b32edf5434bc2275fc9bab85f82640a19130 "HTTP/1.1 200 OK"
+2026-10-28 14:17:01,742 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/processor_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:01,981 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:02,217 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:02,445 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:02,562 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Ftokenizer_config.json=&etag=%2220ae1276042f43d1c80f4f7b7f084a8704592c1d%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:02,709 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Ftokenizer_config.json=&etag=%2220ae1276042f43d1c80f4f7b7f084a8704592c1d%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:02,957 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:03,211 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 14:17:03,567 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:03,709 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/vocab.txt?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fvocab.txt=&etag=%221c51ab79a2298a340952d3e6012042a9c84bbe4d%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:03,961 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/vocab.txt?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fvocab.txt=&etag=%221c51ab79a2298a340952d3e6012042a9c84bbe4d%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:04,459 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:04,607 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Ftokenizer.json=&etag=%227c8e194053bc80e27e19bb2125469e4f289ab2b3%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:04,736 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Ftokenizer.json=&etag=%227c8e194053bc80e27e19bb2125469e4f289ab2b3%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:05,125 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:05,459 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:05,582 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/special_tokens_map.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fspecial_tokens_map.json=&etag=%22378d4fa393d5eaccf69c437a20f1cda6ac65c14d%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:05,709 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/special_tokens_map.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2Fspecial_tokens_map.json=&etag=%22378d4fa393d5eaccf69c437a20f1cda6ac65c14d%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:05,958 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:06,260 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:06,381 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2F1_Pooling%2Fconfig.json=&etag=%224e09f293dfe90bba49f87cfe7996271f07be2666%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:06,507 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-mpnet-base-v2%2Fresolve%2Fe8c3b32edf5434bc2275fc9bab85f82640a19130%2F1_Pooling%2Fconfig.json=&etag=%224e09f293dfe90bba49f87cfe7996271f07be2666%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:06,760 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:07,509 [INFO]   ARI=0.1671  Sil=0.1520  Purity: 1.00/0.50/1.00
+2026-10-28 14:17:07,509 [INFO] === BAAI/bge-small-en-v1.5 ===
+2026-10-28 14:17:07,509 [INFO] No device provided, using mps
+2026-10-28 14:17:07,763 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-10-28 14:17:08,227 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:08,372 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:08,501 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:08,740 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:08,881 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:09,024 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig_sentence_transformers.json=&etag=%22dcb0c0d97d09b930d13600b1a773ddb27e441aab%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:09,027 [INFO] Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-10-28 14:17:09,284 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:09,402 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:09,526 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2FREADME.md=&etag=%228b8567d75ffa619486d9590cb0eb76d66ad46c49%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:09,898 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:10,028 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:10,162 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fsentence_bert_config.json=&etag=%22ea85692bff64b0d1917833c31ddbca8ab10f5455%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:10,395 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:10,640 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:10,765 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:10,890 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fconfig.json=&etag=%223992bf890728a92476c700e6e657fd696eb94160%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:11,155 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/model.safetensors "HTTP/1.1 302 Found"
+2026-10-28 14:17:11,397 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/xet-read-token/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a "HTTP/1.1 200 OK"
+2026-10-28 14:17:25,468 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/processor_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:25,730 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:25,975 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:26,251 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:26,391 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:26,531 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer_config.json=&etag=%2237fca74771bc76a8e01178ce3a6055a0995f8093%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:26,792 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:27,042 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 14:17:27,406 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:27,531 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fvocab.txt=&etag=%22fb140275c155a9c7c5a3b3e0e77a9e839594a938%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:27,680 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fvocab.txt=&etag=%22fb140275c155a9c7c5a3b3e0e77a9e839594a938%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:28,452 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:28,616 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer.json=&etag=%22688882a79f44442ddc1f60d70334a7ff5df0fb47%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:28,758 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Ftokenizer.json=&etag=%22688882a79f44442ddc1f60d70334a7ff5df0fb47%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:29,151 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:29,517 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:29,652 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fspecial_tokens_map.json=&etag=%22a8b3208c2884c4efb86e49300fdd3dc877220cdf%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:29,791 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2Fspecial_tokens_map.json=&etag=%22a8b3208c2884c4efb86e49300fdd3dc877220cdf%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:30,051 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:30,321 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-28 14:17:30,452 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:30,592 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json?%2FBAAI%2Fbge-small-en-v1.5%2Fresolve%2F5c38ec7c405ec4b44b94cc5a9bb96e735b38267a%2F1_Pooling%2Fconfig.json=&etag=%221da070f0993788c8851a652170ff013aa54dd519%22 "HTTP/1.1 200 OK"
+2026-10-28 14:17:30,841 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:31,072 [INFO]   ARI=0.5714  Sil=0.2388  Purity: 0.50/1.00/1.00
+2026-10-28 14:17:39,630 [INFO] ===============================================================
+2026-10-28 14:17:39,630 [INFO]  PHASE 6.2: Multi-encoder semantic clustering
+2026-10-28 14:17:39,630 [INFO] ===============================================================
+2026-10-28 14:17:39,630 [INFO] === all-MiniLM-L6-v2 ===
+2026-10-28 14:17:39,630 [INFO] No device provided, using mps
+2026-10-28 14:17:40,258 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-10-28 14:17:40,264 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-10-28 14:17:40,610 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:40,853 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 14:17:41,122 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:41,123 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-28 14:17:41,401 [INFO]   ARI=0.5045  Sil=0.1214  Purity: 1.00/1.00/0.75
+2026-10-28 14:17:41,401 [INFO] === all-mpnet-base-v2 ===
+2026-10-28 14:17:41,401 [INFO] No device provided, using mps
+2026-10-28 14:17:41,634 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+2026-10-28 14:17:41,640 [INFO] Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+2026-10-28 14:17:41,944 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:42,166 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 14:17:42,455 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:42,717 [INFO]   ARI=0.1671  Sil=0.1520  Purity: 1.00/0.50/1.00
+2026-10-28 14:17:42,717 [INFO] === BAAI/bge-small-en-v1.5 ===
+2026-10-28 14:17:42,717 [INFO] No device provided, using mps
+2026-10-28 14:17:42,959 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-10-28 14:17:43,199 [INFO] Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-10-28 14:17:43,494 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:43,830 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 14:17:44,093 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 14:17:44,333 [INFO]   ARI=0.5714  Sil=0.2388  Purity: 0.50/1.00/1.00

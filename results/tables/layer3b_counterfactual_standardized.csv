@@ -1,0 +1,4 @@
+Trait,N_high,Primary_driver,Pct_flipped,Median_|z_shift|,Q1_|z_shift|,Compression_factor,SD_pred,SD_y
+Machiavellianism,325,BFI_A_sum,0.206,1.4,0.8,0.425,2.196,5.165
+Psychopathy,343,TEQ_sum,0.35,0.8,0.35,0.544,2.427,4.462
+Narcissism,390,BFI_A_sum,0.618,1.0,0.4,0.382,1.923,5.04
