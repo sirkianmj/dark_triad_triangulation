@@ -63,16 +63,16 @@ Our five‑layer triangulation framework reveals a **middle‑ground conclusion*
 
 | Paradigm | Layer | Key Metric | Value | Support |
 |:---------|:------|:-----------|:------|:--------|
-| Representational Similarity (CKA) | Layer 2 | Mean CKA vs. Null | 0.0369 (null: 0.0912 ± 0.0043, *p* < 0.0001) | **STRONG** |
+| Representational Similarity (CKA) | Layer 2 | Mean CKA vs. Null | 0.0542 (null: 0.0890 ± 0.0043, *p* < 0.005) | **STRONG** |
 | LLM Semantic Clustering | Layer 4 | Adjusted Rand Index (ARI) | 0.5045 (*p* = 0.007) | **MODERATE** |
 | SHAP Divergence Index (SDI) | Layer 5 | SDI vs. Pseudo‑Trait Null | 0.2591 (null: 0.0953, *p* = 0.010) | **STRONG** |
 | Rashomon Set Robustness | Layer 5 | Max R² Architecture Variance | Δ = 0.019 | **STRONG** |
 | SHAP Interaction Geometries | Layer 2 | Unique Top Interaction Pairs | 3 out of 3 | **STRONG** |
-| Unsupervised Network (EBICglasso) | Layer 1 | Louvain Clusters | DTDD‑only: 3; Full‑item: **1 (Dark Core Collapse)** | **WEAK** |
+| Unsupervised Network (EBICglasso) | Layer 1 | Louvain Clusters | DTDD‑only: 3; Full‑item: **20 communities (all 12 DTDD items in one — Dark Core Collapse)** | **WEAK** |
 | Counterfactual Tipping Features | Layer 3 | Primary Modifiable Feature | Mach: Agreeableness; Psychopathy: **Empathy**; Narc: Agreeableness | **MODERATE** |
 | Symbolic Regression | Layer 2 | Equation Uniqueness | 3 distinct equations | **STRONG** |
 
-> **⚠️ Important Limitation:** Supervised models explain only **13–23%** of trait variance. Conclusions about distinctiveness are restricted to the **nomological overlap**, not the full latent constructs.
+> **⚠️ Important Limitation:** Supervised models explain only **13–24%** of trait variance. Conclusions about distinctiveness are restricted to the **nomological overlap**, not the full latent constructs.
 
 ---
 
@@ -93,7 +93,7 @@ flowchart TD
     B --> B3[Topological Data Analysis<br>Mapper]
 
     C --> C1[Multi‑Task Neural Network<br>Shared Trunk + 3 Heads]
-    C --> C2[CKA Representational Similarity<br>0.0369 vs. null 0.0912]
+    C --> C2[CKA Representational Similarity<br>0.0542 vs. null 0.0890]
     C --> C3[SHAP Feature Importance<br>Divergent predictors per trait]
     C --> C4[Symbolic Regression<br>3 distinct functional forms]
 
