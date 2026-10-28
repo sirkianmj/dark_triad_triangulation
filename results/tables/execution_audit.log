@@ -2369,3 +2369,41 @@ Psychopathy        0  0  4
 2026-10-28 14:29:54,065 [INFO] sample_3_representative: N=1492
 2026-10-28 14:29:54,072 [INFO]   3-factor: χ²=383.51, df=51, CFI=0.957, TLI=0.945, RMSEA=0.066
 2026-10-28 14:29:54,088 [INFO]   Bifactor: χ²=207.94, df=42, CFI=0.979, TLI=0.966, RMSEA=0.051
+2026-10-28 15:22:30,898 [INFO] ===============================================================
+2026-10-28 15:22:30,898 [INFO]  PHASE 2.7: CFA reporting completeness (SRMR, RMSEA CI, FD)
+2026-10-28 15:22:30,898 [INFO] ===============================================================
+2026-10-28 15:22:30,932 [INFO] Community sample: N = 5902
+2026-10-28 15:22:30,932 [INFO] Fitting: 1-factor
+2026-10-28 15:22:30,944 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:30,944 [INFO] Fitting: 2-factor M+P
+2026-10-28 15:22:30,953 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:30,953 [INFO] Fitting: 2-factor M+N
+2026-10-28 15:22:30,962 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:30,962 [INFO] Fitting: 3-factor
+2026-10-28 15:22:30,971 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:30,971 [INFO] Fitting: Bifactor symmetric
+2026-10-28 15:22:30,989 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:30,989 [INFO] Fitting: Bifactor-(S-1)
+2026-10-28 15:22:30,998 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:30,998 [INFO] Fitting: Bifactor-(S.I-1)
+2026-10-28 15:22:31,012 [ERROR]   FIT FAILED: could not convert string to float: '2022-12-12 14:06:20 UTC'
+2026-10-28 15:22:31,017 [INFO] Wrote results/tables/baseline_14_cfa_completeness.csv
+2026-10-28 15:22:53,068 [INFO] ===============================================================
+2026-10-28 15:22:53,068 [INFO]  PHASE 2.7: CFA reporting completeness (SRMR, RMSEA CI, FD)
+2026-10-28 15:22:53,068 [INFO] ===============================================================
+2026-10-28 15:22:53,090 [INFO] Community sample (12 DTDD items only): N = 5902
+2026-10-28 15:22:53,090 [INFO] Fitting: 1-factor
+2026-10-28 15:22:53,103 [INFO]   CFI=0.686 RMSEA=0.172 [0.169, 0.175] SRMR=0.141
+2026-10-28 15:22:53,103 [INFO] Fitting: 2-factor M+P
+2026-10-28 15:22:53,112 [INFO]   CFI=0.849 RMSEA=0.120 [0.118, 0.123] SRMR=0.172
+2026-10-28 15:22:53,113 [INFO] Fitting: 2-factor M+N
+2026-10-28 15:22:53,122 [INFO]   CFI=0.793 RMSEA=0.141 [0.138, 0.144] SRMR=0.165
+2026-10-28 15:22:53,122 [INFO] Fitting: 3-factor
+2026-10-28 15:22:53,133 [INFO]   CFI=0.941 RMSEA=0.077 [0.074, 0.080] SRMR=0.188
+2026-10-28 15:22:53,133 [INFO] Fitting: Bifactor symmetric
+2026-10-28 15:22:53,154 [INFO]   CFI=0.965 RMSEA=0.066 [0.062, 0.069] SRMR=0.181
+2026-10-28 15:22:53,155 [INFO] Fitting: Bifactor-(S-1)
+2026-10-28 15:22:53,167 [INFO]   CFI=0.959 RMSEA=0.068 [0.065, 0.071] SRMR=0.183
+2026-10-28 15:22:53,167 [INFO] Fitting: Bifactor-(S.I-1)
+2026-10-28 15:22:53,186 [INFO]   CFI=0.965 RMSEA=0.066 [0.062, 0.069] SRMR=0.183
+2026-10-28 15:22:53,186 [INFO] Wrote results/tables/baseline_14_cfa_completeness.csv
