@@ -307,7 +307,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 | Role | Name | Contact |
 |:-----|:-----|:--------|
-| **Psychology Lead** | Sabine Khorshidi | [sabikekhorshidy@gmail.com](mailto:sabikekhorshidy@gmail.com) |
+| **Psychology Lead** | Sabine Khorshidi | [sabikekhorshidy@gmail.com](mailto:sabihekhorshidy@gmail.com) |
 | **AI/ML Lead** | Kian Mansouri Jamshidi | [sirkianmj@gmail.com](mailto:sirkianmj@gmail.com) |
 
 **Author Contributions:**
