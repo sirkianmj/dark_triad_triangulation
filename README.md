@@ -282,7 +282,7 @@ If you use this code, data, or findings in your research, please cite:
 
 ```bibtex
 @article{KhorshidiMansouriJamshidi2026,
-  author    = {Sabine Khorshidi and Kian Mansouri Jamshidi},
+  author    = {Sabihe Khorshidi and Kian Mansouri Jamshidi},
   title     = {The Dark Triad as a Multi-Layered Structure: A Triangulation of Classical Psychometrics and Explainable Machine Learning for Testing the Distinctiveness and Convergence of Machiavellianism, Psychopathy, and Narcissism},
   journal   = {SSRN},
   year      = {2026},
@@ -307,7 +307,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 | Role | Name | Contact |
 |:-----|:-----|:--------|
-| **Psychology Lead** | Sabine Khorshidi | [sabikekhorshidy@gmail.com](mailto:sabihekhorshidy@gmail.com) |
+| **Psychology Lead** | Sabihe Khorshidi | [sabihekhorshidy@gmail.com](mailto:sabihekhorshidy@gmail.com) |
 | **AI/ML Lead** | Kian Mansouri Jamshidi | [sirkianmj@gmail.com](mailto:sirkianmj@gmail.com) |
 
 **Author Contributions:**
