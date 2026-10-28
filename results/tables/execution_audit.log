@@ -2407,3 +2407,73 @@ Psychopathy        0  0  4
 2026-10-28 15:22:53,167 [INFO] Fitting: Bifactor-(S.I-1)
 2026-10-28 15:22:53,186 [INFO]   CFI=0.965 RMSEA=0.066 [0.062, 0.069] SRMR=0.183
 2026-10-28 15:22:53,186 [INFO] Wrote results/tables/baseline_14_cfa_completeness.csv
+2026-10-28 15:28:25,874 [INFO] ===============================================================
+2026-10-28 15:28:25,875 [INFO]  PHASE 6.4: Linkage-rule robustness (Layer 4)
+2026-10-28 15:28:25,875 [INFO] ===============================================================
+2026-10-28 15:28:25,875 [INFO] === all-MiniLM-L6-v2 ===
+2026-10-28 15:28:25,875 [INFO] No device provided, using mps
+2026-10-28 15:28:27,628 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-10-28 15:28:27,634 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-10-28 15:28:28,056 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 15:28:28,391 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 15:28:28,749 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 15:28:28,750 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-28 15:28:29,238 [INFO]   average : ARI=0.505  purities M/P/N=1.00/1.00/0.75  fractured=Narc
+2026-10-28 15:28:29,238 [ERROR]   ward: failed - cosine was provided as metric. Ward can only work with euclidean distances (i.e. 'euclidean' and 'l2').
+2026-10-28 15:28:29,239 [INFO]   complete: ARI=0.571  purities M/P/N=0.50/1.00/1.00  fractured=Mach
+2026-10-28 15:28:29,239 [INFO] === all-mpnet-base-v2 ===
+2026-10-28 15:28:29,239 [INFO] No device provided, using mps
+2026-10-28 15:28:29,566 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+2026-10-28 15:28:29,570 [INFO] Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+2026-10-28 15:28:29,972 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 15:28:30,305 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 15:28:30,649 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 15:28:31,071 [INFO]   average : ARI=0.167  purities M/P/N=1.00/0.50/1.00  fractured=Psy
+2026-10-28 15:28:31,071 [ERROR]   ward: failed - cosine was provided as metric. Ward can only work with euclidean distances (i.e. 'euclidean' and 'l2').
+2026-10-28 15:28:31,072 [INFO]   complete: ARI=0.285  purities M/P/N=0.50/1.00/0.75  fractured=Mach
+2026-10-28 15:28:31,072 [INFO] === BAAI/bge-small-en-v1.5 ===
+2026-10-28 15:28:31,072 [INFO] No device provided, using mps
+2026-10-28 15:28:31,397 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-10-28 15:28:31,674 [INFO] Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-10-28 15:28:32,057 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 15:28:32,482 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 15:28:32,810 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 15:28:33,023 [INFO]   average : ARI=0.571  purities M/P/N=0.50/1.00/1.00  fractured=Mach
+2026-10-28 15:28:33,023 [ERROR]   ward: failed - cosine was provided as metric. Ward can only work with euclidean distances (i.e. 'euclidean' and 'l2').
+2026-10-28 15:28:33,025 [INFO]   complete: ARI=0.571  purities M/P/N=0.50/1.00/1.00  fractured=Mach
+2026-10-28 15:28:33,030 [INFO] Wrote results/tables/layer4c_linkage_robustness.csv
+2026-10-28 15:29:24,633 [INFO] ===============================================================
+2026-10-28 15:29:24,633 [INFO]  PHASE 6.4: Linkage-rule robustness (Layer 4)
+2026-10-28 15:29:24,633 [INFO] ===============================================================
+2026-10-28 15:29:24,633 [INFO] === all-MiniLM-L6-v2 ===
+2026-10-28 15:29:24,633 [INFO] No device provided, using mps
+2026-10-28 15:29:26,163 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-10-28 15:29:26,167 [INFO] Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-10-28 15:29:26,553 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 15:29:26,889 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 15:29:27,228 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 15:29:27,470 [INFO]   average : ARI=0.505  purities M/P/N=1.00/1.00/0.75  fractured=Narc
+2026-10-28 15:29:27,471 [INFO]   ward    : ARI=0.383  purities M/P/N=0.50/1.00/0.75  fractured=Mach
+2026-10-28 15:29:27,472 [INFO]   complete: ARI=0.571  purities M/P/N=0.50/1.00/1.00  fractured=Mach
+2026-10-28 15:29:27,472 [INFO] === all-mpnet-base-v2 ===
+2026-10-28 15:29:27,472 [INFO] No device provided, using mps
+2026-10-28 15:29:27,784 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+2026-10-28 15:29:27,790 [INFO] Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+2026-10-28 15:29:28,184 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 15:29:28,501 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 15:29:28,868 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/e8c3b32edf5434bc2275fc9bab85f82640a19130/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 15:29:28,869 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-28 15:29:29,213 [INFO]   average : ARI=0.167  purities M/P/N=1.00/0.50/1.00  fractured=Psy
+2026-10-28 15:29:29,214 [INFO]   ward    : ARI=0.737  purities M/P/N=1.00/1.00/0.75  fractured=Narc
+2026-10-28 15:29:29,214 [INFO]   complete: ARI=0.285  purities M/P/N=0.50/1.00/0.75  fractured=Mach
+2026-10-28 15:29:29,214 [INFO] === BAAI/bge-small-en-v1.5 ===
+2026-10-28 15:29:29,215 [INFO] No device provided, using mps
+2026-10-28 15:29:29,548 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-10-28 15:29:29,815 [INFO] Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-10-28 15:29:30,189 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-28 15:29:30,501 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-28 15:29:30,936 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-28 15:29:31,170 [INFO]   average : ARI=0.571  purities M/P/N=0.50/1.00/1.00  fractured=Mach
+2026-10-28 15:29:31,171 [INFO]   ward    : ARI=1.000  purities M/P/N=1.00/1.00/1.00  fractured=Mach
+2026-10-28 15:29:31,172 [INFO]   complete: ARI=0.571  purities M/P/N=0.50/1.00/1.00  fractured=Mach
+2026-10-28 15:29:31,175 [INFO] Wrote results/tables/layer4c_linkage_robustness.csv
