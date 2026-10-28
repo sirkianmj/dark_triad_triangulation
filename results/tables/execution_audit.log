@@ -2357,3 +2357,15 @@ Psychopathy        0  0  4
 2026-10-28 14:17:43,830 [INFO] HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
 2026-10-28 14:17:44,093 [INFO] HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/2_Normalize/config.json "HTTP/1.1 404 Not Found"
 2026-10-28 14:17:44,333 [INFO]   ARI=0.5714  Sil=0.2388  Purity: 0.50/1.00/1.00
+2026-10-28 14:29:53,972 [INFO] ===============================================================
+2026-10-28 14:29:53,973 [INFO]  PHASE 2.6: Multi-group configural invariance (Python)
+2026-10-28 14:29:53,973 [INFO] ===============================================================
+2026-10-28 14:29:53,996 [INFO] sample_1_community: N=5902
+2026-10-28 14:29:54,007 [INFO]   3-factor: χ²=1838.65, df=51, CFI=0.941, TLI=0.923, RMSEA=0.077
+2026-10-28 14:29:54,024 [INFO]   Bifactor: χ²=1109.75, df=42, CFI=0.965, TLI=0.944, RMSEA=0.066
+2026-10-28 14:29:54,027 [INFO] sample_2_student: N=2071
+2026-10-28 14:29:54,033 [INFO]   3-factor: χ²=521.28, df=51, CFI=0.94, TLI=0.923, RMSEA=0.067
+2026-10-28 14:29:54,064 [INFO]   Bifactor: χ²=301.73, df=42, CFI=0.967, TLI=0.948, RMSEA=0.055
+2026-10-28 14:29:54,065 [INFO] sample_3_representative: N=1492
+2026-10-28 14:29:54,072 [INFO]   3-factor: χ²=383.51, df=51, CFI=0.957, TLI=0.945, RMSEA=0.066
+2026-10-28 14:29:54,088 [INFO]   Bifactor: χ²=207.94, df=42, CFI=0.979, TLI=0.966, RMSEA=0.051

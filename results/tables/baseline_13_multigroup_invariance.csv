@@ -1,0 +1,7 @@
+Model,Chi2,df,CFI,RMSEA,delta_CFI,delta_RMSEA
+3-factor | configural (3 samples),2009.18,153,0.941,0.062,NA,NA
+3-factor | metric (3 samples),2174.68,171,0.936,0.061,-0.005,-0.001
+3-factor | scalar (3 samples),2976.08,189,0.911,0.068,-0.025,0.007
+Bifactor | configural (3 samples),1247.24,126,0.964,0.053,NA,NA
+Bifactor | metric (3 samples),1523.29,166,0.957,0.051,-0.007,-0.002
+Bifactor | scalar (3 samples),2063.97,182,0.94,0.057,-0.017,0.006
