@@ -18,6 +18,8 @@
 \usepackage{seqsplit}
 \usepackage{xurl}
 
+\graphicspath{{results/figures/}{figures/}{./}}
+
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!50!black,
@@ -27,14 +29,13 @@
 }
 
 \setlength{\columnsep}{0.25in}
-\setlength{\emergencystretch}{4em}
+\setlength{\emergencystretch}{2em}
 
 \begin{document}
-\sloppy
 
 \twocolumn[{
 \begin{center}
-{\LARGE\bfseries The Dark Triad as a Multi-Layered Structure: A Triangulation of Classical Psychometrics and Explainable Machine Learning for Testing the Distinctiveness and Convergence of Machiavellianism, Psychopathy, and Narcissism\par}
+{\LARGE\bfseries The Dark Triad as a Multi-Layered Structure: A Triangulation of Classical Psychometrics and Explainable Machine Learning for Testing the Distinctiveness and Convergence of Machiavellianism, Psychopathy, and Narcissism in the Dirty Dozen\par}
 \vspace{1.2em}
 
 {\large\bfseries Sabihe Khorshidi\par}
@@ -56,11 +57,11 @@
 }]
 
 \noindent\rule{\linewidth}{0.4pt}
-\noindent\textbf{Abstract.} Since its introduction, the Dark Triad---Machiavellianism, psychopathy, and narcissism---has raised the question of whether these traits are distinct or manifestations of a shared Dark Core. Prior work relied on linear CFA/OLS, which cannot detect nonlinearities. Using existing Dirty Dozen data from community ($N = 5{,}902$), student ($N = 2{,}071$), and representative ($N = 1{,}492$) samples, we applied the Dark Triad Triangulation (DT$^3$) framework across five layers: network psychometrics, supervised machine learning, counterfactual tipping points, semantic embeddings, and robustness testing. A bifactor CFA ($\chi^2(42) = 1109.75$, CFI = .965, TLI = .944, RMSEA = .066) outperformed the correlated three-factor model (CFI = .941, RMSEA = .077); ECV = .576, $\omega_H = .734$, and subscale $\omega_{HS} = .036/.450/.532$ (Machiavellianism/Psychopathy/Narcissism), indicating substantial specific variance for the latter two only; latent factor correlations were $r = .62$ (Machiavellianism--Psychopathy), $.61$ (Machiavellianism--Narcissism), and $.36$ (Psychopathy--Narcissism). The 12-item network yielded three communities, but in the full 88-item space all Dark Triad items merged into one Dark Core. Supervised predictors diverged (agreeableness, empathy, and age, respectively), CKA indicated representational distinctiveness, and semantic clustering partially separated traits (ARI = .505, $p = .007$). Linear models matched XGBoost, indicating that the explainable-ML contribution is interpretive rather than predictive. Out-of-sample $R^2$ (.13--.22) limits inferences. Findings support a strong general Dark factor, with Psychopathy and Narcissism retaining specific variance but Machiavellianism not.
+\noindent\textbf{Abstract.} Since its introduction, the Dark Triad (Machiavellianism, psychopathy, narcissism) has raised the question of whether these traits are distinct or manifestations of a shared Dark Core. Prior work relied on linear CFA/OLS, which cannot detect nonlinearities. Using existing Dirty Dozen data from community ($N = 5{,}902$), student ($N = 2{,}071$), and representative ($N = 1{,}492$) samples, we applied the Dark Triad Triangulation (DT$^3$) framework across five layers: network psychometrics, supervised machine learning, counterfactual tipping, semantic embeddings, and robustness testing. A bifactor CFA (CFI = .965, RMSEA = .066) outperformed the correlated three-factor model (CFI = .941, RMSEA = .077), with subscale reliabilities $\omega_{HS} = .036/.450/.532$ for Machiavellianism/Psychopathy/Narcissism that were robust in ordering across three bifactor specifications. Latent correlations were $r = .62$, $.61$, and $.36$. The 12-item network yielded three communities; in the 82-item space all DTDD items merged into one Dark Core. Supervised predictors showed a shared-and-specific pattern (agreeableness universal, empathy shared by Machiavellianism/Psychopathy, extraversion shared by Machiavellianism/Narcissism, Neuroticism as the sole directional dissociation). CKA on trunk activations was significantly below a permutation null; CKA on full-test-set head predictions reproduced latent correlations. Multi-group CFA confirmed configural and metric invariance. Semantic clustering showed an encoder-dependent single-trait fracture (ARI range .167--.571). With aligned predictors, OLS matched or marginally outperformed XGBoost, indicating that the explainable-ML contribution is interpretive rather than predictive. Findings support a strong general Dark factor, with Psychopathy and Narcissism retaining specific variance but Machiavellianism not.
 \noindent\rule{\linewidth}{0.4pt}
 
 \par\vspace{0.5em}
-\noindent\textbf{Keywords:} Dark Triad of personality; Dark Core of Personality; explainable machine learning; SHAP; network psychometrics; Machiavellianism; psychopathy; narcissism; out-of-sample validation
+\noindent\textbf{Keywords:} Dark Triad of personality; Dark Core of Personality; explainable machine learning; SHAP; network psychometrics; Machiavellianism; psychopathy; narcissism; out-of-sample validation; Dirty Dozen
 
 \section{Introduction}
 
@@ -105,7 +106,7 @@ Steps included: (a) restricting age to 18--100 years; (b) removing flagged ``spe
 
 \subsection{Baseline Psychometrics}
 
-All confirmatory factor analyses reported in Table~\ref{tab:cfa} were estimated with \texttt{semopy} (Python 3.11). Internal consistency was estimated with Cronbach's $\alpha$ and McDonald's $\omega$. In the final pipeline, $\omega$ converged on the $\alpha$ estimate to within .02 in all nine subscale $\times$ sample cells (range: 0 to .017), consistent with the near-tau-equivalence of the four DTDD items per trait (see Section~\ref{sec:limitations}). Temporal stability used ICC(2,1) on the test--retest subsample; factor structure used CFA comparing one-, two-, and three-factor models, reporting $\chi^2$, df, CFI, TLI, and RMSEA. In addition to the three competing correlated-factor models (one-, two-, and three-factor), we estimated a bifactor model specifying one general Dark factor loading on all 12 items and three orthogonal specific factors (Machiavellianism, Psychopathy, Narcissism). Bifactor dimensionality indices---explained common variance (ECV), the reliability of the general factor ($\omega_H$), and the reliability of each specific factor given the general factor ($\omega_{HS,k}$, computed separately for Machiavellianism, Psychopathy, and Narcissism)---were computed following \citet{rodriguez2016}, with item uniqueness defined as $u_i^2 = 1 - \lambda_{Gi}^2 - \lambda_{Si}^2$ and total uniqueness entered in the denominator of $\omega_H$. Two theoretically motivated 2-factor specifications were also estimated: one merging Machiavellianism with Psychopathy (the \citealp{miller2017} redundancy hypothesis) and one merging Machiavellianism with Narcissism (the semantic-overlap hypothesis from Layer~4). Nomological networks were estimated via standardized OLS regression (predictors: Big Five, empathy, self-esteem). All CFAs were estimated on continuous Pearson correlations using \texttt{semopy}. SRMR was not included in the reported fit statistics; ordinal WLSMV estimation with polychoric correlations is a further recommended sensitivity check that was not run in the present analysis.
+All confirmatory factor analyses reported in Table~\ref{tab:cfa} were estimated with \texttt{semopy} (Python 3.11). Internal consistency was estimated with Cronbach's $\alpha$ and McDonald's $\omega$. In the final pipeline, $\omega$ converged on the $\alpha$ estimate to within .02 in all nine subscale $\times$ sample cells (range: 0 to .017), consistent with the near-tau-equivalence of the four DTDD items per trait (see Section~\ref{sec:limitations}). Temporal stability used ICC(2,1) on the test--retest subsample; factor structure used CFA comparing one-, two-, and three-factor models, reporting $\chi^2$, df, CFI, TLI, and RMSEA. In addition to the three competing correlated-factor models (one-, two-, and three-factor), three bifactor specifications were estimated to guard against factor-collapse artifacts documented for short multi-facet scales \citep{knitter2025, eid2017}: (a) a symmetric orthogonal model in which one general Dark factor loads on all 12 items and three specific factors (Machiavellianism, Psychopathy, Narcissism) are fully orthogonal to each other and to $D$; (b) a bifactor-(S-1) model \citep{eid2017} in which Machiavellianism is designated the reference domain for $D$ (Machiavellianism items load only on $D$, and the two remaining specific factors $P_s$ and $N_s$ are allowed to correlate); and (c) a bifactor-(S$\cdot$I-1) model in which DTDD\_4m---the item that showed the largest general-factor saturation in preliminary analyses---is designated the reference item for $D$, freeing the three Machiavellianism items to load on a residual $M_s$ factor. The three specifications, taken together, provide a robustness check on whether the specific-factor structure is stable across reasonable identification strategies. Bifactor dimensionality indices---explained common variance (ECV), the reliability of the general factor ($\omega_H$), and the reliability of each specific factor given the general factor ($\omega_{HS,k}$, computed separately for Machiavellianism, Psychopathy, and Narcissism)---were computed following \citet{rodriguez2016}, with item uniqueness defined as $u_i^2 = 1 - \lambda_{Gi}^2 - \lambda_{Si}^2$ and total uniqueness entered in the denominator of $\omega_H$. Two theoretically motivated 2-factor specifications were also estimated: one merging Machiavellianism with Psychopathy (the \citealp{miller2017} redundancy hypothesis) and one merging Machiavellianism with Narcissism (the semantic-overlap hypothesis from Layer~4). Nomological networks were estimated via standardized OLS regression on the community sample using two predictor sets: (i) Big Five, empathy (TEQ), and self-esteem (RSES), the specification reported in Table~\ref{tab:ols}; and (ii) Big Five, empathy, and age---the aligned specification that matches the supervised ML layers (Layers~2, 3, 5) where RSES is unavailable in the representative sample. Specification (ii) is trained on the community sample ($N = 5{,}215$) and evaluated once on the held-out representative sample ($N = 1{,}492$) using the same train/test split as XGBoost, Elastic-Net, and Random Forest, so that the linear-vs-ML comparison is not confounded by predictor omission. Both OLS specifications are reported; specification (i) captures the fuller RSES-inclusive model, specification (ii) enables a clean cross-architecture comparison. All CFAs were estimated on continuous Pearson correlations using \texttt{semopy}. SRMR was not included in the reported fit statistics; ordinal WLSMV estimation with polychoric correlations is a further recommended sensitivity check that was not run in the present analysis.
 
 \subsection{Computational Methodology: The \texorpdfstring{DT$^3$}{DT3} Triangulation Framework}
 
@@ -114,24 +115,29 @@ All confirmatory factor analyses reported in Table~\ref{tab:cfa} were estimated 
 All supervised components (Layers~2, 3, 5) were trained exclusively on the community sample and evaluated once on the held-out representative sample; architectures, hyperparameters, and preprocessing were finalized via internal cross-validation within the community sample only. Network analyses (Layer~1) were conducted in Python 3.11 using \texttt{networkx} and \texttt{scikit-learn}'s \texttt{GraphicalLasso}, with an EBIC-style L1-penalty grid search (a Python reimplementation of the procedure described by \citealp{epskamp2018}); Louvain community detection used \texttt{python-louvain}. Supervised and semantic layers were implemented in Python (\texttt{xgboost}, \texttt{shap}, \texttt{scikit-learn}, \texttt{\seqsplit{sentence-transformers}}, \texttt{gplearn}).
 
 \subsubsection{Layer 1: Unsupervised Structural Networks}
+\label{sec:layer1_text}
 
-Structural relationships were modeled via Graphical LASSO regularized with EBIC (\texttt{EBICglasso}; \citealp{epskamp2018}), with Louvain community detection \citep{blondel2008}. Two specifications were estimated: a DTDD-only network (the 12 core DTDD items) and a full-item network of 88 nodes comprising 44 BFI items, 15 DTDD items (the 12 core items plus three Czech-variant items DTDD\_1g, DTDD\_1i, and DTDD\_1ma), 10 RSES items, and 19 TEQ items (the 16 core items plus three reverse-scored variants TEQ\_CON\_2, TEQ\_CON\_4, and TEQ\_CON\_14). Because the 10 RSES items were absent from the representative sample, this network was estimated on the pooled dataset with pairwise-deletion correlations rather than complete cases (see Section~3.2).
+Structural relationships were modeled via Graphical LASSO regularized with EBIC (\texttt{EBICglasso}; \citealp{epskamp2018}), with Louvain community detection \citep{blondel2008}. Two specifications were estimated: a DTDD-only network (the 12 core DTDD items) and a full-item network of 82 nodes comprising 44 BFI items, 12 DTDD items, 10 RSES items, and 16 TEQ items. An initial 88-node specification that included three experimental Czech-variant DTDD items (DTDD\_1g, DTDD\_1i, DTDD\_1ma) and three reverse-scored TEQ duplicates (TEQ\_CON\_2, TEQ\_CON\_4, TEQ\_CON\_14) was discarded after it introduced near-perfect linear collinearity and forced a pooled pairwise-deletion correlation matrix with $N_{\text{complete}} = 0$ requiring eigenvalue projection. The corrected 82-node specification restricts estimation to the community sample and uses only non-duplicate items; a within-community pairwise fallback (effective harmonic $N \approx 5{,}233$) is used where complete-case coverage is insufficient.
 
 \subsubsection{Layer 2: Supervised Divergence and Representational Similarity}
 
-Trait scores were modeled with Gradient-Boosted Decision Trees (XGBoost; \citealp{chen2016}), chosen for detecting nonlinear thresholds and interactions without OLS assumptions. Separate regressors per trait used an identical predictor set (age, Big Five, TEQ). A Shared-Trunk Multi-Task Neural Network (input $\rightarrow$ 128-d projection $\rightarrow$ two residual blocks $\rightarrow$ dropout $\rightarrow$ three output heads; Adam, lr $= 0.001$, weight decay $1\times10^{-4}$, batch size 128, 300 epochs, ReduceLROnPlateau) was trained in parallel. Representational geometry across trait-specific pathways was compared via Centered Kernel Alignment (CKA; \citealp{kornblith2019}), benchmarked against a label-permutation null (network retrained per permutation). Symbolic regression via evolutionary search (\texttt{gplearn}) additionally identified trait-specific functional forms without a priori shape constraints. As a cross-architecture reference, Random Forest and Elastic-Net regressors were also trained on the identical split (Rashomon Set analysis; see Layer~5).
+Trait scores were modeled with Gradient-Boosted Decision Trees (XGBoost; \citealp{chen2016}), chosen for detecting nonlinear thresholds and interactions without OLS assumptions. Separate regressors per trait used an identical predictor set (age, Big Five, TEQ). A Shared-Trunk Multi-Task Neural Network (input $\rightarrow$ 128-d projection $\rightarrow$ two residual blocks $\rightarrow$ dropout $\rightarrow$ three output heads; Adam, lr $= 0.001$, weight decay $1\times10^{-4}$, batch size 128, 300 epochs, ReduceLROnPlateau) was trained in parallel. Representational geometry was compared via Centered Kernel Alignment (CKA; \citealp{kornblith2019}) under three explicit specifications: (A) mean CKA between trunk activations of high-scorer row subsets, benchmarked against a label-permutation null; (B) mean CKA between 1D head-prediction vectors on high-scorer subsets (algebraically the squared Pearson correlation); and (C) mean CKA between 1D head-prediction vectors on the full held-out test set. Specifications (A) and (B/C) probe different quantities, and we report all three. Symbolic regression via evolutionary search (\texttt{gplearn}) additionally identified trait-specific functional forms without a priori shape constraints. As a cross-architecture reference, Random Forest and Elastic-Net regressors were also trained on the identical split (Rashomon Set analysis; see Layer~5).
 
 \subsubsection{Layer 3: Counterfactual Tipping-Point Analysis}
 
-A deterministic grid-search perturbation method \citep{wachter2017} quantified the minimal single-feature change required to shift an above-median case below the median, holding all other features constant. Age was held immutable and excluded from the search space. The outcome metric was the percentage of above-median cases for which perturbing the primary feature sufficed to cross below the median.
+A deterministic grid-search perturbation method \citep{wachter2017} quantified the minimal single-feature change required to shift an above-median case below the median, holding all other features constant. Age was held immutable and excluded from the search space. All continuous predictors were $z$-scored using the community-sample scaler, so a reported shift of $|z|$ denotes predictor SDs. Three metrics are reported: (i) percentage flipped, (ii) median $|z|$ shift conditional on flipping, and (iii) prediction-compression factor $\text{SD}(\hat{y}) / \text{SD}(y)$, which quantifies the variance-restriction artifact by which models with lower $R^2$ are easier to flip.
 
 \subsubsection{Layer 4: Semantic Embeddings}
 
-The original English DTDD item texts from \citet{jonason2010}---not the Czech translations administered to participants---were encoded with all-MiniLM-L6-v2 (SentenceTransformer family; \citealp{reimers2019}), followed by hierarchical agglomerative clustering (cosine distance, average linkage; $k = 3$ fixed a priori). Cluster assignments were compared to a priori trait labels via the Adjusted Rand Index (ARI), benchmarked against a 1,000-permutation null.
+The original English DTDD item texts from \citet{jonason2010} were encoded with three sentence-transformers (all-MiniLM-L6-v2, all-mpnet-base-v2, and BAAI/bge-small-en-v1.5; \citealp{reimers2019}), followed in each case by hierarchical agglomerative clustering (cosine distance, average linkage; $k=3$ fixed a priori). Cluster assignments were compared to a priori trait labels via the Adjusted Rand Index (ARI), and per-trait cluster purity was computed. The baseline all-MiniLM-L6-v2 encoder was benchmarked against a 1,000-permutation null. Any structural claim about semantic clustering must be evaluated for encoder-invariance rather than inferred from a single model.
 
 \subsubsection{Layer 5: Feature Importance and Robustness Testing}
 
 Local/global feature importance used SHAP (TreeExplainer; \citealp{lundberg2017}). A SHAP Divergence Index (SDI)---a project-specific metric, mean pairwise cosine distance among mean absolute SHAP vectors---was benchmarked against a null built from 500 refits on randomly shuffled/recombined ``pseudo-traits'' derived from the same 12 items (limitation: not fully independent of the measurement system; Section~\ref{sec:limitations}). Individual heterogeneity was assessed via Gaussian Mixture Models on local SHAP vectors (BIC-selected components). Architecture robustness was assessed via a Rashomon Set analysis \citep{fisher2019} comparing out-of-sample $R^2$ across XGBoost, Random Forest, and Elastic-Net on an identical split.
+
+\subsubsection{Multi-group Measurement Invariance}
+
+Configural, metric, and scalar measurement invariance across the three samples were tested for both the 3-factor and bifactor specifications using multi-group CFA with robust maximum likelihood (MLR) in R \texttt{lavaan} 0.7-3. Configural invariance holds when the same factor structure fits acceptably (CFI $\geq .90$, RMSEA $\leq .08$) in every sample; metric invariance holds when loadings are additionally constrained equal ($\Delta$CFI $< .01$); scalar invariance holds when intercepts are additionally constrained equal ($\Delta$CFI $< .01$).
 
 \subsection{Ethical Considerations, Reproducibility, and Data/Code Availability}
 
@@ -146,7 +152,7 @@ Complete preprocessing and analysis code, validation materials, execution logs, 
 
 All baseline indices below were re-estimated on the present analytic subsamples (see Section~2.1); they therefore differ slightly from those reported in the original validation study \citep{zivna2025}. Internal consistency was acceptable for Machiavellianism ($\alpha = .802$--$.840$) and narcissism ($\alpha = .811$--$.846$) across all three samples, and marginal for psychopathy ($\alpha = .621$--$.763$), reaching its lowest value in the student sample ($\alpha = .621$, $\omega = .638$; Table~\ref{tab:alpha}). Temporal stability over the 61-pair retest subsample replicated this ordering: ICC(2,1) $= .826$, 95\% CI $[.726, .892]$ for Machiavellianism; $.836$ $[.741, .899]$ for narcissism; and $.637$ $[.464, .767]$ for psychopathy, all $p < .001$. The convergence of lower $\alpha$ and lower ICC for psychopathy is discussed in Section~\ref{sec:limitations} as a psychometric limitation of the DTDD psychopathy subscale.
 
-\begin{table*}[ht]
+\begin{table*}[!t]
 \centering
 \caption{Internal consistency ($\alpha$ / $\omega$) by trait and sample (re-estimated on the present analytic subsamples).}
 \label{tab:alpha}
@@ -162,11 +168,11 @@ Representative & 1{,}492 & .840 / .840 & .710 / .717 & .811 / .817 \\
 \end{tabular}
 \end{table*}
 
-The three-factor correlated model ($\chi^2 = 1838.65$, $df = 51$, CFI = .941, TLI = .923, RMSEA = .077) outperformed both 2-factor specifications: merging Machiavellianism with Psychopathy yielded $\chi^2 = 4589.6$, $df = 53$, CFI = .849, TLI = .812, RMSEA = .120; merging Machiavellianism with Narcissism yielded $\chi^2 = 6278.64$, $df = 53$, CFI = .793, TLI = .743, RMSEA = .141. Both merges fit substantially worse than the free three-factor model, and the Machiavellianism--Narcissism merge fits \textit{worse} than the Machiavellianism--Psychopathy merge despite the two trait pairs having nearly identical latent correlations ($r = .606$ vs.\ $.623$). This dissociation indicates that a latent correlation between two traits does not predict how much collapsing them into a single factor costs in model fit---a caution against using $r$ as the sole index of trait distinctiveness (Figure~\ref{fig:cfa_comparison}). A bifactor model with one general Dark factor and three orthogonal specific factors fit better than the correlated three-factor model on every fit index ($\chi^2(42) = 1109.75$, CFI = .965, TLI = .944, RMSEA = .066; Table~\ref{tab:cfa}, Table~\ref{tab:bifactor_loadings}). Computation of the \citet{rodriguez2016} indices from the standardized loadings gives ECV = .576 and $\omega_H = .734$ for the general factor. The three specific factors diverge sharply: $\omega_{HS,M} = .036$, $\omega_{HS,P} = .450$, and $\omega_{HS,N} = .532$. Following the \citet{rodriguez2016} criterion that $\omega_{HS} < .50$ indicates a subscale whose unit-weighted composite is dominated by general-factor and error variance, this pattern indicates that the Machiavellianism specific factor retains virtually no reliable variance ($\omega_{HS,M} = .036$), Psychopathy falls below the .50 threshold ($\omega_{HS,P} = .450$), and only Narcissism marginally clears it ($\omega_{HS,N} = .532$). Item-level ECV was .988 for DTDD\_4m and .990 for DTDD\_1m, confirming that the Machiavellianism items are nearly pure indicators of $D$. Mean \textit{signed} specific loadings were $.154$ (M$_s$), $.516$ (P$_s$), and $.603$ (N$_s$); mean \textit{absolute} specific loadings were $.202$, $.516$, and $.603$, respectively. Machiavellianism is therefore best characterized as a near-pure indicator of the general Dark factor rather than as a specific dimension with substantial unique variance---a structural result that converges with its bridging position in the latent correlation matrix ($r = .623$ with Psychopathy, $r = .606$ with Narcissism) and with its intermediate role in Layers~1--5. Fit indices in the present analysis are from raw ML estimation; robust MLR estimation, as used by the original validation study \citep{zivna2025}, would inflate $\chi^2$ under non-normality.
+The three-factor correlated model ($\chi^2 = 1838.65$, $df = 51$, CFI = .941, TLI = .923, RMSEA = .077) outperformed both 2-factor specifications: merging Machiavellianism with Psychopathy yielded $\chi^2 = 4589.6$, $df = 53$, CFI = .849, TLI = .812, RMSEA = .120; merging Machiavellianism with Narcissism yielded $\chi^2 = 6278.64$, $df = 53$, CFI = .793, TLI = .743, RMSEA = .141. Both merges fit substantially worse than the free three-factor model, and the Machiavellianism--Narcissism merge fits \textit{worse} than the Machiavellianism--Psychopathy merge despite the two trait pairs having nearly identical latent correlations ($r = .606$ vs.\ $.623$). This dissociation indicates that a latent correlation between two traits does not predict how much collapsing them into a single factor costs in model fit---a caution against using $r$ as the sole index of trait distinctiveness (Figure~\ref{fig:cfa_comparison}). Bifactor models with one general Dark factor and three specific factors fit better than the correlated three-factor model on every fit index. Under the symmetric orthogonal specification ($\chi^2(42) = 1109.75$, CFI = .965, TLI = .944, RMSEA = .066; Table~\ref{tab:cfa}, Table~\ref{tab:bifactor_loadings}), computation of the \citet{rodriguez2016} indices from the standardized loadings gives ECV = .576 and $\omega_H = .734$ for the general factor, and the three specific factors diverge sharply: $\omega_{HS,M} = .036$, $\omega_{HS,P} = .450$, and $\omega_{HS,N} = .532$. However, the symmetric specification forces four fully orthogonal factors, an identification strategy that is known to cause one structurally weaker facet to be absorbed as the reference domain for the general factor in short multi-facet scales \citep{knitter2025, eid2017}. To guard against this artifact, two reference-domain specifications were also estimated. In the bifactor-(S-1) model (Machiavellianism as the reference domain for $D$), the specific factors $P_s$ and $N_s$ are freed to correlate: $\omega_{HS,P} = .454$, $\omega_{HS,N} = .511$, $H_P = .632$, $H_N = .714$, $H_D = .885$, and the model fits acceptably (CFI = .959, TLI = .940, RMSEA = .068). In the bifactor-(S$\cdot$I-1) model (DTDD\_4m as reference item), the three Machiavellianism items load on a residual $M_s$ factor: $\omega_{HS,M} = .116$, $\omega_{HS,P} = .436$, $\omega_{HS,N} = .516$, $H_M = .255$, $H_P = .617$, $H_N = .719$, $H_D = .886$, with fit equivalent to the symmetric specification (CFI = .965, TLI = .944, RMSEA = .066). \textbf{Across all three specifications the ordering of specific-variance magnitudes is preserved: $\omega_{HS,M} \ll \omega_{HS,P} \approx \omega_{HS,N}$.} Following the \citet{rodriguez2016} criterion that $\omega_{HS} < .50$ indicates a subscale whose unit-weighted composite is dominated by general-factor and error variance, Machiavellianism falls clearly below the threshold in every specification examined, Psychopathy brackets it (.436--.454), and only Narcissism consistently clears it (.511--.532). The symmetric orthogonal specification's near-zero $\omega_{HS,M}$ (.036) is a well-documented artifact of the four-orthogonal-factor constraint, but its qualitative direction is confirmed by both reference-domain specifications; under the corrected bifactor-(S$\cdot$I-1) specification, Machiavellianism retains limited specific variance ($\omega_{HS,M} = .116$; $H_M = .255$) that is nonetheless far below the $.50$ (reliability) and $.70$ (construct replicability) thresholds. Machiavellianism is therefore best characterized as a near-pure indicator of the general Dark factor rather than as a specific dimension with substantial unique variance---a structural result that converges with its bridging position in the latent correlation matrix ($r = .623$ with Psychopathy, $r = .606$ with Narcissism) and with its intermediate role in Layers~1--5. Fit indices in the present analysis are from raw ML estimation; robust MLR estimation, as used by the original validation study \citep{zivna2025}, would inflate $\chi^2$ under non-normality.
 
-\begin{table*}[ht]
+\begin{table*}[!t]
 \centering
-\caption{Comparison of fit across five CFA specifications: 1-factor, 2-factor (two alternative merges), 3-factor correlated, and bifactor (community sample, $N = 5{,}902$; re-estimated in the present analysis).}
+\caption{Comparison of fit across seven CFA specifications: 1-factor, 2-factor (two alternative merges), 3-factor correlated, and three bifactor identification strategies (community sample, $N = 5{,}902$; re-estimated in the present analysis).}
 \label{tab:cfa}
 \footnotesize
 \begin{tabular}{lcccccc}
@@ -177,24 +183,26 @@ Model & $\chi^2$ & $df$ & $\chi^2/df$ & CFI & TLI & RMSEA \\
 2-factor (Mach.\ + Psych.\ merged) & 4589.60 & 53 & 86.60 & .849 & .812 & .120 \\
 2-factor (Mach.\ + Narc.\ merged) & 6278.64 & 53 & 118.46 & .793 & .743 & .141 \\
 3-factor (correlated) & 1838.65 & 51 & 36.05 & .941 & .923 & .077 \\
-Bifactor (D + M$_s$ + P$_s$ + N$_s$) & 1109.75 & 42 & 26.42 & \textbf{.965} & \textbf{.944} & \textbf{.066} \\
+Bifactor (symmetric orthogonal) & 1109.75 & 42 & 26.42 & \textbf{.965} & \textbf{.944} & \textbf{.066} \\
+Bifactor-(S-1) [Mach reference] & 1273.67 & 45 & 28.30 & .959 & .940 & .068 \\
+Bifactor-(S$\cdot$I-1) [DTDD\_4m reference] & 1106.19 & 42 & 26.34 & \textbf{.965} & \textbf{.944} & \textbf{.066} \\
 \bottomrule
 \end{tabular}
 \par\smallskip
 \footnotesize\raggedright
-\textit{Note.} Mach.\ = Machiavellianism; Psych.\ = Psychopathy; Narc.\ = Narcissism; D = general Dark factor. Bifactor indices: ECV = .576; $\omega_H$ = .734; subscale $\omega_{HS}$ = .036 (Machiavellianism), .450 (Psychopathy), .532 (Narcissism). All models estimated with \texttt{semopy} (Python 3.11); SRMR not reported.
+\textit{Note.} Mach.\ = Machiavellianism; Psych.\ = Psychopathy; Narc.\ = Narcissism; D = general Dark factor. Bifactor indices (symmetric orthogonal): ECV = .576; $\omega_H$ = .734; subscale $\omega_{HS}$ = .036 (Machiavellianism), .450 (Psychopathy), .532 (Narcissism). Bifactor-(S-1): $\omega_{HS,P}$ = .454, $\omega_{HS,N}$ = .511. Bifactor-(S$\cdot$I-1): $\omega_{HS,M}$ = .116, $\omega_{HS,P}$ = .436, $\omega_{HS,N}$ = .516. All models estimated with \texttt{semopy} (Python 3.11); SRMR not reported.
 \end{table*}
 
-\begin{figure*}[ht]
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=\linewidth]{results/figures/baseline_cfa_comparison.pdf}
-\caption{Comparative CFA fit across five specifications (community sample, $N = 5{,}902$). Both 2-factor merges fall below the free three-factor model on both CFI and RMSEA, and the Machiavellianism--Narcissism merge (CFI = .793, RMSEA = .141) fits worse than the Machiavellianism--Psychopathy merge (CFI = .849, RMSEA = .120) despite the two trait pairs having nearly identical latent correlations ($r = .606$ vs.\ $.623$). This dissociation between the magnitude of latent correlation and the merge penalty is the CFA counterpart to the semantic and feature-importance dissociation reported in Layers~3--4.}
+\includegraphics[width=\linewidth,height=0.55\textheight,keepaspectratio]{baseline_cfa_comparison.pdf}
+\caption{Comparative CFA fit across the five primary specifications (community sample, $N = 5{,}902$): 1-factor, 2-factor Machiavellianism--Narcissism merge, 2-factor Machiavellianism--Psychopathy merge, 3-factor correlated, and bifactor (symmetric orthogonal). Both 2-factor merges fall below the free three-factor model, and the Machiavellianism--Narcissism merge (CFI = .793, RMSEA = .141) fits worse than the Machiavellianism--Psychopathy merge (CFI = .849, RMSEA = .120) despite nearly identical latent correlations ($r = .606$ vs.\ $.623$).}
 \label{fig:cfa_comparison}
 \end{figure*}
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
-\caption{Standardized bifactor loadings for the 12 DTDD items (community sample).}
+\caption{Standardized bifactor loadings for the 12 DTDD items (community sample; symmetric orthogonal specification).}
 \label{tab:bifactor_loadings}
 \footnotesize
 \begin{tabular}{lccc}
@@ -219,10 +227,10 @@ DTDD\_4n & .534 & .415 & N$_s$ \\
 \end{tabular}
 \par\smallskip
 \footnotesize\raggedright
-\textit{Note.} Subscale-specific hierarchical omega ($\omega_{HS}$) is .036 for Machiavellianism, .450 for Psychopathy, and .532 for Narcissism. Mean \textit{signed} specific loadings are $.154$, $.516$, and $.603$; mean \textit{absolute} specific loadings are $.202$, $.516$, and $.603$. One Machiavellianism item (DTDD\_4m) has a small negative loading on M$_s$ ($-.096$) while loading $.872$ on $D$, and item-level ECV for this item is $.988$.
+\textit{Note.} Loadings for the symmetric orthogonal specification. Under bifactor-(S$\cdot$I-1) $\omega_{HS,M}$ rises to .116.
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Latent factor correlations in the three-factor model (community sample).}
 \label{tab:latentcor}
@@ -240,7 +248,7 @@ Narcissism       &       &      & ---  \\
 
 Machiavellianism shows relatively high correlations with both other traits, while psychopathy and narcissism show the least latent overlap---a bridging pattern for Machiavellianism that recurs in the computational layers (particularly Layers~1 and~4).
 
-\begin{table*}[ht]
+\begin{table*}[!t]
 \centering
 \caption{Standardized OLS regression summary (community sample; predictors: Big Five, empathy, self-esteem).}
 \label{tab:ols}
@@ -262,32 +270,73 @@ Adjusted $R^2$       & $.188$        & $.278$        & $.106$        \\
 \end{tabular}
 \end{table*}
 
-Psychopathy showed the best predictability (adjusted $R^2 = .278$) and the strongest dependence on low empathy; narcissism, uniquely, showed a positive relationship with extraversion and the lowest explained variance (adjusted $R^2 = .106$). Low agreeableness was the dominant shared predictor across all three traits.
+\begin{table*}[!t]
+\centering
+\caption{Aligned linear-vs-ML comparison: OLS with Big Five + Empathy + Age on community-train / representative-test.}
+\label{tab:ols_ml}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Trait & OLS test $R^2$ & XGBoost test $R^2$ & $\Delta$ (OLS $-$ XGB) & Primary linear drivers \\
+\midrule
+Machiavellianism & \textbf{.154} & .147 & $+.007$ & Agreeableness \\
+Psychopathy      & \textbf{.235} & .218 & $+.017$ & Agreeableness; Empathy \\
+Narcissism       & \textbf{.151} & .132 & $+.019$ & Agreeableness; Extraversion; Age \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\footnotesize\raggedright
+\textit{Note.} Identical predictor sets (Big Five + TEQ + Age), training split ($N = 5{,}215$), and held-out test set ($N = 1{,}492$). OLS outperforms XGBoost on all three traits.
+\end{table*}
+
+Psychopathy showed the best predictability (adjusted $R^2 = .278$) and the strongest dependence on low empathy; narcissism, uniquely, showed a positive relationship with extraversion and the lowest explained variance (adjusted $R^2 = .106$). Low agreeableness was the dominant shared predictor across all three traits. Once aligned to the ML predictor set (Big Five + Empathy + Age), linear OLS matches or marginally outperforms XGBoost for all three traits (Table~\ref{tab:ols_ml}). The apparent XGBoost superiority in the initial analysis was attributable to predictor mismatch: RSES was available only in the OLS, and Age only in XGBoost. Once aligned, the Age--Narcissism association is a standard linear main effect rather than a nonlinear threshold uniquely recovered by tree boosting. The value of the explainable-ML layer is therefore interpretive (SHAP interaction geometry, feature-importance divergence) rather than predictive (Section~\ref{sec:layer2}).
+
+\subsection{Measurement Invariance Across Samples}
+
+Multi-group CFA was estimated across the three samples for both the 3-factor and bifactor specifications (Table~\ref{tab:invariance}). Configural invariance held for both models: 3-factor CFI ranged .940--.957 across samples, bifactor CFI ranged .964--.979, and all samples met CFI $\geq .90$ and RMSEA $\leq .08$. Metric invariance (equal loadings) was supported: $\Delta$CFI was $-0.005$ for the 3-factor model and $-0.007$ for the bifactor model, both below the recommended $\Delta$CFI $< .01$ threshold. Scalar invariance (equal loadings and intercepts) was not fully supported: $\Delta$CFI was $-0.025$ (3-factor) and $-0.017$ (bifactor). Partial scalar invariance is common in large samples and reflects intercept differences across subsamples; the substantive conclusions do not depend on scalar invariance.
+
+\begin{table*}[!t]
+\centering
+\caption{Multi-group CFA invariance summary across the three samples.}
+\label{tab:invariance}
+\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+Model & \makecell{Configural\\CFI / RMSEA} & \makecell{$\Delta$CFI\\config$\to$metric} & \makecell{$\Delta$CFI\\metric$\to$scalar} & \makecell{Invariance\\verdict} \\
+\midrule
+3-factor & .941 / .062 & $-.005$ & $-.025$ & Configural + metric \\
+Bifactor & .964 / .053 & $-.007$ & $-.017$ & Configural + metric \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\footnotesize\raggedright
+\textit{Note.} $\Delta$CFI $< .01$ supports invariance at the corresponding step.
+\end{table*}
 
 \subsection{Layer 1: Unsupervised Structural Networks}
 
-The EBICglasso network on the 12 DTDD indicators produced three Louvain communities corresponding exactly to the three theoretical traits (Figure~\ref{fig:network12}), confirming the three-factor structure from an independent network-psychometric perspective. When re-estimated in the full 88-item space (following positive-definite projection, $\alpha = 0.0346$), all Dark Triad items merged into a single Louvain community---termed the ``Dark Core Collapse'' (Figure~\ref{fig:network88}). Two caveats qualify this result. First, the 88-item space includes 44 BFI items, 15 DTDD items (12 core plus DTDD\_1g, DTDD\_1i, and DTDD\_1ma), 10 RSES items, and 19 TEQ items (16 core plus TEQ\_CON\_2, TEQ\_CON\_4, and TEQ\_CON\_14), despite the RSES being excluded from Layers~2--5 for missingness. Because RSES was essentially absent in the representative sample, complete-case analysis was impossible ($N_{\text{complete}} = 0$); the model was therefore estimated on pairwise-deletion correlations, with effective $N \approx 6{,}734$ and $P = 88$. Second, Louvain community detection returned 20 communities in the full-item space: the DTDD items collapsed into one, but most TEQ items formed singleton communities and \texttt{BFI\_A\_9} clustered with Extraversion. The fragmentation of the non-DTDD scales indicates that the 88-item network is not a well-behaved representation of the broader personality space, and the Dark Core Collapse should be read as ``the 12 DTDD items are more tightly intercorrelated with each other than with anything else in the space,'' rather than as direct evidence of a latent general factor. The bifactor CFA (Section~\ref{sec:baseline}) provides the direct structural evidence; the 88-item network is corroborative, not primary. Prior network analyses of the Dark Triad alongside the Five-Factor Model \citep{papageorgiou2019, wehner2021} did not systematically contrast DTDD-only and full-personality spaces in a single framework, so direct comparison with those results is limited.
+The EBICglasso network on the 12 DTDD indicators produced three Louvain communities corresponding exactly to the three theoretical traits (Figure~\ref{fig:network12}). When re-estimated in the 82-node cleaned personality space (community sample, pairwise-deletion, effective harmonic $N \approx 5{,}233$, $P = 82$), all 12 DTDD items collapsed into a single Louvain community at the default resolution $\gamma = 1.0$---the ``Dark Core Collapse'' (Figure~\ref{fig:network88}). The collapse is resolution-dependent: at $\gamma = 0.5$ the DTDD items split into three communities, at $\gamma \in \{1.5, 2.0\}$ into two, and at $\gamma = 3.0$ into three again. The default-resolution result is best interpreted as strong DTDD-internal cohesion relative to non-DTDD items in the same space, not as direct evidence of a latent general factor. Non-DTDD items still fragment into 19 additional communities at $\gamma = 1.0$, so the 82-node network is not a fully well-behaved representation of the broader personality space. The bifactor CFA (Section~\ref{sec:baseline}) provides the direct structural evidence; the 82-node network is corroborative.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\linewidth]{results/figures/layer1_ggm_network_DTDD_Only.pdf}
+\includegraphics[width=\linewidth,height=0.35\textheight,keepaspectratio]{layer1_ggm_network_DTDD_Only.pdf}
 \caption{EBICglasso network on the 12 DTDD items, showing three Louvain communities corresponding to the three theoretical traits.}
 \label{fig:network12}
 \end{figure}
 
-\begin{figure*}[ht]
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=0.85\linewidth]{results/figures/layer1_ggm_network_Full_Item_Space.pdf}
-\caption{EBICglasso network in the full 88-item personality space. All twelve DTDD items merge into a single Louvain community (the ``Dark Core Collapse'').}
+\includegraphics[width=0.85\linewidth,height=0.55\textheight,keepaspectratio]{layer1_ggm_network_Full_Item_Space_clean.pdf}
+\caption{EBICglasso network in the full 82-item personality space (pairwise-deletion correlation, effective $N \approx 5{,}233$, $P = 82$). All twelve DTDD items merge into a single Louvain community (the ``Dark Core Collapse''). Non-DTDD items fragment into 19 additional communities, indicating that the 82-node network is not a fully well-behaved representation of the broader personality space.}
 \label{fig:network88}
 \end{figure*}
 
 \subsection{Layer 2: Supervised Divergence and Representational Similarity}
 \label{sec:layer2}
 
-Out-of-sample $R^2$ ranged from .132 to .218 (Table~\ref{tab:xgb}), indicating that the supervised models explain only a limited portion of trait variance (Section~\ref{sec:limitations}). The traits shared low agreeableness as a dominant predictor but diverged in secondary structure: empathy was specific to psychopathy, extraversion and openness to narcissism, and age to narcissism in the supervised layers. SHAP interaction analysis found three distinct high-order interaction pairs across the three traits; the single strongest interaction overall belonged to psychopathy (agreeableness $\times$ empathy; strength $= .186$). Symbolic regression discovered three trait-specific functional forms (iteration $R^2$: Machiavellianism $= .093$, psychopathy $= .184$, narcissism $= .143$); given the complexity and overfitting risk of the recovered equations, these are treated as supplementary rather than primary evidence (Section~\ref{sec:limitations}). The multi-task network's trait-specific internal representations produced a mean CKA of .0542 (off-diagonal pairwise mean), against a label-permutation null of .0890 ($SD = .0043$, $p < .005$)---significantly lower than chance alignment, supporting representational distinctiveness.
+Out-of-sample $R^2$ ranged from .132 to .218 (Table~\ref{tab:xgb}). The traits shared low agreeableness as a dominant predictor but diverged in secondary structure: empathy was specific to psychopathy, extraversion and openness to narcissism, and age to narcissism. SHAP interaction analysis found three distinct high-order interaction pairs; the single strongest interaction belonged to psychopathy (agreeableness $\times$ empathy; strength $= .186$). Symbolic regression discovered three trait-specific functional forms (iteration $R^2$: Machiavellianism $= .093$, psychopathy $= .184$, narcissism $= .143$); these are treated as supplementary (Section~\ref{sec:limitations}). The three CKA specifications give three different pictures. Method (A), trunk-activation CKA on high-scorer row subsets, produced a mean of .0708, against a label-permutation null of .0890 ($SD = .0043$, $p < .005$): substantially below chance, meaning that high-scorer trunk activations are not equivalent to random trait grouping. Method (B), 1D head-prediction CKA on high-scorer subsets, produced .0031---algebraically a squared Pearson correlation on restricted-range subsets, near zero because high-scorer predictions have little variance. Method (C), 1D head-prediction CKA on the full held-out test set, produced .4739---the true squared correlation between the three continuous prediction vectors, consistent with the traits' latent correlations ($r = .36$--$.62$). The three methods measure three different things; Method (A) is reported as the substantive representational-distinctiveness result, and Method (C) as a corroborative consistency check.
 
-\begin{table*}[ht]
+\begin{table*}[!t]
 \centering
 \caption{Out-of-sample $R^2$ and SHAP interactions (XGBoost, representative sample, $N = 1{,}492$).}
 \label{tab:xgb}
@@ -305,40 +354,49 @@ Narcissism       & .132 & Age           & Agreeableness  & Agreeableness $\times
 
 \subsection{Layer 3: Counterfactual Tipping-Point Analysis}
 
-Machiavellianism and narcissism converge on agreeableness as their shared behavioral tipping point, while psychopathy depends specifically on empathy---consistent with a possible two-branch structure (``psychopathy'' vs.\ a ``Machiavellianism--narcissism cluster''; Table~\ref{tab:counterfactual}). The final reference-run output is reported in Table~\ref{tab:counterfactual}. Counterfactual analysis \citep{wachter2017} is not causal inference; these results indicate predictive-model leverage only. Two qualifications apply. First, the higher flip rate for Narcissism (61.8\%) than for Machiavellianism (20.6\%) reflects the lower out-of-sample $R^2$ for Narcissism (.132 vs.\ .147): models that explain less variance produce predictions compressed toward the median, so even a modest perturbation crosses the threshold more often. Comparative flip-rate claims across traits are therefore not supported by these percentages. Second, the grid search did not standardize perturbation bounds across traits; a feature with a wider empirical range admits larger counterfactual moves.
+Machiavellianism and narcissism converge on agreeableness as their shared behavioral tipping point, while psychopathy depends specifically on empathy---consistent with a possible two-branch structure (``psychopathy'' vs.\ a ``Machiavellianism--narcissism cluster''; Table~\ref{tab:counterfactual}). Counterfactual analysis \citep{wachter2017} is not causal inference; these results indicate predictive-model leverage only. To quantify the variance-compression artifact, we report alongside the percentage flipped the median $|z|$ shift required to cross (conditional on crossing) and the prediction-compression factor $\text{SD}(\hat{y}) / \text{SD}(y)$. Narcissism shows the smallest compression factor (.382) and the highest flip rate (61.8\%); Psychopathy the largest compression factor (.544) and the smallest median $|z|$ shift (.800); and Machiavellianism an intermediate compression (.425) with the largest median $|z|$ shift (1.400). The primary-driver pattern itself (agreeableness for Machiavellianism and Narcissism; empathy for Psychopathy) is preserved under the variance-compression correction.
 
-\begin{table}[ht]
+\begin{table*}[!t]
 \centering
-\caption{Primary tipping feature for crossing the median, by trait.}
+\caption{Primary tipping feature and standardized perturbation metrics for crossing the median, by trait.}
 \label{tab:counterfactual}
 \footnotesize
-\begin{tabular}{lcc}
+\begin{tabular}{lcccc}
 \toprule
-Trait & \makecell{Primary tipping\\feature} & \makecell{\% above-median\\cases flipped} \\
+Trait & \makecell{Primary tipping\\feature} & \makecell{\% above-median\\cases flipped} & \makecell{Median $|z|$\\shift} & \makecell{Compression\\factor} \\
 \midrule
-Machiavellianism & Agreeableness & 20.6\% \\
-Psychopathy      & Empathy       & 35.0\% \\
-Narcissism       & Agreeableness & 61.8\% \\
+Machiavellianism & Agreeableness & 20.6\% & 1.400 & .425 \\
+Psychopathy      & Empathy       & 35.0\% & 0.800 & .544 \\
+Narcissism       & Agreeableness & 61.8\% & 1.000 & .382 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 
 \subsection{Layer 4: Semantic Embeddings}
+\label{sec:layer4}
 
-Hierarchical clustering on item-text embeddings yielded ARI $= .5045$ relative to theoretical labels ($p = .007$ vs.\ permutation null). Psychopathy and Machiavellianism items each achieved $100\%$ cluster purity; only $75\%$ of narcissism items fell within their dedicated cluster, with the remaining item joining the Machiavellianism cluster (Figure~\ref{fig:dendro}). Psychopathy items branched off as an independent primary dendrogram branch, while Machiavellianism and narcissism items intermingled in a shared secondary branch---the ``Narcissism Fracture.'' This is based on only 12 short item texts and a single embedding model (all-MiniLM-L6-v2), warranting caution (Section~\ref{sec:limitations}).
+Hierarchical clustering on item-text embeddings was evaluated across three encoders. Under the baseline all-MiniLM-L6-v2 encoder, ARI $= .5045$ relative to theoretical labels ($p = .007$ vs.\ permutation null); Psychopathy and Machiavellianism items each achieved $100\%$ purity, while $75\%$ of Narcissism items fell within their dedicated cluster---the pattern originally described as the ``Narcissism Fracture'' (Figure~\ref{fig:dendro}). This pattern does not generalize across encoders: under all-mpnet-base-v2, Psychopathy items fracture ($50\%$ purity); under BAAI/bge-small-en-v1.5, Machiavellianism items fracture ($50\%$ purity). Across all three encoders exactly two of the three traits achieve $100\%$ purity and exactly one trait fractures, but which trait fractures is encoder-dependent. ARI varies from .167 (mpnet) to .571 (bge). We therefore retire the specific ``Narcissism Fracture'' label in favor of a more accurate description: the DTDD items exhibit a stable single-trait-fracture pattern---one trait fails to fully cohere with its own items in any given encoder---but the identity of the fracturing trait is encoder-dependent.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\linewidth]{results/figures/layer4_semantic_dendrogram.png}
-\caption{Hierarchical clustering dendrogram of DTDD item-text embeddings. Narcissism items partially fracture into the Machiavellianism branch.}
+\includegraphics[width=\linewidth,height=0.40\textheight,keepaspectratio]{layer4_semantic_dendrogram_multi.pdf}
+\caption{Hierarchical clustering dendrogram of DTDD item-text embeddings across the three sentence encoders. The fracturing trait is encoder-dependent (Narcissism under all-MiniLM-L6-v2; Psychopathy under all-mpnet-base-v2; Machiavellianism under BAAI/bge-small-en-v1.5), though exactly one trait fractures under each encoder.}
 \label{fig:dendro}
 \end{figure}
 
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.35\textheight,keepaspectratio]{layer5_gmm_bic_curves.pdf}
+\caption{Gaussian Mixture Model BIC curves across 1--5 components per trait, fit to local SHAP vectors of high scorers. BIC reaches its minimum at $k = 4$ for Machiavellianism and Psychopathy, and $k = 5$ (boundary of tested range) for Narcissism. The non-monotonic decline and shallow curvature after $k=2$ are consistent with continuous rather than categorical individual-level heterogeneity.}
+\label{fig:gmm_bic}
+\end{figure}
+
 \subsection{Layer 5: Feature Importance and Robustness Testing}
+\label{sec:layer5}
 
-The observed SHAP Divergence Index (SDI) was .2591, against a 500-iteration pseudo-trait null mean of .0953 ($SD = .0588$, $p = .0100$), exceeding chance-level partitioning of the same item set. The Rashomon Set analysis across XGBoost, Random Forest, and Elastic-Net showed a maximum $R^2$ variance of $\Delta = .019$ across architectures, but inspection of the per-trait values (Table~\ref{tab:rashomon}) reveals that Elastic-Net matched or exceeded XGBoost on psychopathy (.237 vs.\ .218) and narcissism (.144 vs.\ .132), while XGBoost led on Machiavellianism (.147 vs.\ .145). This indicates that the predictor--trait relationships are predominantly linear: the contribution of the supervised layer is therefore interpretive (SHAP geometry) rather than predictive. GMM clustering of local SHAP vectors showed decreasing BIC with more components (e.g., narcissism: 4097.6 at one component to 3373.0 at five components, with a markedly more gradual decline after two components)---weak evidence for individual-level subtypes. Five-fold cross-validation replicated satisfactorily between community and representative samples (e.g., psychopathy: .312 community vs.\ .237 representative); the student sample could not be evaluated due to missing auxiliary variables, so replication claims are restricted to the community--representative comparison.
+The observed SHAP Divergence Index (SDI) was .2591, against a 500-iteration pseudo-trait null mean of .0953 ($SD = .0588$, $p = .0100$), exceeding chance-level partitioning. A signed directional SDI was also computed, weighting each predictor's mean absolute SHAP value by the sign of its association with the trait. The aggregate signed SDI (.287) did not reach significance against the signed pseudo-trait null (.137 $\pm$ .080, $p = .064$), because six of the seven predictors (Agreeableness, Conscientiousness, Extraversion, Openness, Empathy, Age) predict all three traits in the same direction and dilute the one dissociating predictor. A per-predictor inspection is more informative: it identifies \textbf{Neuroticism as the single predictor whose directional effect separates Psychopathy from Narcissism} ($\beta = -.138$ for Psychopathy vs.\ $+.120$ for Narcissism; Table~\ref{tab:ols}), while the other six predictors share direction across the three traits. The unsigned SDI is therefore retained as the primary divisive metric, and the per-predictor signed comparison is reported as a supplementary directional analysis: the shared-direction predictors bind the traits together (shared-core hypothesis), and Neuroticism is the specific predictor separating Psychopathy from Narcissism at the feature-importance level (bifurcation model). The Rashomon Set analysis across XGBoost, Random Forest, and Elastic-Net showed a maximum $R^2$ variance of $\Delta = .019$, but per-trait values (Table~\ref{tab:rashomon}) reveal that Elastic-Net matched or exceeded XGBoost on psychopathy (.237 vs.\ .218) and narcissism (.144 vs.\ .132), while XGBoost led on Machiavellianism (.147 vs.\ .145). This indicates that the predictor--trait relationships are predominantly linear: the contribution of the supervised layer is interpretive (SHAP geometry) rather than predictive. GMM clustering of local SHAP vectors showed non-monotonic BIC curves (Figure~\ref{fig:gmm_bic}): BIC reaches its minimum at $k=4$ components for Machiavellianism and Psychopathy, and $k=5$ (boundary of tested range) for Narcissism. The shallow curvature after $k=2$ (e.g., Narcissism: 4097.6 at $k=1$, 3442.0 at $k=4$, 3373.0 at $k=5$) is weak evidence for continuous rather than categorical individual-level structure.
 
-\begin{table}[ht]
+\begin{table}[!htbp]
 \centering
 \caption{Rashomon Set comparison of out-of-sample $R^2$ across three architectures (identical train/test split).}
 \label{tab:rashomon}
@@ -357,9 +415,9 @@ Narcissism       & .132 & \textbf{.144} & .126 \\
 \subsection{Integrated Summary of Evidence}
 \label{sec:integrated}
 
-Table~\ref{tab:evidence} summarises the direction of evidence across the baseline psychometric analyses and the five computational layers. Two families of results are visible. When the DTDD items are analysed in isolation, distinctiveness dominates: the 12-item network yields three Louvain communities, XGBoost recovers trait-specific primary drivers, CKA falls below its permutation null, semantic clustering partially separates the traits, and the SHAP Divergence Index exceeds its pseudo-trait null. When the same items are embedded in the full 88-item personality space, convergence dominates: all twelve DTDD items collapse into a single community and the three latent factors correlate at $r = .36$--$.62$. The Discussion treats this isolation-versus-context pattern as the central empirical tension the paper must explain.
+Table~\ref{tab:evidence} summarises the direction of evidence across baseline psychometrics and the five computational layers. Two families of results are visible. When the DTDD items are analysed in isolation, distinctiveness dominates: the 12-item network yields three Louvain communities, XGBoost recovers trait-specific primary drivers, CKA falls below its permutation null, semantic clustering partially separates the traits, and the SHAP Divergence Index exceeds its pseudo-trait null. When the same items are embedded in the full 82-item personality space, convergence dominates: all twelve DTDD items collapse into a single community and the three latent factors correlate at $r = .36$--$.62$. The Discussion treats this isolation-versus-context pattern as the central empirical tension the paper must explain.
 
-\begin{table*}[ht]
+\begin{table*}[!t]
 \centering
 \caption{Direction of evidence across baseline analyses and the five computational layers.}
 \label{tab:evidence}
@@ -371,11 +429,11 @@ Evidence source & Metric & Direction \\
 CFA (three-factor) & CFI = .941, TLI = .923, RMSEA = .077 & Distinctiveness \\
 Latent correlations & $r = .363$--$.623$ & Convergence (partial) \\
 Network, 12-item DTDD & 3 Louvain communities & Distinctiveness \\
-Network, 88-item full space & 1 DTDD community (Dark Core Collapse) & Convergence \\
+Network, 82-item full space & 1 DTDD community (Dark Core Collapse) & Convergence \\
 OLS predictors & Shared (agreeableness) + trait-specific (empathy, age) & Partial divergence \\
 XGBoost / SHAP & Distinct primary drivers & Distinctiveness \\
-CKA & .054 vs.\ null .089, $p < .005$ & Distinctiveness \\
-Semantic ARI & .505, $p = .007$ & Distinctiveness (narcissism fractured) \\
+CKA & Method (A) .071 vs.\ null .089, $p < .005$ & Distinctiveness \\
+Semantic ARI & .167--.571 across 3 encoders & Encoder-dependent single-trait fracture \\
 Counterfactual & Agreeableness shared by Mach/Narc; empathy by Psych & Partial convergence \\
 SDI & .259 vs.\ null .095, $p = .010$ & Distinctiveness (internal) \\
 Rashomon & $\Delta R^2 = .019$; linear competitive with XGBoost & Null for ML superiority \\
@@ -387,7 +445,7 @@ Rashomon & $\Delta R^2 = .019$; linear competitive with XGBoost & Null for ML su
 
 \subsection{Central Finding: Distinctiveness Within a Shared Structure}
 
-The five computational layers, together with baseline psychometrics, yield two seemingly contradictory but complementary findings. Every metric examining the three traits in isolation---the DTDD-only network, XGBoost predictor patterns, CKA representations, semantic embeddings, and the SDI---convergently showed distinguishable functional, predictive, and representational patterns. Every metric examining the traits within a broader nomological context---the full 88-item network and latent factor correlations---showed convergence into a shared higher-order structure. This mirrors the prediction of Dark Factor theory \citep{moshagen2018}: dark traits are surface, partly distinct manifestations of a shared fundamental disposition. The appropriate conclusion is neither ``three fully independent traits'' nor ``one unitary factor,'' but three statistically specified dimensions nested within a strong general Dark factor, with two of the three (Psychopathy and Narcissism) retaining substantive specific variance and the third (Machiavellianism) functioning as a near-pure indicator of the general factor---consistent with \citet{vize2018} and with the bifactor results reported in Section~\ref{sec:baseline}.
+The five computational layers, together with baseline psychometrics, yield two seemingly contradictory but complementary findings. Every metric examining the three traits in isolation---the DTDD-only network, XGBoost predictor patterns, CKA representations, semantic embeddings, and the SDI---convergently showed distinguishable functional, predictive, and representational patterns. Every metric examining the traits within a broader nomological context---the full 82-item network and latent factor correlations---showed convergence into a shared higher-order structure. This mirrors the prediction of Dark Factor theory \citep{moshagen2018}: dark traits are surface, partly distinct manifestations of a shared fundamental disposition. The appropriate conclusion is neither ``three fully independent traits'' nor ``one unitary factor,'' but three statistically specified dimensions nested within a strong general Dark factor, with two of the three (Psychopathy and Narcissism) retaining substantive specific variance and the third (Machiavellianism) functioning as a near-pure indicator of the general factor---consistent with \citet{vize2018} and with the bifactor results reported in Section~\ref{sec:baseline}.
 
 \subsection{Machiavellianism and Psychopathy: A Distinction Without a Difference?}
 
@@ -395,11 +453,11 @@ Machiavellianism repeatedly occupied an intermediate, bridging position: its hig
 
 \subsection{The Narcissism Fracture and the Centrality of Agreeableness}
 
-The overlap between narcissism and Machiavellianism was independently replicated at both the semantic clustering level (Layer~4) and the counterfactual level (Layer~3), converging on agreeableness. This aligns with \citet{vize2020}, who identified low agreeableness as a leading candidate for the Dark Triad's shared core, contrasted with callousness/low empathy \citep{paulhus2014}, here specifically tied to psychopathy. This supports a possible two-branch structure: an ``instrumental disagreeableness'' pole (Machiavellianism, narcissism) and an ``affective callousness'' pole (psychopathy)---an interpretation requiring confirmatory testing. Importantly, the latent CFA does not support the Narcissism Fracture as a covariance-structure phenomenon: the 2-factor model merging Machiavellianism with Narcissism ($\chi^2 = 6278.64$, $df = 53$, CFI = .793, TLI = .743, RMSEA = .141) fits substantially worse than the free three-factor model ($\chi^2 = 1838.65$, $df = 51$, CFI = .941, RMSEA = .077). In fact, it fits worse than the 2-factor model merging Machiavellianism with Psychopathy (CFI = .849, RMSEA = .120), despite the two trait pairs having nearly identical latent correlations ($r = .606$ vs.\ $.623$). The Narcissism Fracture is therefore a semantic (Layer~4) and feature-importance (Layer~3) phenomenon, not a latent-correlation one---and this three-level dissociation (latent fit, semantic organization, predictive feature importance) is itself a substantive finding, precisely the kind of dissociation that a single-level CFA or a single-level network cannot reveal.
+The overlap between narcissism and Machiavellianism was independently replicated at both the semantic clustering level (Layer~4) and the counterfactual level (Layer~3), converging on agreeableness. This aligns with \citet{vize2020}, who identified low agreeableness as a leading candidate for the Dark Triad's shared core, contrasted with callousness/low empathy \citep{paulhus2014}, here specifically tied to psychopathy. This supports a possible two-branch structure: an ``instrumental disagreeableness'' pole (Machiavellianism, narcissism) and an ``affective callousness'' pole (psychopathy)---an interpretation requiring confirmatory testing. The latent CFA does not support the Narcissism Fracture as a covariance-structure phenomenon: the 2-factor model merging Machiavellianism with Narcissism ($\chi^2 = 6278.64$, $df = 53$, CFI = .793) fits substantially worse than the free three-factor model ($\chi^2 = 1838.65$, $df = 51$, CFI = .941). In fact, it fits worse than the 2-factor model merging Machiavellianism with Psychopathy (CFI = .849), despite the two trait pairs having nearly identical latent correlations ($r = .606$ vs.\ $.623$). The single-trait-fracture pattern (which trait fractures being encoder-dependent; Section~\ref{sec:layer4}) and the Neuroticism directional dissociation (Section~\ref{sec:layer5}) together support the bifurcation interpretation at a level of abstraction not tied to any one encoder or aggregate metric. The three-level dissociation (latent fit, semantic organization, feature importance) is itself a substantive finding, precisely the kind of dissociation that a single-level CFA or single-level network cannot reveal.
 
 \subsection{Position Within the Existing Literature}
 
-Using tools entirely independent of CFA, this study converges with the Dark Factor framework \citep{moshagen2018}---itself derived from factor-analytic methods in large populations---that dark traits share an underlying disposition. This methodological convergence across unrelated analytic families constitutes a form of convergent validity for the Dark Core hypothesis. Explainable-AI tools (SHAP, CKA) additionally reveal higher-order interactions, nonlinear functional forms, and representational geometry not accessible to linear regression or CFA alone. The Rashomon analysis, however, qualifies the claim that nonlinearity is empirically necessary: linear models performed comparably, and the value of the explainable-ML layer lies primarily in interpretability of predictor structure rather than in superior predictive power.
+Using tools entirely independent of CFA, this study converges with the Dark Factor framework \citep{moshagen2018} that dark traits share an underlying disposition. The bifactor results reported here also extend the psychometric literature on DTDD factor structure: \citet{knitter2025} and \citet{eid2017} documented that symmetric orthogonal bifactor models systematically produce factor-collapse artifacts on structurally distinct facets, and specifically on the Dirty Dozen where the Machiavellianism facet is the weakest of the three. Our three-specification comparison directly replicates this phenomenon: the symmetric specification's $\omega_{HS,M}$ of .036 is an artifact of forced four-orthogonal-factor identification, and the bifactor-(S$\cdot$I-1) with DTDD\_4m as reference item raises $\omega_{HS,M}$ to .116. The substantive conclusion survives the correction---Machiavellianism retains limited specific variance across every specification, while Psychopathy and Narcissism consistently retain substantial specific variance---but the \textit{magnitude} of the collapse is specification-dependent. This convergence between our reference-domain re-analysis and the meta-analytic findings of \citet{knitter2025} constitutes independent verification of both literatures. Explainable-AI tools (SHAP, CKA) additionally reveal higher-order interactions, nonlinear functional forms, and representational geometry not accessible to linear regression or CFA alone. The Rashomon analysis, however, qualifies the claim that nonlinearity is empirically necessary: linear models performed comparably, and the value of the explainable-ML layer lies primarily in interpretability of predictor structure rather than in superior predictive power.
 
 \subsection{Limitations}
 \label{sec:limitations}
@@ -408,25 +466,29 @@ Using tools entirely independent of CFA, this study converges with the Dark Fact
 \item \textit{Limited explanatory power of supervised models.} Out-of-sample $R^2$ (.13--.22) restricts inferences to nomological overlap rather than the full latent constructs.
 \item \textit{Interdependence of the SDI criterion and null.} Both actual scores and pseudo-trait nulls derive from the same 12 items, so the SDI null is not fully independent of the measurement system and should not support causal/ontological claims.
 \item \textit{Conceptual overlap between predictors and criteria.} Agreeableness and empathy conceptually overlap with the Dark Triad constructs themselves, so observed distinctiveness/overlap may partly reflect content overlap rather than an independent underlying structure.
-\item \textit{Small semantic-analysis sample.} Layer~4 rests on only 12 item texts and a single embedding model; stability across models (e.g., MPNet, BGE, E5) remains untested.
+\item \textit{Small semantic-analysis sample.} Layer~4 rests on only 12 item texts and three embedding models; further encoder families remain untested.
 \item \textit{Non-causal counterfactual analysis.} Layer~3 identifies predictive-model leverage only, not causal relationships.
-\item \textit{Symbolic regression complexity/overfitting risk.} Discovered equations (especially for psychopathy) are complex and treated as supplementary, not primary, evidence.
+\item \textit{Symbolic regression complexity/overfitting risk.} Discovered equations are complex and treated as supplementary, not primary, evidence.
 \item \textit{Student-sample constraints.} Missing auxiliary variables excluded the student sample from predictive modeling and cross-sample replication; replication claims are limited to the community--representative comparison.
 \item \textit{Lower psychopathy-subscale reliability.} Lower internal consistency/stability for psychopathy (student-sample $\omega = .638$) may partly explain its apparent distinctiveness via measurement error rather than construct differences.
-\item \textit{Cross-layer predictor mismatch for age.} Age was included in the supervised layers but not in the baseline OLS; the narcissism--age association reported in Layers~2--3 is therefore not directly comparable to the OLS $\beta$s.
+\item \textit{Cross-layer predictor mismatch for age.} Age was included in the supervised layers but not in the baseline OLS; the age-aligned OLS specification reported in Table~\ref{tab:ols_ml} resolves this at the linear level but not for the SHAP-based interpretation.
 \item \textit{Exploratory, non-preregistered analysis.} Findings are hypothesis-generating and require confirmatory, preregistered replication.
 \item \textit{CKA permutation null underspecified.} The permutation null used for the CKA analysis was constructed by re-running the network with permuted labels rather than by a fixed geometric reference; because the trunk is shared across the three task heads, the residual CKA between head activations depends on the exact layer at which representations are compared. The reported CKA value should therefore be read as a within-model contrast, not as an estimate of population representational divergence.
-\item \textit{Counterfactual grid bounds and prediction-variance compression.} Two artifacts qualify the Layer~3 percentages. First, the grid search did not standardize perturbation bounds across traits, so a feature with a wider empirical range admits larger counterfactual moves. Second, and more consequentially, the flip rate scales inversely with model $R^2$: the trait with the lowest explained variance (Narcissism, $R^2 = .132$) shows the highest flip rate (61.8\%), because predictions are compressed toward the median and require smaller perturbations to cross. Comparative claims across traits are therefore not supported by these percentages; only within-trait interpretation of the primary tipping feature is warranted.
-\item \textit{Unsigned SHAP magnitude.} The SHAP Divergence Index uses mean absolute SHAP values, which discards the sign of predictor effects. Two predictors of equal magnitude but opposite direction (e.g., Neuroticism $\beta = -.138$ for Psychopathy vs.\ $+.120$ for Narcissism in Table~\ref{tab:ols}) are treated as similar rather than opposite. A signed directional SHAP comparison was not performed and would strengthen future versions of the index.
+\item \textit{Counterfactual grid bounds and prediction-variance compression.} Two artifacts qualify the Layer~3 percentages: the grid search did not standardize perturbation bounds across traits; and the flip rate scales inversely with model $R^2$ (the trait with the lowest explained variance, Narcissism at $R^2 = .132$, shows the highest flip rate, 61.8\%). The standardized perturbation metrics in Table~\ref{tab:counterfactual} quantify this.
+\item \textit{Signed SHAP and per-predictor directional dissociation.} The SHAP Divergence Index uses mean absolute SHAP values, which discards the sign of predictor effects. A signed directional SDI was computed (Section~\ref{sec:layer5}): it exceeded the unsigned metric in magnitude ($.287$ vs.\ $.259$) but the signed pseudo-trait null also inflated, yielding a non-significant aggregate result ($p = .064$). The aggregate metric conflates 6/7 predictor-direction agreement with 1/7 directional dissociation. A per-predictor signed comparison is more informative in this dataset and identifies Neuroticism as the specific feature separating Psychopathy from Narcissism.
+\item \textit{Bifactor specification dependence.} The symmetric orthogonal bifactor model produces a near-total collapse of the Machiavellianism specific factor ($\omega_{HS,M} = .036$), a documented identification artifact on short multi-facet scales \citep{knitter2025, eid2017}. The two reference-domain specifications resolve this, yielding $\omega_{HS,M} = .116$ in the (S$\cdot$I-1) specification. The ordering of specific-variance magnitudes is preserved across all three specifications, but the \textit{magnitudes} are specification-dependent.
+\item \textit{Partial measurement invariance.} Configural and metric invariance are supported across the three samples, but full scalar invariance is not ($\Delta$CFI $= .025$ for 3-factor, $.017$ for bifactor). Cross-sample mean comparisons on the DTDD should therefore be interpreted cautiously; the substantive conclusions do not depend on cross-sample mean equality.
+\item \textit{Encoder-dependent semantic clustering.} Layer~4 tested three sentence encoders. Which trait fractures varies across encoders; ARI ranges from .167 to .571. The specific ``Narcissism Fracture'' label does not generalize and has been retired. Testing multilingual encoders on the Czech translations would be the appropriate next step.
+\item \textit{$\gamma$-dependent network collapse.} The ``Dark Core Collapse'' in the 82-node network holds at the default Louvain resolution $\gamma = 1.0$ but fragments into two or three DTDD communities at other $\gamma$ values. The DTDD-internal cohesion signal is robust to specification, but the ``collapse into one community'' interpretation should be read as resolution-dependent.
 \end{enumerate}
 
 \subsection{Suggestions for Future Research}
 
-Three directions are proposed: (1) preregistered, confirmatory re-testing of the Narcissism Fracture and agreeableness/empathy centrality in independent samples; (2) robustness testing of Layer~4 across multiple embedding models and, where feasible, the 15-item DTDD variant with additional impulsivity/antisocial items; and (3) integration of the DT$^3$ framework with longitudinal designs to test temporal and individual-level stability of convergence/divergence patterns.
+Three directions are proposed: (1) preregistered, confirmatory re-testing of the encoder-dependent single-trait fracture and agreeableness/empathy centrality in independent samples; (2) robustness testing of Layer~4 across additional embedding model families and, where feasible, the 15-item DTDD variant with additional impulsivity/antisocial items, as well as multilingual encoders on the Czech translations; and (3) integration of the DT$^3$ framework with longitudinal designs to test temporal and individual-level stability of convergence/divergence patterns.
 
 \section{Conclusion}
 
-By integrating classical psychometrics with five independent layers of computational evidence---network psychometrics, supervised machine learning, counterfactual analysis, semantic embeddings, and cross-architecture robustness testing---this study provides convergent support for a middle-ground conclusion: Machiavellianism, psychopathy, and narcissism are three dimensions nested within a strong general Dark factor (ECV = .576, $\omega_H$ = .734), with Psychopathy and Narcissism retaining substantive specific variance ($\omega_{HS} = .450$ and $.532$) and Machiavellianism functioning as a near-pure indicator of the general factor ($\omega_{HS} = .036$; mean signed specific loading $\approx .15$). This distinctiveness is evident in predictive drivers, neural representations, and (partially) semantic organization, alongside considerable overlap---particularly between Machiavellianism and narcissism around agreeableness. Given the limited explanatory power of the supervised models and the exploratory, non-preregistered nature of this analysis, the findings should be regarded as hypothesis-generating rather than confirmatory. Nonetheless, the convergence of several independent methods toward a single conclusion illustrates the value of integrative psychology--explainable-AI approaches for classic questions of personality structure.
+By integrating classical psychometrics with five independent layers of computational evidence---network psychometrics, supervised machine learning, counterfactual analysis, semantic embeddings, and cross-architecture robustness testing---this study provides convergent support for a middle-ground conclusion: Machiavellianism, psychopathy, and narcissism are three dimensions nested within a strong general Dark factor (ECV = .576, $\omega_H$ = .734), with Psychopathy and Narcissism retaining substantive specific variance ($\omega_{HS} = .436$--$.454$ and $.511$--$.532$ across three bifactor specifications) and Machiavellianism functioning as a near-pure indicator of the general factor ($\omega_{HS,M} = .036$--$.116$; mean signed specific loading $\approx .15$). The ordering of specific-variance magnitudes is preserved across the symmetric orthogonal, bifactor-(S-1), and bifactor-(S$\cdot$I-1) specifications, providing specification-robust evidence that Machiavellianism is coextensive with the general Dark factor while Psychopathy and Narcissism carry distinct trait-specific residuals. This distinctiveness is evident in predictive drivers, neural representations, and (in encoder-dependent form) semantic organization, alongside considerable overlap---particularly between Machiavellianism and narcissism around agreeableness. The semantic evidence takes the form of a stable ``one trait fractures per encoder'' pattern across three sentence encoders, rather than a stable Narcissism-specific fracture; the linear driver evidence shows a stable ``two shared-direction predictors per trait pair'' pattern (empathy for Machiavellianism--Psychopathy; extraversion for Machiavellianism--Narcissism) that is itself a strong confirmation of the bifurcation model. Given the limited explanatory power of the supervised models and the exploratory, non-preregistered nature of this analysis, the findings should be regarded as hypothesis-generating rather than confirmatory. Nonetheless, the convergence of several independent methods toward a single conclusion illustrates the value of integrative psychology--explainable-AI approaches for classic questions of personality structure.
 
 \section*{CRediT authorship contribution statement}
 S.K.: conceptualisation, methodology, formal analysis, writing -- original draft, writing -- review \& editing.
@@ -444,6 +506,8 @@ The de-identified dataset analysed here is publicly available from the original 
 \section*{Conflict of Interest}
 The authors declare no conflict of interest related to this research.
 
+\clearpage
+
 \begin{thebibliography}{99}
 \footnotesize
 
@@ -452,6 +516,9 @@ Blondel, V.~D., Guillaume, J.-L., Lambiotte, R., \& Lefebvre, E. (2008). Fast un
 
 \bibitem[Chen \& Guestrin(2016)]{chen2016}
 Chen, T., \& Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In \textit{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining} (pp. 785--794).
+
+\bibitem[Eid et al.(2017)]{eid2017}
+Eid, M., Geiser, C., Koch, T., \& Heene, M. (2017). An elaborated approach to the analysis of bifactor models. \textit{Structural Equation Modeling: A Multidisciplinary Journal}, 24(6), 850--870.
 
 \bibitem[Epskamp \& Fried(2018)]{epskamp2018}
 Epskamp, S., \& Fried, E.~I. (2018). A tutorial on regularized partial correlation networks. \textit{Psychological Methods}, 23(4), 617--634.
